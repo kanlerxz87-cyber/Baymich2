@@ -58,7 +58,7 @@ function renderRestaurants(restaurants) {
   document.querySelector('#result-count').textContent = `Showing ${shown.length} of ${restaurants.length}`;
   document.querySelector('#restaurant-rows').innerHTML = shown.map((restaurant) => `
     <tr>
-      <td class="name-cell"><a class="venue-link" href="${escapeHtml(restaurant.michelinUrl)}" target="_blank" rel="noreferrer">${escapeHtml(restaurant.name)} ↗</a></td>
+      <td class="name-cell"><a class="venue-link" href="${escapeHtml(restaurant.michelinUrl)}" target="_blank" rel="noreferrer">${escapeHtml(restaurant.name)} ↗</a>${restaurant.address ? `<div class="place">${escapeHtml(restaurant.address)}</div>` : ''}</td>
       <td>${escapeHtml(restaurant.city)}</td>
       <td><span class="star-badge">${'✳'.repeat(restaurant.stars)} <span>${restaurant.stars} ${restaurant.stars === 1 ? 'star' : 'stars'}</span></span></td>
       <td>${priceMarkup(restaurant)}</td>
