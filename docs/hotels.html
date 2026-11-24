@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotels · SF Bay Area Michelin Tracker</title>
+<meta name="description" content="Hotel ranking status for the SF Bay Area Michelin tracker, with candidate hotels.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand"><a href="index.html">SF Bay Area Michelin Tracker</a></div>
+  <nav class="nav"><a href="index.html">Summary</a><a href="starred.html">Michelin stars</a><a href="bib.html">Bib Gourmand</a><a href="hotels.html" class="on">Hotels</a><a href="analysis.html">Analysis</a><a href="flagged.html">Flagged</a><a href="questions.html">Questions</a><a href="suggestions.html">Suggestions</a><a href="sources.html">Sources</a></nav>
+</header>
+<main class="wrap">
+<h1>Hotels</h1>
+<p class="asof">Data as of 2026-11-24 · Official-source verified fields only · blank = <span class="unv">Unverified</span></p>
+
+<section class="card">
+<h2>Status</h2>
+<p><b>The hotel ranking is not built yet.</b> A ranking needs (1) an agreed radius and hotel pool (see Questions Q5), (2) verified official hotel addresses, and (3) coordinates for both hotels and restaurants. None of these is in the verified dataset yet, so no rank has been assigned. No hotel was given a rank or a count.</p>
+<p>Method once approved: count verified Michelin starred + Bib restaurants within the chosen radius of each hotel's official address, and rank by that count. The rank column stays blank until the count is verified.</p>
+</section>
+<section class="card">
+<h2>Michelin-listed hotels found on official pages (candidates, not ranked)</h2>
+<div class="tools"><input type="search" placeholder="Filter rows (name, city, cuisine…)" data-filter="t-hotels" aria-label="Filter table"></div>
+<div class="table-wrap"><table id="t-hotels" class="data">
+<thead><tr><th>Hotel</th><th>Area</th><th>Michelin Keys / stars</th><th>Restaurants within radius</th><th>Rank</th><th>Source</th></tr></thead>
+<tbody><tr><td data-label="Hotel"><b>Kimpton Alton Hotel - Fisherman&#x27;s Wharf</b></td><td data-label="Area">San Francisco</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/kimpton-alton-hotel-12831" target="_blank" rel="noopener">Michelin hotel page</a></td></tr><tr><td data-label="Hotel"><b>San Francisco Proper Hotel</b></td><td data-label="Area">San Francisco</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/san-francisco-proper-hotel-8978" target="_blank" rel="noopener">Michelin hotel page</a></td></tr><tr><td data-label="Hotel"><b>Hotel Zeppelin San Francisco</b></td><td data-label="Area">San Francisco</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/hotel-zeppelin-san-francisco-8165" target="_blank" rel="noopener">Michelin hotel page</a></td></tr><tr><td data-label="Hotel"><b>The Battery</b></td><td data-label="Area">San Francisco</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/the-battery-san-francisco-8661" target="_blank" rel="noopener">Michelin hotel page</a></td></tr><tr><td data-label="Hotel"><b>Hotel Zetta San Francisco</b></td><td data-label="Area">San Francisco</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/hotel-zetta-sanfrancisco-7044" target="_blank" rel="noopener">Michelin hotel page</a></td></tr><tr><td data-label="Hotel"><b>Auberge du Soleil, Auberge Collection</b></td><td data-label="Area">Napa Valley</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246" target="_blank" rel="noopener">Michelin hotel page</a></td></tr><tr><td data-label="Hotel"><b>SingleThread Inn</b></td><td data-label="Area">Sonoma County</td><td data-label="Michelin Keys / stars">Unverified</td><td data-label="Restaurants within radius">Unverified</td><td data-label="Rank">Not ranked</td><td data-label="Source"><a href="https://guide.michelin.com/us/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698" target="_blank" rel="noopener">Michelin hotel page</a></td></tr></tbody></table></div>
+</section>
+
+</main>
+<footer class="foot">
+  <p>Not affiliated with MICHELIN. Star and Bib status from michelin.com and guide.michelin.com. Hours and prices change: confirm with the restaurant before you go.</p>
+  <p><a href="https://github.com/kanlerxz87-cyber/Baymich2" target="_blank" rel="noopener">Repository</a> · <a href="sources.html">All sources</a></p>
+</footer>
+<script src="assets/app.js"></script>
+</body>
+</html>

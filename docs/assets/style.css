@@ -1,0 +1,69 @@
+:root{
+  --ink:#1d2433; --muted:#5b6474; --line:#e3e7ee; --bg:#f6f7f9; --card:#fff;
+  --accent:#0b5cad; --warn:#b45309; --ok:#15803d; --unv:#b42318; --star:#a16207;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.top{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);padding:10px 16px}
+.brand a{font-weight:700;color:var(--ink);font-size:17px}
+.nav{display:flex;gap:6px;overflow-x:auto;margin-top:8px;padding-bottom:2px;-webkit-overflow-scrolling:touch}
+.nav a{white-space:nowrap;padding:6px 10px;border-radius:999px;background:#eef2f7;color:var(--ink);font-size:14px}
+.nav a.on{background:var(--accent);color:#fff}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 40px}
+h1{font-size:26px;margin:6px 0 4px}
+h2{font-size:19px;margin:0 0 10px}
+.asof{color:var(--muted);font-size:14px;margin:0 0 14px}
+.note{color:var(--muted);font-size:14px;background:#fff;border:1px solid var(--line);border-left:4px solid var(--accent);padding:10px 12px;border-radius:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin:14px 0}
+.bullets{margin:0;padding-left:20px}
+.bullets li{margin:6px 0}
+.kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:12px}
+.kpi{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;color:var(--ink)}
+.kpi b{font-size:26px;color:var(--accent)}
+.kpi span{font-size:13px;color:var(--muted)}
+.grid3{display:grid;grid-template-columns:1fr;gap:10px}
+.tile{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:10px;padding:12px;color:var(--ink);background:#fbfcfe}
+.tile b{color:var(--accent)}
+.tile span{color:var(--muted);font-size:14px}
+.tile:hover{border-color:var(--accent);text-decoration:none}
+.tools{margin:0 0 10px}
+.tools input{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font:inherit}
+.table-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:10px}
+table.data{border-collapse:collapse;width:100%;min-width:720px;background:#fff;font-size:14px}
+table.data th,table.data td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+table.data th{background:#f1f4f9;font-weight:600;position:sticky;top:0}
+table.data tr:last-child td{border-bottom:0}
+.sub{color:var(--muted);font-size:13px}
+.unv{color:var(--unv);font-size:13px;font-weight:600}
+.tag{display:inline-block;font-size:12px;padding:2px 8px;border-radius:999px;background:#eef2f7;color:var(--ink)}
+.tag-full{background:#dcfce7;color:var(--ok)}
+.tag-partial{background:#fef3c7;color:var(--warn)}
+.tag-listing{background:#eef2f7;color:var(--muted)}
+code{background:#eef2f7;padding:1px 5px;border-radius:4px}
+.foot{max-width:1180px;margin:0 auto;padding:16px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+
+/* Wide screens: multi-column grids */
+@media (min-width:700px){
+  .kpis{grid-template-columns:repeat(4,1fr)}
+  .grid3{grid-template-columns:repeat(3,1fr)}
+  h1{font-size:30px}
+}
+@media (min-width:1000px){
+  .kpis{grid-template-columns:repeat(6,1fr)}
+}
+
+/* Phones: turn table rows into labelled cards so nothing needs sideways scrolling */
+@media (max-width:699px){
+  .table-wrap{border:0;overflow:visible}
+  table.data{min-width:0;background:transparent}
+  table.data thead{display:none}
+  table.data tbody,table.data tr,table.data td{display:block;width:100%}
+  table.data tr{background:#fff;border:1px solid var(--line);border-radius:10px;margin:0 0 10px;padding:6px 10px}
+  table.data td{border:0;padding:5px 0;display:flex;gap:8px}
+  table.data td::before{content:attr(data-label);flex:0 0 42%;color:var(--muted);font-size:13px}
+  table.data td:first-child{display:block;font-size:16px}
+  table.data td:first-child::before{content:none}
+}
