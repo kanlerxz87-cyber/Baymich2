@@ -24,13 +24,13 @@ Shared task board for agent sessions working on this repo.
 | 3 | Research Michelin-listed (no star) restaurants SF Bay Area | done | session-3a52860e | data/restaurants.json | https://guide.michelin.com (page-1 subset: 8 Bib Gourmand + 14 Selected enumerated, flagged unverified; full guide 116 listed-no-star) |
 | 4 | Research hotels ranked by Michelin restaurants around them | done | session-3a52860e | data/hotels.json | official hotel + Michelin sources (candidate set, flagged unverified) |
 | 5 | Gather social links (YouTube/TikTok/Instagram), hours, pricing per entry | done | session-3a52860e | data/restaurants.json | official entry sites |
-| 6 | Build GitHub Pages site: landing + category subpages + tables | unclaimed | — | *.html, assets/ | n/a |
-| 7 | Executive summary page | unclaimed | — | executive-summary.html | n/a |
-| 8 | Suggestions section page | unclaimed | — | suggestions.html | n/a |
-| 9 | Questions/information/answers page | unclaimed | — | questions.html | n/a |
-| 10 | Verification: every table row has official source link | unclaimed | — | data/sources.md | per-entry official links |
-| 11 | Integration: merge branches, re-verify data line by line, check build + broken links | unclaimed | — | all | n/a |
-| 12 | Publish to GitHub Pages | unclaimed | — | GitHub Pages settings | n/a |
+| 6 | Build GitHub Pages site: landing + category subpages + tables | done | session-3a52860e | *.html, assets/ | n/a |
+| 7 | Executive summary page | done | session-3a52860e | executive-summary.html | n/a |
+| 8 | Suggestions section page | done | session-3a52860e | suggestions.html | n/a |
+| 9 | Questions/information/answers page | done | session-3a52860e | questions.html | n/a |
+| 10 | Verification: every table row has official source link | done | session-3a52860e | sources.html + per-entry source links | per-entry official links |
+| 11 | Integration: re-verify data line by line, check build + broken links | done | session-3a52860e | all | n/a |
+| 12 | Publish to GitHub Pages | BLOCKED | — | GitHub Pages settings | Integration lacks pages:write (403). Enable manually: Settings → Pages → source branch arena/3a52860e-baymich2, path / |
 
 ## Notes
 - This session (session-3a52860e) is performing all tasks sequentially until another session joins.
