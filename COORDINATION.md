@@ -1,15 +1,21 @@
 # Shared task board
 
-Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the branch assigned by Arena).
+Session ID: `arena/8bfb5438-baymich2` (current Arena branch; work remains on the branch assigned by Arena).
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
-| Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
-| Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | in progress | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
+| Final integration, full row-by-row source verification, and GitHub Pages publication | in progress | `arena/8bfb5438-baymich2` | `app.js`, `index.html`, `data/restaurants.json`, `scripts/validate-data.js`, `README.md`, `COORDINATION.md` |
+| Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | done | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
 
 ## Log
 
+- 2026-11-24 — `arena/8bfb5438-baymich2` claimed final integration/review after reading this board; scope is limited to the files listed in the task table. Work remains on the Arena-assigned branch. The claim commit was rebased as `0cb49c6`; the original remote branch did not exist, so the pull/rebase was done against `origin/main` before the eventual branch push.
+- 2026-11-24 — `origin/main` advanced to `f6e2a2e` (PR #6) while work was underway. Rebase conflicts in the shared coordination board and restaurant JSON were resolved by retaining the merged profile-verification task and all its official-source fields, while adding this session's distinct status-source fields. No other-session changes were discarded. The profile pass was marked done because its changes were already merged to `main`; its logged data gaps remain flagged for review.
+- 2026-11-24 — Verified Quince hours and holiday exceptions directly on its official restaurant site: Tuesday–Saturday, main dining-room reservations 5–8 pm, Friday/Saturday lunch offer without published hours, Sunday/Monday closed; the homepage noted Nov 26 and Dec 25–26 closures and special Christmas Eve/New Year's Eve service. Its row now uses that official-site source rather than stale profile-hour details.
+- 2026-11-24 — Re-opened the official 2026 California star-list article and checked the entire star roster (all article chunks) against all 41 local rows: 7 local three-star, 7 two-star and 27 one-star entries match the listed city/name/tier. The official article states California totals of 10/13/60 across those tiers. Rechecked official profile hours for Acquerello (Tue–Sat, 5:30–9:45 pm), Commis (Tue–Sat, 5–9:30 pm), Enclos (Wed–Sat, 5:30–8 pm) and Wolfsbane (Tue–Sat, 5:30–10 pm); these are venue-local time as shown by MICHELIN, and exception/holiday schedules remain unverified. Rechecked Acquerello’s official menu at $295/person plus 20% service and 4% employee-benefits charges: $731.60 for two before tax/drinks. Rechecked all four hotel Key/address/name facts against their MICHELIN hotel profiles; no hotel count/rank is inferred.
+- 2026-11-24 — Added per-row official 2026 star-list URLs, clarified that the roster excludes Guide-listed non-starred places, and added a Node validation script for row counts, uniqueness, source presence, status year, tier counts and conditional price/hour source requirements. Validation passed locally.
+- 2026-11-24 — Rechecked Quince's official restaurant homepage and updated its service schedule/2026 holiday closures from that source; hours renderer now surfaces the row-specific exception note. Updated the validator to accept either the official MICHELIN profile or that same row's official venue page for hours. Verified the previously recorded GitHub PR #3 merge and Pages deployment in `gh`; local JSON, source checks, JS syntax and `git diff --check` all passed. The current branch was pushed after `git pull --rebase origin main`; it is ready for final PR integration.
 - 2026-11-24 — Claimed site foundation and research scope. Repo initially contained only the initial README; no coordination board or other claims were present. Work stayed on the active Arena branch.
 - 2026-11-24 — Built mobile-responsive dashboard, search/filterable restaurant index, city-level cluster summary, hotel shortlist, decision questions, suggestions, and a flagged-review register. The dashboard's row-level restaurant links point to the official MICHELIN restaurant profile pages; each row's 2026 star distinction was cross-checked against MICHELIN's official 2026 California starred list.
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
@@ -21,7 +27,7 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 
 ## Irregularities flagged for review (session e3632548)
 
-- Repo log says PR #3 merged at 65175a5 and the Pages build ran at 45360018248. These hashes are not in the current branch history, which shows only the PR #4 merge (c7849d2); confirm on GitHub before relying on either.
+- PR #3 and Pages publication are verified in GitHub: PR #3 merged at `65175a55f10ab8fde38242c9f0e96da07425c892`; Pages deployment run `45360018248` completed successfully. PR #4 merge commit `c7849d2` is the current branch base.
 - The Michelin article states 83 starred restaurants statewide for 2026. The dataset holds 41 Bay Area and adjacent entries, a boundary set by the previous session rather than by Michelin.
 - Michelin's profile URLs are in `/ca/en/` and `/us/en/` forms. Both load the same profile; the us/en URL is used for Atelier Crenn, which redirected.
 - Acquerello's $731.60 figure reconciles to 2 × $295 × 1.24 (20% service plus 4% surcharge on the menu base). Tax and beverages excluded.
