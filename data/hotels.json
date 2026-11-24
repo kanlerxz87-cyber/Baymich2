@@ -1,6 +1,37 @@
 [
-  {"name":"SingleThread Inn","area":"Healdsburg","keys":3,"address":"131 North Street, Healdsburg, CA 95448","rooms":"5 rooms","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698","note":"Three MICHELIN Keys; MICHELIN Guide lists the affiliated SingleThread restaurant as a three-star venue. Room rate and nearby-restaurant count are not entered: date/radius data not yet verified."},
-  {"name":"Auberge du Soleil, Auberge Collection","area":"Rutherford","keys":3,"address":"180 Rutherford Hill Road, Rutherford, CA","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246","note":"Three MICHELIN Keys; date-specific rates and a standardized count of nearby Guide restaurants are not verified."},
-  {"name":"Meadowood Napa Valley","area":"St. Helena","keys":3,"address":"900 Meadowood Lane, St. Helena, CA 94574","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/meadowood-napa-valley-8121","note":"Three MICHELIN Keys according to the official MICHELIN 2026 hotel selection; date-specific rates and nearby restaurant counts are not verified."},
-  {"name":"Rosewood Sand Hill","area":"Menlo Park","keys":1,"address":"2825 Sand Hill Road, Menlo Park, CA","source":"https://guide.michelin.com/en/hotels-stays/silicon-valley/rosewood-sand-hill-11406","note":"One MICHELIN Key; date-specific rates and standardized nearby-restaurant counts are not verified."}
+  {
+    "name": "SingleThread Inn",
+    "area": "Healdsburg",
+    "keys": 3,
+    "address": "131 North Street, Healdsburg, CA",
+    "rooms": "5 rooms",
+    "source": "https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698",
+    "note": "Three MICHELIN Keys and 5 rooms verified on the official MICHELIN hotel page (24 Nov 2026). Sample rate: from $1,647/night before tax ($1,902 with taxes) for MICHELIN search dates Dec 22–23, 2026, 1 adult; not your travel dates. Nearby-restaurant count is not entered.",
+    "sampleRate": "From $1,647/night before tax ($1,902 with taxes) · sample dates Dec 22–23, 2026 · 1 adult"
+  },
+  {
+    "name": "Auberge du Soleil, Auberge Collection",
+    "area": "Rutherford",
+    "keys": 3,
+    "address": "180 Rutherford Hill Road, Rutherford, CA",
+    "source": "https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246",
+    "note": "Three MICHELIN Keys and 50 rooms verified on the official MICHELIN hotel page (24 Nov 2026). Address verified. No rate was displayed in the page text checked; date-specific rate not verified. Nearby-restaurant count not verified."
+  },
+  {
+    "name": "Meadowood Napa Valley",
+    "area": "St. Helena",
+    "keys": 3,
+    "address": "900 Meadowood Lane, St. Helena, CA",
+    "source": "https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/meadowood-napa-valley-8121",
+    "note": "Three MICHELIN Keys and 36 rooms verified on the official MICHELIN hotel page (24 Nov 2026). Sample rate: from $1,250/night before tax ($1,441 with taxes) for MICHELIN search dates Dec 22–23, 2026, 1 adult; not your travel dates. Nearby-restaurant count is not entered.",
+    "sampleRate": "From $1,250/night before tax ($1,441 with taxes) · sample dates Dec 22–23, 2026 · 1 adult"
+  },
+  {
+    "name": "Rosewood Sand Hill",
+    "area": "Menlo Park",
+    "keys": 1,
+    "address": "2825 Sand Hill Road, Menlo Park, CA",
+    "source": "https://guide.michelin.com/en/hotels-stays/silicon-valley/rosewood-sand-hill-11406",
+    "note": "One MICHELIN Key and 121 rooms verified on the official MICHELIN hotel page (24 Nov 2026). No rate was displayed in the page text checked; date-specific rate not verified. Nearby-restaurant count not verified."
+  }
 ]

@@ -57,7 +57,7 @@
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
     "hours": "Wednesday–Saturday 5:30–8:00 pm; Sunday–Tuesday closed",
-    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursNote": "Verified 24 Nov 2026 on the official MICHELIN profile (Wednesday–Saturday 5:30–8 pm). Holiday exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos"
   },
   {
@@ -84,12 +84,12 @@
     "name": "Acquerello",
     "city": "San Francisco",
     "stars": 2,
-    "pairPrice": "$731.60 + tax",
-    "pairPriceNote": "Two seasonal tasting menus at $295 each, plus the restaurant’s stated 20% service charge and 4% employee-benefits surcharge; excludes tax and beverages. Recheck menu before booking.",
+    "pairPrice": "$731.60 – $736.32 before tax (estimate)",
+    "pairPriceNote": "Official Acquerello menu: $295 per person seasonal tasting menu; the venue states a 20% service charge and a 4% employee-benefits surcharge are added to all sales (acquerellosf.com, checked 24 Nov 2026). Two calculation methods are shown because the venue does not state the order: additive $590 + $118 + $23.60 = $731.60; compounded $708 × 1.04 = $736.32. Excludes tax and the optional $195 per-person wine pairing. Re-check before booking.",
     "menuUrl": "https://www.acquerellosf.com/seasonal-tasting-menu",
     "restaurantUrl": "https://www.acquerellosf.com/",
     "hours": "Tuesday–Saturday 5:30–9:45 pm; Sunday–Monday closed",
-    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursNote": "Verified 24 Nov 2026 on the official MICHELIN profile (Tuesday–Saturday 5:30–9:45 pm). Holiday exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello"
   },
@@ -111,7 +111,7 @@
     "city": "Oakland",
     "stars": 2,
     "hours": "Tuesday–Saturday, 5:00–9:30 pm; Sunday–Monday closed",
-    "hoursNote": "MICHELIN profile hours; holiday/exception schedules not confirmed.",
+    "hoursNote": "Verified 24 Nov 2026 on the official MICHELIN profile (Tuesday–Saturday 5–9:30 pm). Holiday exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis",
     "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis"
   },
@@ -240,7 +240,7 @@
     "stars": 1,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane",
     "hours": "Tuesday–Saturday 5:30–10:00 pm; Sunday–Monday closed",
-    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursNote": "Verified 24 Nov 2026 on the official MICHELIN profile (Tuesday–Saturday 5:30–10 pm). Holiday exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane"
   },
   {
@@ -311,7 +311,7 @@
   },
   {
     "name": "Press",
-    "city": "St. Helena",
+    "city": "Saint Helena",
     "stars": 1,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press"
   }
