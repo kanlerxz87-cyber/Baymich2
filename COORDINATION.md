@@ -1,15 +1,16 @@
 # Shared task board
 
-Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the branch assigned by Arena).
+Session ID: `arena/8bfb5438-baymich2` (current Arena branch; work remains on the branch assigned by Arena).
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
-| Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
-| Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | in progress | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
+| Final integration, full row-by-row source verification, and GitHub Pages publication | in progress | `arena/8bfb5438-baymich2` | `app.js`, `index.html`, `data/restaurants.json`, `scripts/validate-data.js`, `README.md`, `COORDINATION.md` |
+| Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | done | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
 
 ## Log
 
+- 2026-11-24 — `arena/8bfb5438-baymich2` claimed final integration/review after reading this board; scope is limited to the files listed in the task table. Work remains on the Arena-assigned branch.
 - 2026-11-24 — Claimed site foundation and research scope. Repo initially contained only the initial README; no coordination board or other claims were present. Work stayed on the active Arena branch.
 - 2026-11-24 — Built mobile-responsive dashboard, search/filterable restaurant index, city-level cluster summary, hotel shortlist, decision questions, suggestions, and a flagged-review register. The dashboard's row-level restaurant links point to the official MICHELIN restaurant profile pages; each row's 2026 star distinction was cross-checked against MICHELIN's official 2026 California starred list.
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
