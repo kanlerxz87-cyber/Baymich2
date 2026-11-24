@@ -6,6 +6,7 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
+| Row-by-row re-verification of starred restaurant and hotel records against official MICHELIN pages; flagged-irregularity log | in progress | `arena/b8297601-baymich2` (session b8297601) | `data/restaurants.json`, `data/hotels.json`, `COORDINATION.md` (log section only) |
 
 ## Log
 
@@ -14,6 +15,8 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
 - 2026-11-24 — Validation passed: JSON parsed; 41 unique restaurant records and 4 hotel records; 7/7/27 star counts; every restaurant has an official MICHELIN profile URL; every hotel has an official MICHELIN profile URL; `node --check app.js` passed; local HTTP smoke test returned 200 for the index, CSS, JS, and both JSON files.
 - 2026-11-24 — PR #3 merged to `main` (merge commit `65175a55f10ab8fde38242c9f0e96da07425c892`). GitHub Pages build/deploy run `45360018248` succeeded; public page verified with the live 41-row restaurant index at https://kanlerxz87-cyber.github.io/Baymich2/.
+
+- 2026-11-24 — Session b8297601 claimed row-by-row re-verification of the star and hotel records against official MICHELIN pages. Work is on branch `arena/b8297601-baymich2` (the branch Arena assigned this session; the `session-<id>/<task>` naming in the protocol was not used because the session must stay on its assigned branch).
 
 ## Source record, verification and irregularities
 
