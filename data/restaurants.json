@@ -2,7 +2,8 @@
   "generated": "2026-11-24",
   "source": "MICHELIN Guide California — San Francisco and surroundings (guide.michelin.com)",
   "sourceUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurants",
-  "note": "Star status and details verified line-by-line against the official MICHELIN Guide website on 2026-11-24. Fields that could not be confirmed from an official source are left blank and flagged unverified. No values were inferred.",
+  "socialNote": "Social media links (Instagram) verified via each restaurant's official website or official profile. YouTube/TikTok links were not found on official sources and are left blank (unverified).",
+  "priceNote": "Price column shows the MICHELIN Guide price symbol (official). Exact dollar totals for 2 adults are not published by MICHELIN and are left blank/unverified unless confirmed from the restaurant's official menu. No dollar amounts were inferred.",
   "restaurants": [
     {
       "id": "atelier-crenn",
@@ -22,12 +23,13 @@
       "hours": null,
       "hoursVerified": false,
       "exceptions": null,
-      "greenStar": false,
+      "greenStar": true,
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/atelier-crenn",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/atelier.crenn/",
+      "instagramHandle": "@atelier.crenn",
+      "socialVerified": true
     },
     {
       "id": "benu",
@@ -51,8 +53,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/benu",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/benu_sf/",
+      "instagramHandle": "@benu_sf",
+      "socialVerified": true
     },
     {
       "id": "californios",
@@ -76,8 +79,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/californios",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/californiossf/",
+      "instagramHandle": "@californiossf",
+      "socialVerified": true
     },
     {
       "id": "quince",
@@ -101,8 +105,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/quince",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/quince_sf/",
+      "instagramHandle": "@quince_sf",
+      "socialVerified": true
     },
     {
       "id": "acquerello",
@@ -126,8 +131,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/acquerello",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/acquerellosf/",
+      "instagramHandle": "@acquerellosf",
+      "socialVerified": true
     },
     {
       "id": "birdsong",
@@ -151,8 +157,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/birdsong",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/birdsong_sf/",
+      "instagramHandle": "@birdsong_sf",
+      "socialVerified": true
     },
     {
       "id": "commis",
@@ -177,6 +184,7 @@
       "youtube": null,
       "tiktok": null,
       "instagram": null,
+      "instagramHandle": null,
       "socialVerified": false
     },
     {
@@ -201,8 +209,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/kiln-1210355",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/kilnsf/",
+      "instagramHandle": "@kilnsf",
+      "socialVerified": true
     },
     {
       "id": "lazy-bear",
@@ -226,8 +235,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/lazy-bear",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/lazybearsf/",
+      "instagramHandle": "@lazybearsf",
+      "socialVerified": true
     },
     {
       "id": "saison",
@@ -251,8 +261,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/saison",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/saisonsf/",
+      "instagramHandle": "@saisonsf",
+      "socialVerified": true
     },
     {
       "id": "sons-daughters",
@@ -276,8 +287,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/sons-daughters",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/sonsanddaughterssf/",
+      "instagramHandle": "@sonsanddaughterssf",
+      "socialVerified": true
     },
     {
       "id": "7-adams",
@@ -301,8 +313,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/7-adams",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/7adamsrestaurant/",
+      "instagramHandle": "@7adamsrestaurant",
+      "socialVerified": true
     },
     {
       "id": "angler-sf",
@@ -326,8 +339,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/angler-sf",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/anglersf/",
+      "instagramHandle": "@anglersf",
+      "socialVerified": true
     },
     {
       "id": "hilda-and-jesse",
@@ -351,8 +365,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/hilda-and-jesse",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/hildaandjessesf/",
+      "instagramHandle": "@hildaandjessesf",
+      "socialVerified": true
     },
     {
       "id": "kin-khao",
@@ -376,8 +391,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/kin-khao",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/kinkhao/",
+      "instagramHandle": "@kinkhao",
+      "socialVerified": true
     },
     {
       "id": "mister-jius",
@@ -401,8 +417,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/misterjius/",
+      "instagramHandle": "@misterjius",
+      "socialVerified": true
     },
     {
       "id": "nari",
@@ -426,8 +443,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/nari",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/nari_sf/",
+      "instagramHandle": "@nari_sf",
+      "socialVerified": true
     },
     {
       "id": "niku-steakhouse",
@@ -446,13 +464,14 @@
       "phone": "+1 415-829-7817",
       "hours": "Mon–Thu 5–9 PM; Fri–Sat 5–10 PM; Sun 5–9 PM",
       "hoursVerified": true,
-      "exceptions": "None listed",
+      "exceptions": "None listed (temporarily closed Mar–May 2025 after a fire; reopened per restaurant announcement)",
       "greenStar": false,
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/niku-steakhouse",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/nikusteakhouse/",
+      "instagramHandle": "@nikusteakhouse",
+      "socialVerified": true
     },
     {
       "id": "nisei",
@@ -467,17 +486,18 @@
       "price": "$$$$",
       "priceFor2Adults": null,
       "priceFor2AdultsVerified": false,
-      "website": null,
-      "phone": null,
-      "hours": null,
-      "hoursVerified": false,
-      "exceptions": null,
+      "website": "https://www.restaurantnisei.com/",
+      "phone": "+1 415-827-6898",
+      "hours": "Wed–Sun dinner service only (Mon–Tue closed)",
+      "hoursVerified": true,
+      "exceptions": "Closed Mondays and Tuesdays; dinner only",
       "greenStar": false,
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/nisei",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/nisei_sf/",
+      "instagramHandle": "@nisei_sf",
+      "socialVerified": true
     },
     {
       "id": "restaurant-naides",
@@ -487,7 +507,7 @@
       "address": "708 Bush St.",
       "city": "San Francisco",
       "zip": "94108",
-      "neighborhood": "Chinatown",
+      "neighborhood": "Chinatown / Nob Hill",
       "cuisine": "Filipino, Contemporary",
       "price": "$$$$",
       "priceFor2Adults": null,
@@ -501,8 +521,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/naides",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/restaurantnaides/",
+      "instagramHandle": "@restaurantnaides",
+      "socialVerified": true
     },
     {
       "id": "san-ho-won",
@@ -526,8 +547,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/san-ho-won",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/sanhowon/",
+      "instagramHandle": "@sanhowon",
+      "socialVerified": true
     },
     {
       "id": "ssal",
@@ -551,8 +573,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/ssal",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/ssalsf/",
+      "instagramHandle": "@ssalsf",
+      "socialVerified": true
     },
     {
       "id": "state-bird-provisions",
@@ -576,8 +599,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/state-bird-provisions",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/statebirdprovisions/",
+      "instagramHandle": "@statebirdprovisions",
+      "socialVerified": true
     },
     {
       "id": "sun-moon-studio",
@@ -601,8 +625,9 @@
       "source": "https://guide.michelin.com/us/en/california/oakland/restaurant/sun-moon-studio",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/sun_moon_studio_/",
+      "instagramHandle": "@sun_moon_studio_",
+      "socialVerified": true
     },
     {
       "id": "the-progress",
@@ -626,8 +651,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/the-progress",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/thePROGRESS_sf/",
+      "instagramHandle": "@thePROGRESS_sf",
+      "socialVerified": true
     },
     {
       "id": "sorrel",
@@ -651,8 +677,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/sorrel",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/sorrelrestaurant/",
+      "instagramHandle": "@sorrelrestaurant",
+      "socialVerified": true
     },
     {
       "id": "wakuriya",
@@ -676,8 +703,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-mateo/restaurant/wakuriya",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/wakuriya/",
+      "instagramHandle": "@wakuriya",
+      "socialVerified": true
     },
     {
       "id": "wolfsbane",
@@ -701,8 +729,9 @@
       "source": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/wolfsbane",
       "youtube": null,
       "tiktok": null,
-      "instagram": null,
-      "socialVerified": false
+      "instagram": "https://www.instagram.com/wolfsbane_sf/",
+      "instagramHandle": "@wolfsbane_sf",
+      "socialVerified": true
     }
   ],
   "summary": {
@@ -710,7 +739,15 @@
     "twoStar": 7,
     "oneStar": 18,
     "totalStarred": 29,
+    "withVerifiedSocial": 28,
     "verifiedAgainst": "guide.michelin.com",
-    "verifiedDate": "2026-11-24"
+    "verifiedDate": "2026-11-24",
+    "irregularities": [
+      "The MICHELIN Guide 'San Francisco and surroundings' view lists 29 starred restaurants (4 three-star, 7 two-star, 18 one-star). Broader Bay Area starred venues (e.g. The French Laundry Yountville, SingleThread Healdsburg) sit in MICHELIN's separate 'Napa / Sonoma Valleys' area and are not included in this view.",
+      "Commis (Oakland) hours and weekend hours for Saison, Sons & Daughters, Birdsong were not fully captured on the official MICHELIN page and are flagged unverified.",
+      "Nisei and Sun Moon Studio / Restaurant Naides phone numbers were not fully captured on the official MICHELIN page; Nisei phone added from its official website.",
+      "Exact dollar totals for 2 adults are not published by MICHELIN; left blank/unverified per verification policy.",
+      "YouTube and TikTok official links were not found on official sources; left blank/unverified."
+    ]
   }
 }
