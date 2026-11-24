@@ -8,6 +8,7 @@ Session ID: `arena/8bfb5438-baymich2` (current Arena branch; work remains on the
 | Final integration, full row-by-row source verification, and GitHub Pages publication | in progress | `arena/8bfb5438-baymich2` | `app.js`, `index.html`, `data/restaurants.json`, `scripts/validate-data.js`, `README.md`, `COORDINATION.md` |
 | Officially sourced local activities directory and standalone category page | in progress | `arena/e60a579b-baymich2` | `activities.html`, `activities.js`, `activities.css`, `data/activities.json` |
 | Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | done | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
+| Officially sourced local activities directory and standalone category page | in progress | `arena/e60a579b-baymich2` | `activities.html`, `activities.js`, `activities.css`, `data/activities.json` |
 
 ## Log
 
