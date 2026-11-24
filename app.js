@@ -37,8 +37,15 @@ function hoursMarkup(restaurant) {
   return `<span>${escapeHtml(restaurant.hours)}<small class="hours-note"> · ${escapeHtml(note)}</small></span>`;
 }
 
-function socialMarkup() {
-  return '<span class="missing" title="No official social profile confirmed from an official venue source">Unverified</span>';
+function socialMarkup(restaurant = {}) {
+  const labels = { youtube: 'YouTube ↗', tiktok: 'TikTok ↗', instagram: 'Instagram ↗' };
+  if (!restaurant.social || !restaurant.social.length) {
+    return '<span class="missing" title="No official social profile confirmed from an official venue source">Unverified</span>';
+  }
+  return restaurant.social.map((item) => {
+    const label = labels[item.platform] || item.platform;
+    return `<a class="source-link" href="${escapeHtml(item.url)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+  }).join(' ');
 }
 
 function venueMarkup(restaurant) {
@@ -62,9 +69,10 @@ function renderRestaurants(restaurants) {
       <td class="name-cell"><a class="venue-link" href="${escapeHtml(restaurant.michelinUrl)}" target="_blank" rel="noreferrer">${escapeHtml(restaurant.name)} ↗</a>${restaurant.address ? `<div class="place">${escapeHtml(restaurant.address)}</div>` : ''}</td>
       <td>${escapeHtml(restaurant.city)}</td>
       <td><span class="star-badge">${'✳'.repeat(restaurant.stars)} <span>${restaurant.statusYear || GUIDE_YEAR} · ${restaurant.stars} ${restaurant.stars === 1 ? 'star' : 'stars'}</span></span></td>
+      <td>${restaurant.priceBand ? escapeHtml(restaurant.priceBand) : '<span class="missing">Unverified</span>'}</td>
       <td>${priceMarkup(restaurant)}</td>
       <td>${hoursMarkup(restaurant)}</td>
-      <td>${socialMarkup()}</td>
+      <td>${socialMarkup(restaurant)}</td>
       <td>${sourceLink(restaurant.statusSource || STAR_SOURCE, `Official ${restaurant.statusYear || GUIDE_YEAR} star list ↗`)}</td>
     </tr>`).join('');
   document.querySelector('#restaurant-cards').innerHTML = shown.map((restaurant) => `
@@ -73,7 +81,7 @@ function renderRestaurants(restaurants) {
       <div class="restaurant-card-info">
         <div><label>DINNER FOR TWO</label>${priceMarkup(restaurant)}</div>
         <div><label>OPEN DAYS / HOURS</label>${hoursMarkup(restaurant)}</div>
-        <div><label>OFFICIAL SOCIAL</label>${socialMarkup()}</div>
+        <div><label>OFFICIAL SOCIAL</label>${socialMarkup(restaurant)}</div>
         <div><label>VENUE LINK</label>${venueMarkup(restaurant)}</div>
       </div>
       <div class="restaurant-card-bottom">${sourceLink(restaurant.michelinUrl || STAR_SOURCE, 'Official MICHELIN profile ↗')}${restaurant.menuUrl ? `<a class="source-link" href="${escapeHtml(restaurant.menuUrl)}" target="_blank" rel="noreferrer">Price source ↗</a>` : ''}</div>
@@ -85,8 +93,9 @@ function renderHotels(hotels) {
     <article class="hotel-card">
       <div class="hotel-top"><span class="key-stars">${'✦'.repeat(hotel.keys)}<span class="sr-only"> ${hotel.keys} MICHELIN Keys</span></span><span class="hotel-area">${escapeHtml(hotel.area)}</span></div>
       <h3>${escapeHtml(hotel.name)}</h3><div class="hotel-address">${escapeHtml(hotel.address)}</div>
-      <div class="hotel-metric"><span>Nearby starred restaurants</span><strong>Not yet counted</strong></div>
-      <div class="hotel-metric"><span>Stay price</span><strong>Not date-verified</strong></div>
+      <div class="hotel-metric"><span>Rooms</span><strong>${escapeHtml(hotel.rooms || 'Not verified')}</strong></div>
+      <div class="hotel-metric"><span>Stay price (from)</span><strong>${hotel.rateFrom ? escapeHtml(hotel.rateFrom) : '<span class="missing">Unverified</span>'}</strong></div>
+      ${hotel.rateNote ? `<p class="hotel-rate-note">${escapeHtml(hotel.rateNote)}</p>` : ''}
       ${sourceLink(hotel.source, 'MICHELIN hotel profile ↗')}
     </article>`).join('');
 }
@@ -123,5 +132,5 @@ function initialize(data) {
 }
 
 loadData().then(initialize).catch((error) => {
-  document.querySelector('#restaurant-rows').innerHTML = `<tr><td colspan="7">${escapeHtml(error.message)}. Run the site through a local HTTP server (not file://).</td></tr>`;
+  document.querySelector('#restaurant-rows').innerHTML = `<tr><td colspan="8">${escapeHtml(error.message)}. Run the site through a local HTTP server (not file://).</td></tr>`;
 });

@@ -1,6 +1,54 @@
 [
-  {"name":"SingleThread Inn","area":"Healdsburg","keys":3,"address":"131 North Street, Healdsburg, CA 95448","rooms":"5 rooms","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698","note":"Three MICHELIN Keys; MICHELIN Guide lists the affiliated SingleThread restaurant as a three-star venue. Room rate and nearby-restaurant count are not entered: date/radius data not yet verified."},
-  {"name":"Auberge du Soleil, Auberge Collection","area":"Rutherford","keys":3,"address":"180 Rutherford Hill Road, Rutherford, CA","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246","note":"Three MICHELIN Keys; date-specific rates and a standardized count of nearby Guide restaurants are not verified."},
-  {"name":"Meadowood Napa Valley","area":"St. Helena","keys":3,"address":"900 Meadowood Lane, St. Helena, CA 94574","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/meadowood-napa-valley-8121","note":"Three MICHELIN Keys according to the official MICHELIN 2026 hotel selection; date-specific rates and nearby restaurant counts are not verified."},
-  {"name":"Rosewood Sand Hill","area":"Menlo Park","keys":1,"address":"2825 Sand Hill Road, Menlo Park, CA","source":"https://guide.michelin.com/en/hotels-stays/silicon-valley/rosewood-sand-hill-11406","note":"One MICHELIN Key; date-specific rates and standardized nearby-restaurant counts are not verified."}
+  {
+    "name": "SingleThread Inn",
+    "area": "Healdsburg",
+    "keys": 3,
+    "keysNote": "Three MICHELIN Keys ('Three MICHELIN Keys · An extraordinary stay') confirmed on the official 2026 MICHELIN Guide hotel page.",
+    "address": "131 North Street, Healdsburg, CA 95448",
+    "rooms": "5 rooms",
+    "rateFrom": "$2,367",
+    "rateNote": "Official MICHELIN Guide booking widget, 1 adult / 1 room, check-in 22 Dec 2026, check-out 23 Dec 2026: $2,367 starting rate, $2,734 total with taxes. Reservations accepted up to three months in advance. Rate varies by date and room type.",
+    "rateDate": "2026-12-22 to 2026-12-23",
+    "source": "https://guide.michelin.com/ca/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698",
+    "note": "Three MICHELIN Keys; the affiliated SingleThread restaurant is a MICHELIN three-star venue. Rates are date-specific and were captured from the official booking widget on 24 Nov 2026."
+  },
+  {
+    "name": "Auberge du Soleil, Auberge Collection",
+    "area": "Rutherford",
+    "keys": 3,
+    "keysNote": "Three MICHELIN Keys ('Three MICHELIN Keys · An extraordinary stay') confirmed on the official 2026 MICHELIN Guide hotel page.",
+    "address": "180 Rutherford Hill Road, Rutherford, CA 94573",
+    "rooms": "50 rooms",
+    "rateFrom": "$7,401",
+    "rateNote": "Official MICHELIN Guide booking widget, 1 adult / 1 room, check-in 22 Dec 2026, check-out 23 Dec 2026: $7,401 starting rate, $8,525 total with taxes. Designed for adults; children under 16 not recommended. Rate varies by date and room type.",
+    "rateDate": "2026-12-22 to 2026-12-23",
+    "source": "https://guide.michelin.com/ca/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246",
+    "note": "Three MICHELIN Keys; in-house The Restaurant at Auberge du Soleil is a MICHELIN one-star venue. Rates are date-specific and were captured from the official booking widget on 24 Nov 2026."
+  },
+  {
+    "name": "Meadowood Napa Valley",
+    "area": "St. Helena",
+    "keys": 3,
+    "keysNote": "Three MICHELIN Keys ('Three MICHELIN Keys · An extraordinary stay') confirmed on the official 2026 MICHELIN Guide hotel page. Guest score 19.6/20.",
+    "address": "900 Meadowood Lane, St. Helena, CA 94574",
+    "rooms": "36 rooms",
+    "rateFrom": "$1,796",
+    "rateNote": "Official MICHELIN Guide booking widget, 1 adult / 1 room, check-in 22 Dec 2026, check-out 23 Dec 2026: $1,796 starting rate, $2,070 total with taxes. Rate varies by date and room type.",
+    "rateDate": "2026-12-22 to 2026-12-23",
+    "source": "https://guide.michelin.com/ca/en/hotels-stays/napa-sonoma-valleys/meadowood-napa-valley-8121",
+    "note": "Three MICHELIN Keys. Rates are date-specific and were captured from the official booking widget on 24 Nov 2026."
+  },
+  {
+    "name": "Rosewood Sand Hill",
+    "area": "Menlo Park",
+    "keys": 1,
+    "keysNote": "One MICHELIN Key ('One MICHELIN Key · A very special stay') confirmed on the official 2026 MICHELIN Guide hotel page.",
+    "address": "2825 Sand Hill Road, Menlo Park, CA 94025",
+    "rooms": "121 rooms",
+    "rateFrom": null,
+    "rateNote": "No starting rate displayed on the official MICHELIN Guide hotel page as of 24 Nov 2026; no guest score available yet. Rate not entered - leave blank/unverified.",
+    "rateDate": null,
+    "source": "https://guide.michelin.com/ca/en/hotels-stays/silicon-valley/rosewood-sand-hill-11406",
+    "note": "One MICHELIN Key. Rate and standardized nearby-restaurant counts are not verified; the page links nearby selection entries (e.g. Madera, Menlo Park) but none are part of the verified star roster."
+  }
 ]
