@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baymich2 — Michelin Restaurants by Category</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="emoji">&#127852;</span>Baymich2</a>
+    <div class="tagline">Michelin SF Bay Area &mdash; restaurants by category</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="restaurants.html?category=3-stars">3 Stars</a>
+      <a href="restaurants.html?category=2-stars">2 Stars</a>
+      <a href="restaurants.html?category=1-stars">1 Star</a>
+      <a href="restaurants.html?category=listed">Listed (no star)</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="executive-summary.html">Summary</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Q&amp;A</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section">
+      <h2 id="category-title">Restaurants</h2>
+      <p class="note-box">Tables load from the verified data file (<code>data/restaurants.json</code>). Filter by city or search name/cuisine. Every row links to its official MICHELIN detail page; unverified values are blank and flagged.</p>
+      <div id="restaurants-container">
+        <div class="empty">Loading restaurant data&#8230;</div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Baymich2 &middot; Verified against guide.michelin.com on 2026-11-24</div>
+    <div><a href="index.html" style="color:var(--muted);">&#8592; Back to home</a></div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+</body>
+</html>

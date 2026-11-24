@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baymich2 — Suggestions</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="emoji">&#127852;</span>Baymich2</a>
+    <div class="tagline">Suggestions &mdash review before implementing</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="restaurants.html?category=3-stars">3 Stars</a>
+      <a href="restaurants.html?category=2-stars">2 Stars</a>
+      <a href="restaurants.html?category=1-stars">1 Star</a>
+      <a href="restaurants.html?category=listed">Listed (no star)</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="executive-summary.html">Summary</a>
+      <a href="suggestions.html" class="active">Suggestions</a>
+      <a href="questions.html">Q&amp;A</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section">
+      <h1>Suggestions</h1>
+      <p class="note-box">Options to review and choose from before implementing the next phase. These are suggestions, not commitments.</p>
+
+      <h2>1. Publish scope (choose one)</h2>
+      <ul>
+        <li><strong>Option A &mdash; Starred only (recommended to ship first):</strong> Publish the 29 starred restaurants with full verification. They are complete, sourced, and high value. Defer listed-only (116) and hotels until verified.</li>
+        <li><strong>Option B &mdash; Starred + listed-only placeholder:</strong> Publish starred plus a listed-only index page showing names + official MICHELIN links, clearly marked unverified/blank. Good for completeness but lower data quality.</li>
+        <li><strong>Option C &mdash; Full:</strong> Publish starred + listed-only + hotels. Requires fetching 90+ more detail pages and hotel verification; not recommended before a first release.</li>
+      </ul>
+
+      <h2>2. Data gaps to close before publishing listed-only / hotels</h2>
+      <ul>
+        <li>Enumerate the remaining 94 listed-no-star restaurants (pages 2–4 of the MICHELIN index) and fetch their official detail pages.</li>
+        <li>Verify hotel addresses, distances and nearby-restaurant counts with geocoding.</li>
+        <li>Add Oakland/San Mateo/Marin hotels near Commis, Sun Moon Studio, Wakuriya and Madcap.</li>
+        <li>Confirm exact dollar cost for 2 adults from each restaurant's official menu (MICHELIN does not publish totals).</li>
+        <li>Find official YouTube/TikTok links (none found yet) or confirm absence.</li>
+        <li>Find Instagram for Compis and Madcap San Anselmo.</li>
+      </ul>
+
+      <h2>3. Site implementation suggestions</h2>
+      <ul>
+        <li>Keep GitHub Pages static HTML (no build step) &mdash; already mobile-friendly and fast.</li>
+        <li>Add client-side search/filter (already in app.js) so users can scan tables on phones.</li>
+        <li>Add a "Verified / Unverified" toggle so users can hide unverified rows.</li>
+        <li>Consider adding a map view (restaurants clustered by neighbourhood) once addresses are geocoded.</li>
+        <li>Add a "Last verified" date badge on each page so users know data freshness.</li>
+      </ul>
+
+      <h2>4. Suggested rollout order</h2>
+      <ol>
+        <li>Ship starred-restaurant pages + landing + executive summary (this data is complete).</li>
+        <li>Publish sources/verification page for audit transparency.</li>
+        <li>Close the listed-only and hotels data gaps (see Q&amp;A page).</li>
+        <li>Then publish listed-only and hotels as verified.</li>
+      </ol>
+
+      <div class="note-box warn-box"><strong>No manual input rule:</strong> All missing data must be found from official sources, not filled in by hand. Leave blanks and flag unverified until confirmed.</div>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Baymich2 &middot; Verified against guide.michelin.com on 2026-11-24</div>
+    <div><a href="questions.html" style="color:var(--muted);">See open questions &#8594;</a> &middot; <a href="index.html" style="color:var(--muted);">Back to home</a></div>
+  </div>
+</footer>
+</body>
+</html>

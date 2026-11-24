@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baymich2 — Questions, Information &amp; Answers</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="emoji">&#127852;</span>Baymich2</a>
+    <div class="tagline">Open questions, missing information &amp; how to resolve them</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="restaurants.html?category=3-stars">3 Stars</a>
+      <a href="restaurants.html?category=2-stars">2 Stars</a>
+      <a href="restaurants.html?category=1-stars">1 Star</a>
+      <a href="restaurants.html?category=listed">Listed (no star)</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="executive-summary.html">Summary</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html" class="active">Q&amp;A</a>
+      <a href="sources.html">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section">
+      <h1>Questions &amp; answers</h1>
+      <p class="note-box">Items to address before decisions, plus suggestions for discovering missing information. No manual input &mdash; everything must come from official sources.</p>
+
+      <div class="q-item">
+        <div class="q">Q1. Which listed-only (no-star) restaurants should be included?</div>
+        <div class="a"><strong>A:</strong> The guide lists 116 listed-no-star restaurants (30 Bib Gourmand + 86 Selected). Only a page-1 subset (22) is currently enumerated. <strong>Next:</strong> fetch MICHELIN index pages 2–4 and each restaurant's official detail page to build the full listed-only table.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q2. What is the real price for 2 adults at each restaurant?</div>
+        <div class="a"><strong>A:</strong> MICHELIN does not publish dollar totals. All priceFor2Adults values are blank/unverified. <strong>Next:</strong> check each restaurant's official menu and sum a representative two-person meal; leave blank unless confirmed from the official site.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q3. Are there official YouTube / TikTok links?</div>
+        <div class="a"><strong>A:</strong> None found on official sources for any restaurant; all left blank/unverified. Instagram verified for 28 of 29 starred restaurants. <strong>Next:</strong> search each restaurant's official website and social profiles for YouTube/TikTok; confirm Compis and Madcap Instagram too.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q4. Are hours/phones complete?</div>
+        <div class="a"><strong>A:</strong> Mostly yes for starred restaurants, but Commis, Saison, Sons &amp; Daughters, Birdsong hours and Nisei/Sun Moon Studio/Restaurant Naides phones were not fully captured and are flagged unverified. <strong>Next:</strong> re-fetch those official MICHELIN detail pages (higher chunk indices) or the restaurant's own site.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q5. How are hotels ranked, and is it trustworthy?</div>
+        <div class="a"><strong>A:</strong> Not yet trustworthy &mdash; it's a neighbourhood-cluster proxy, not verified geocoding. Hotel addresses/distances/counts are blank/unverified. <strong>Next:</strong> geocode each hotel and each starred restaurant, compute true distances, and re-rank. Add Oakland/San Mateo/Marin hotels.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q6. What about Napa/Sonoma starred venues (French Laundry, SingleThread)?</div>
+        <div class="a"><strong>A:</strong> Excluded &mdash; they're in MICHELIN's separate "Napa / Sonoma Valleys" area, not the "San Francisco and surroundings" view used here. <strong>Decision needed:</strong> include them as a separate "Extended Bay Area" section, or keep scope to SF/surroundings.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q7. How to keep data current?</div>
+        <div class="a"><strong>A:</strong> MICHELIN stars change annually (ceremony ~June). Add a "last verified" date and re-verify against guide.michelin.com after each ceremony. <strong>Next:</strong> set a reminder to re-verify at the next MICHELIN California ceremony.</div>
+      </div>
+
+      <div class="q-item">
+        <div class="q">Q8. How to handle unverified values?</div>
+        <div class="a"><strong>A:</strong> Per policy, leave blank and flag unverified; never infer. Show a "Verified / Unverified" filter so users can choose what to trust.</div>
+      </div>
+
+      <h2>Information still needed</h2>
+      <ul>
+        <li>Full listed-only restaurant enumeration (pages 2–4 of MICHELIN index).</li>
+        <li>Official detail pages for ~94 listed-no-star restaurants.</li>
+        <li>Hotel geocoding and true distances to starred restaurants.</li>
+        <li>Official 2-adult price totals from restaurant menus.</li>
+        <li>YouTube/TikTok official links (or confirmed absence).</li>
+        <li>Instagram for Compis and Madcap San Anselmo.</li>
+        <li>Missing hours/phones for Commis, Saison, Sons &amp; Daughters, Birdsong, Nisei, Sun Moon Studio, Restaurant Naides.</li>
+      </ul>
+
+      <p class="note-box warn-box"><strong>Discovery method:</strong> for each missing item, start at guide.michelin.com official detail pages, then the restaurant's official website, then official social profiles. Record every source URL; never fill in a value without a source.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Baymich2 &middot; Verified against guide.michelin.com on 2026-11-24</div>
+    <div><a href="suggestions.html" style="color:var(--muted);">Back to suggestions &#8594;</a> &middot; <a href="index.html" style="color:var(--muted);">Back to home</a></div>
+  </div>
+</footer>
+</body>
+</html>

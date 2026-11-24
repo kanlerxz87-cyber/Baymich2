@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baymich2 — Sources &amp; Verification</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="emoji">&#127852;</span>Baymich2</a>
+    <div class="tagline">Official sources and per-row verification trail</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="restaurants.html?category=3-stars">3 Stars</a>
+      <a href="restaurants.html?category=2-stars">2 Stars</a>
+      <a href="restaurants.html?category=1-stars">1 Star</a>
+      <a href="restaurants.html?category=listed">Listed (no star)</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="executive-summary.html">Summary</a>
+      <a href="suggestions.html">Suggestions</a>
+      <a href="questions.html">Q&amp;A</a>
+      <a href="sources.html" class="active">Sources</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <section class="section">
+      <h1>Sources &amp; verification</h1>
+      <p class="note-box">Every table row carries an official source link. Values that could not be confirmed from an official source are left blank and flagged unverified. Nothing was inferred. Verified 2026-11-24.</p>
+
+      <h2>Primary source &mdash; MICHELIN Guide</h2>
+      <ul>
+        <li><a class="link" href="https://guide.michelin.com/us/en/california/san-francisco/restaurants" target="_blank" rel="noopener">MICHELIN Guide &mdash; San Francisco and surroundings: restaurants index</a> (145 restaurants: 4×3★, 7×2★, 18×1★, 30 Bib Gourmand, 86 Selected)</li>
+        <li><a class="link" href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/3-stars-michelin" target="_blank" rel="noopener">3-star list</a></li>
+        <li><a class="link" href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/2-stars-michelin" target="_blank" rel="noopener">2-star list</a></li>
+        <li><a class="link" href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/1-star-michelin" target="_blank" rel="noopener">1-star list</a></li>
+        <li><a class="link" href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area" target="_blank" rel="noopener">MICHELIN hotel stays &mdash; San Francisco Bay Area</a></li>
+      </ul>
+
+      <h2>Starred restaurant detail pages (official MICHELIN)</h2>
+      <table class="small-table">
+        <thead><tr><th>Restaurant</th><th>Stars</th><th>Official MICHELIN detail page</th><th>Verified</th></tr></thead>
+        <tbody id="source-rows">
+          <tr><td colspan="4">Loading source data&#8230;</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Verification rules applied</h2>
+      <ul>
+        <li><strong>Source link per row:</strong> every restaurant row links to its official MICHELIN detail page (source column on category pages).</li>
+        <li><strong>Blank if unconfirmed:</strong> addresses, hours, phone, website, price-for-2-adults, social links that could not be confirmed are left blank and marked unverified.</li>
+        <li><strong>No inference:</strong> no prices, hours, distances or counts were guessed or computed unless stated as a proxy.</li>
+        <li><strong>Hotel ranking:</strong> neighbourhood-cluster proxy, not verified geocoding; hotel details unverified.</li>
+        <li><strong>Listed-only details:</strong> not verified from official detail pages; page-1 subset only.</li>
+      </ul>
+
+      <h2>Irregularities flagged for manual review</h2>
+      <ul>
+        <li>Niku Steakhouse closed Mar–May 2025 after a fire; reopened per restaurant announcement &mdash; hours flagged.</li>
+        <li>Secondary sources show conflicting dates (2026 vs June 2025 ceremony); only guide.michelin.com used.</li>
+        <li>Compis (chef's personal Instagram only) and Madcap San Anselmo (not searched) lack verified social links.</li>
+        <li>MICHELIN does not publish dollar totals for 2 adults &mdash; left blank.</li>
+        <li>No official YouTube/TikTok links found for any restaurant &mdash; left blank.</li>
+      </ul>
+
+      <p class="note-box warn-box"><strong>Manual review recommended:</strong> open the source links above and confirm each table row before publishing listed-only or hotels data. Starred-restaurant data is fully sourced from guide.michelin.com.</p>
+    </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>Baymich2 &middot; Verified against guide.michelin.com on 2026-11-24</div>
+    <div><a href="index.html" style="color:var(--muted);">&#8592; Back to home</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  fetch('data/restaurants.json')
+    .then(r=>{ if(!r.ok) throw new Error('Failed to load data'); return r.json(); })
+    .then(data=>{
+      const tbody = document.getElementById('source-rows');
+      let html = '';
+      data.restaurants.forEach(r=>{
+        html += '<tr>';
+        html += '<td>'+escapeHtml(r.name)+'</td>';
+        html += '<td>'+r.stars+'★</td>';
+        html += '<td><a class="link" href="'+escapeHtml(r.source)+'" target="_blank" rel="noopener">MICHELIN detail</a></td>';
+        html += '<td><span class="badge '+(r.hoursVerified && r.socialVerified ? 'badge-verified' : 'badge-unverified')+'">'+(r.hoursVerified && r.socialVerified ? 'verified' : 'partial/unverified')+'</span></td>';
+        html += '</tr>';
+      });
+      tbody.innerHTML = html;
+    })
+    .catch(err=>{
+      document.getElementById('source-rows').innerHTML = '<tr><td colspan="4" class="empty">Failed to load data: '+escapeHtml(err.message)+'</td></tr>';
+      console.error(err);
+    });
+  function escapeHtml(t){ if(t==null) return ''; var d=document.createElement('div'); d.textContent=String(t); return d.innerHTML; }
+})();
+</script>
+</body>
+</html>
