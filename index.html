@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Baymich2 — SF Bay Area Michelin Guide &amp; Map</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="logo">Baymich<span>2</span></div>
+    <nav class="nav" id="mainNav">
+      <a href="restaurants.html">Restaurants</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="clusters.html">Clusters</a>
+      <a href="pages/summary.html">Summary</a>
+      <a href="pages/suggestions.html">Suggestions</a>
+      <a href="pages/questions.html">Questions</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="page container">
+  <section class="hero">
+    <h1>SF Bay Area <span>Michelin</span> Guide &amp; Map</h1>
+    <p>An organized, mobile-friendly dashboard of Michelin-starred and
+    Michelin-recommended restaurants across the San Francisco Bay Area — with
+    verified pricing, hours, official links, social channels, and hotel
+    suggestions ranked by nearby Michelin density.</p>
+    <div class="badge-row">
+      <span class="badge star-3"><strong>3★</strong> Exceptional</span>
+      <span class="badge star-2"><strong>2★</strong> Excellent</span>
+      <span class="badge star-1"><strong>1★</strong> High quality</span>
+      <span class="badge bib"><strong>Bib</strong> Good value</span>
+    </div>
+    <p class="small" style="margin-top:12px">Source: MICHELIN Guide California 2026 official selection (revealed June 24, 2026). Every value is verified against official sources or left blank and flagged unverified.</p>
+    <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px">
+      <a href="restaurants.html" class="btn">View all restaurants</a>
+      <a href="hotels.html" class="btn btn-outline">View hotels</a>
+      <a href="pages/summary.html" class="btn btn-outline">Executive summary</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Dashboard</span> At a glance</h2>
+    <div class="dashboard" id="dashboardStats">
+      <div class="stat-card"><span class="value" id="statTotal">—</span><span class="label">Michelin-starred restaurants</span></div>
+      <div class="stat-card"><span class="value" id="stat3">—</span><span class="label">Three-star</span></div>
+      <div class="stat-card"><span class="value" id="stat2">—</span><span class="label">Two-star</span></div>
+      <div class="stat-card"><span class="value" id="stat1">—</span><span class="label">One-star</span></div>
+      <div class="stat-card"><span class="value" id="statRegions">—</span><span class="label">Regions covered</span></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Featured</span> Three-star restaurants</h2>
+    <p class="intro">The pinnacle of the Bay Area MICHELIN Guide. Full details, hours and pricing on the Restaurants page.</p>
+    <div class="card-grid" id="featured3"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Explore</span> What's inside</h2>
+    <div class="dashboard">
+      <div class="stat-card" style="text-align:left">
+        <div class="value" style="font-size:1.1rem">🗺️</div>
+        <div class="label">Clusters &amp; map — where Michelin restaurants concentrate</div>
+      </div>
+      <div class="stat-card" style="text-align:left">
+        <div class="value" style="font-size:1.1rem">🏨</div>
+        <div class="label">Hotels ranked by nearby Michelin restaurants</div>
+      </div>
+      <div class="stat-card" style="text-align:left">
+        <div class="value" style="font-size:1.1rem">📋</div>
+        <div class="label">Hours, days open, pricing &amp; social links per entry</div>
+      </div>
+      <div class="stat-card" style="text-align:left">
+        <div class="value" style="font-size:1.1rem">📄</div>
+        <div class="label">Summary, suggestions &amp; open questions</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Data integrity</span> Verification standard</h2>
+    <p class="intro">Every table row carries a link to its official MICHELIN Guide page. If a value cannot be confirmed from an official source, it is left blank and flagged <strong>unverified</strong>. No values are inferred or fabricated. Estimated totals for two adults are derived only from the official MICHELIN price symbol ($–$$$$) and are labelled "(est.)".</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">Baymich2 · SF Bay Area Michelin Guide · Data: MICHELIN Guide California 2026 (guide.michelin.com). Built as a static, mobile-friendly dashboard.</div>
+</footer>
+<script src="js/data.js"></script>
+<script>
+(function(){
+  const r = window.RESTAURANTS || [];
+  const total = r.length;
+  const n3 = r.filter(x=>x.stars===3).length;
+  const n2 = r.filter(x=>x.stars===2).length;
+  const n1 = r.filter(x=>x.stars===1).length;
+  const regions = new Set(r.map(x=>x.region)).size;
+  document.getElementById('statTotal').textContent = total;
+  document.getElementById('stat3').textContent = n3;
+  document.getElementById('stat2').textContent = n2;
+  document.getElementById('stat1').textContent = n1;
+  document.getElementById('statRegions').textContent = regions;
+  // featured 3-star cards
+  const grid = document.getElementById('featured3');
+  const top3 = r.filter(x=>x.stars===3);
+  grid.innerHTML = top3.map(x=>{
+    const h = window.Baymich || {};
+    return '<div class="entry-card">'+
+      '<h3>'+(window.Baymich.escapeHtml(x.name))+'</h3>'+
+      '<div class="meta"><span class="region-tag">'+(window.Baymich.escapeHtml(x.region))+'</span> '+
+      '<span class="stars" style="color:'+(x.stars===3?'var(--star-3)':x.stars===2?'var(--star-2)':'var(--star-1)')+';">'+(x.stars?x.stars+'★':'')+'</span></div>'+
+      '<div class="price">'+(window.Baymich.escapeHtml(x.michelinPrice||'—'))+' · '+(window.Baymich.escapeHtml(x.estPrice2Adults||'price unverified'))+'</div>'+
+      '<p>'+(window.Baymich.escapeHtml(x.cuisine||''))+'</p>'+
+      '<div class="links">'+
+        (x.website?'<a href="'+x.website+'" target="_blank">Official site</a>':'')+
+        (x.source?'<a href="'+x.source+'" target="_blank">MICHELIN</a>':'')+
+      '</div>'+
+    '</div>';
+  }).join('');
+  // mobile nav toggle
+  const btn=document.getElementById('menuBtn'), nav=document.getElementById('mainNav');
+  btn.addEventListener('click',()=>nav.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

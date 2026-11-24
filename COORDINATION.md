@@ -19,8 +19,8 @@ Base URL (live site): GitHub Pages — TBD (repo must be enabled for Pages)
 |---|------|--------|---------------|---------------|------------------------|----------------|
 | 1 | Create COORDINATION.md task board | done | session-arena-e1428a33 | COORDINATION.md | — | — |
 | 2 | Scaffold repo (README, site structure, GitHub Pages config) | in progress | session-arena-e1428a33 | README.md, index.html, assets/, _config.yml (if Jekyll) | — | — |
-| 3 | Research Michelin Guide SF Bay Area starred restaurants (official michelin guide) | unclaimed | — | data/restaurants.md | guide.michelin.com | — |
-| 4 | Research Michelin recommended (Bib Gourmand / selected) restaurants | unclaimed | — | data/restaurants.md | guide.michelin.com | — |
+| 3 | Research Michelin Guide SF Bay Area starred restaurants (official michelin guide, 2026 selection) | in progress | session-arena-e1428a33 | data/restaurants.json | guide.michelin.com (2026 ceremony article, June 24 2026) | IRREGULARITY: initial "kiln" fetch returned LONDON Kiln; corrected to SF Kiln at guide.michelin.com/.../san-francisco/restaurant/kiln-1210355. Using official 2026 as current (2025 list differs: Chez Noir, Hilda & Jesse, Kenzo, Le Comptoir, Mister Jiu's, O' by Claude, Osito, San Ho Won, The Shota, State Bird Provisions dropped from 2026 starred list). 40/40 Bay Area starred fetched & verified. |
+| 4 | Research Michelin Bib Gourmand restaurants (2026 selection) | in progress | session-arena-e1428a33 | data/restaurants.json | guide.michelin.com / michelin.com 2026 product page | — |
 | 5 | Research hotel clusters near Michelin restaurants & rank hotels | unclaimed | — | data/hotels.md | official hotel sites | — |
 | 6 | Gather pricing, hours, days open, social links (YT/TT/IG) per entry | unclaimed | — | data/restaurants.md | official site + social | — |
 | 7 | Build mobile-friendly dashboard site (tables + analysis) | unclaimed | — | *.html, css/, js/ | — | — |

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotels Ranked by Michelin Density — Baymich2</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="logo"><a href="../index.html">Baymich<span>2</span></a></div>
+    <nav class="nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="hotels.html" class="active">Hotels</a>
+      <a href="clusters.html">Clusters</a>
+      <a href="../pages/summary.html">Summary</a>
+      <a href="../pages/suggestions.html">Suggestions</a>
+      <a href="../pages/questions.html">Questions</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="page container">
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Hotels</span> Ranked by nearby Michelin restaurants</h2>
+    <p class="intro">Hotels are ranked by how many MICHELIN-starred / recommended restaurants are around them in the
+    San Francisco Bay Area (wine-country clusters and the San Francisco cluster). "Nearby" means within the same town
+    or a short drive within the cluster — it is an analytical grouping, not a guaranteed distance.</p>
+    <p class="small">MICHELIN Keys (3 = “Extraordinary stay”, 2 = “Exceptional stay”, 1 = “Very special stay”) are from the official MICHELIN Guide hotel selection.</p>
+    <div class="table-wrap">
+      <div id="hotelTable">Loading…</div>
+    </div>
+    <p class="small source" style="margin-top:10px">Sources: MICHELIN Guide Hotels (guide.michelin.com/hotels), sftravel.com Michelin Key Hotels guide, Sonoma Magazine. Hotel nightly rates change frequently — blank/unverified rates are not confirmed from an official source.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="container">Baymich2 · SF Bay Area Michelin Guide · Mobile-friendly dashboard</div>
+</footer>
+<script src="../js/data.js"></script>
+<script src="../js/hotels.js"></script>
+<script src="../js/app.js"></script>
+<script>
+(function(){
+  const h = window.HOTELS || [];
+  const sorted = h.slice().sort((a,b)=>(a.rank||999)-(b.rank||999));
+  const container = document.getElementById('hotelTable');
+  let rows='';
+  for(const x of sorted){
+    rows+='<tr>';
+    rows+='<td><strong>'+window.Baymich.escapeHtml(x.name)+'</strong><br><span class="small">Rank #'+x.rank+'</span></td>';
+    rows+='<td>'+window.Baymich.escapeHtml(x.location)+'</td>';
+    rows+='<td>'+window.Baymich.escapeHtml(x.address)+'</td>';
+    rows+='<td>'+window.Baymich.escapeHtml(x.michelinKeys||'—')+' '+(x.keysNote?'<span class="small">('+window.Baymich.escapeHtml(x.keysNote)+')</span>':'')+'</td>';
+    rows+='<td class="price-cell">'+window.Baymich.escapeHtml(x.price||'—')+'</td>';
+    rows+='<td>'+window.Baymich.escapeHtml(x.nearbyMichelin)+'</td>';
+    rows+='<td>'+window.Baymich.escapeHtml(x.nearbyCount)+'</td>';
+    rows+='<td class="web-cell">'+(x.website?'<a href="'+x.website+'" target="_blank" rel="noopener">Official / MICHELIN</a>':'<span class="blank">—</span>')+'</td>';
+    rows+='<td class="small">'+window.Baymich.escapeHtml(x.source||'')+'</td>';
+    rows+='</tr>';
+  }
+  container.innerHTML='<table><thead><tr>'+
+    '<th>Hotel</th><th>Location</th><th>Address</th><th>MICHELIN Keys</th>'+
+    '<th>Price (per night)</th><th>Michelin restaurants nearby</th>'+
+    '<th>Cluster density</th><th>Official link</th><th>Source</th>'+
+    '</tr></thead><tbody>'+rows+'</tbody></table>';
+  const why=document.createElement('div');
+  why.className='section';
+  why.innerHTML='<h2 class="section-title"><span class="kicker">Ranking rationale</span> Why this order</h2>'+
+    sorted.map(x=>'<div class="sugg-item"><div class="num">#'+x.rank+'</div>'+
+      '<div><div class="q" style="font-weight:700;color:var(--text)">'+window.Baymich.escapeHtml(x.name)+' ('+window.Baymich.escapeHtml(x.location)+')</div>'+
+      '<p style="font-size:0.88rem;color:var(--text-muted);margin:0">'+window.Baymich.escapeHtml(x.rankWhy)+'</p></div></div>').join('');
+  container.parentNode.insertBefore(why, container.nextSibling);
+})();
+</script>
+</body>
+</html>

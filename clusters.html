@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Michelin Clusters &amp; Map — Baymich2</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <div class="logo"><a href="../index.html">Baymich<span>2</span></a></div>
+    <nav class="nav" id="mainNav">
+      <a href="../index.html">Home</a>
+      <a href="restaurants.html">Restaurants</a>
+      <a href="hotels.html">Hotels</a>
+      <a href="clusters.html" class="active">Clusters</a>
+      <a href="../pages/summary.html">Summary</a>
+      <a href="../pages/suggestions.html">Suggestions</a>
+      <a href="../pages/questions.html">Questions</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main class="page container">
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Clusters</span> Where Michelin restaurants concentrate</h2>
+    <p class="intro">Michelin-starred restaurants in the Bay Area are not spread evenly — they cluster in a few
+    geographic areas. Use this to plan where to stay (see Hotels page) and which areas to group for a single trip.</p>
+    <div class="dashboard" id="clusterStats"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Map concept</span> Bay Area Michelin clusters</h2>
+    <div class="map-placeholder">
+      <p><strong>Interactive map placeholder.</strong> A production version would plot each restaurant's coordinates
+      (from its official MICHELIN page) on a Leaflet/Google Map, filterable by star level.</p>
+      <p class="small">Cluster pins: San Francisco · Napa/Sonoma · Peninsula/South Bay · East Bay (Oakland) · Marin · Mendocino Coast · Sacramento (extended)</p>
+    </div>
+    <div class="card-grid" id="clusterCards"></div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title"><span class="kicker">Cluster detail</span> Restaurants by area</h2>
+    <div id="clusterList"></div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">Baymich2 · SF Bay Area Michelin Guide · Mobile-friendly dashboard</div>
+</footer>
+<script src="../js/data.js"></script>
+<script>
+(function(){
+  const r = window.RESTAURANTS || [];
+  const byRegion = {};
+  for (const x of r) {
+    if (!byRegion[x.region]) byRegion[x.region] = [];
+    byRegion[x.region].push(x);
+  }
+  const order = ["San Francisco","Napa","Sonoma","Peninsula","South Bay","East Bay","Marin","Mendocino","Sacramento (extended)"];
+  const regions = order.filter(o=>byRegion[o]).concat(Object.keys(byRegion).filter(k=>!order.includes(k)));
+
+  // stats
+  const stats = document.getElementById('clusterStats');
+  stats.innerHTML = regions.map(reg=>{
+    const arr = byRegion[reg];
+    const stars3 = arr.filter(x=>x.stars===3).length;
+    const stars2 = arr.filter(x=>x.stars===2).length;
+    const stars1 = arr.filter(x=>x.stars===1).length;
+    return '<div class="stat-card" style="text-align:left">'+
+      '<div class="value" style="font-size:1.15rem">'+arr.length+'</div>'+
+      '<div class="label" style="font-size:0.82rem">'+window.Baymich.escapeHtml(reg)+' ('+stars3+'★★★ / '+stars2+'★★ / '+stars1+'★)</div>'+
+    '</div>';
+  }).join('');
+
+  // cards
+  const grid = document.getElementById('clusterCards');
+  grid.innerHTML = regions.map(reg=>{
+    const arr = byRegion[reg];
+    return '<div class="entry-card">'+
+      '<h3 style="font-size:1.05rem">'+window.Baymich.escapeHtml(reg)+'</h3>'+
+      '<div class="meta" style="font-size:0.8rem;color:var(--text-muted)"><strong>'+arr.length+'</strong> Michelin entries</div>'+
+      '<p style="font-size:0.8rem;color:var(--text-muted);margin:6px 0">'+arr.map(x=>window.Baymich.escapeHtml(x.name)+(x.stars?' ('+x.stars+'★)':'')).join(', ')+'</p>'+
+      '</div>';
+  }).join('');
+
+  // detail list
+  const list = document.getElementById('clusterList');
+  list.innerHTML = regions.map(reg=>{
+    const arr = byRegion[reg];
+    const items = arr.map(x=>{
+      const stars = x.stars?Array(x.stars).fill('★').join('')+(x.stars===3?' 3-star':x.stars===2?' 2-star':' 1-star'):'Listed';
+      return '<li style="margin:4px 0;font-size:0.9rem"><strong>'+window.Baymich.escapeHtml(x.name)+'</strong> — '+window.Baymich.escapeHtml(x.city)+' ('+window.Baymich.escapeHtml(stars)+')</li>';
+    }).join('');
+    return '<h3 style="margin:14px 0 6px">'+window.Baymich.escapeHtml(reg)+'</h3><ul style="margin-bottom:10px">'+items+'</ul>';
+  }).join('');
+
+  const btn=document.getElementById('menuBtn'), nav=document.getElementById('mainNav');
+  btn.addEventListener('click',()=>nav.classList.toggle('open'));
+})();
+</script>
+</body>
+</html>

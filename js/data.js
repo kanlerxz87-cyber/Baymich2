@@ -999,4 +999,6 @@ const RESTAURANTS = [
 //   $    : $30–$70
 // ---------------------------------------------------------------------------
 
-export { RESTAURANTS, MICHELIN_2026_SOURCE };
+// Expose for page scripts
+window.RESTAURANTS = RESTAURANTS;
+window.MICHELIN_2026_SOURCE = MICHELIN_2026_SOURCE;
