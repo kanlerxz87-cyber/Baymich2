@@ -4,6 +4,8 @@
     "city": "San Francisco",
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/atelier-crenn",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "3127 Fillmore St., San Francisco, CA 94123",
     "phone": "+1 415-440-0462",
     "restaurantUrl": "https://www.ateliercrenn.com/",
@@ -17,6 +19,8 @@
     "city": "San Francisco",
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "22 Hawthorne St., San Francisco, CA 94105",
     "phone": "+1 415-685-4860",
     "restaurantUrl": "https://www.benusf.com/",
@@ -30,6 +34,8 @@
     "city": "San Francisco",
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "355 11th St., San Francisco, CA 94103",
     "phone": "+1 415-757-0994",
     "restaurantUrl": "https://www.californiossf.com/",
@@ -43,6 +49,8 @@
     "city": "San Francisco",
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "470 Pacific Ave., San Francisco, CA 94133",
     "phone": "+1 415-775-8500",
     "restaurantUrl": "https://www.quincerestaurant.com/",
@@ -58,13 +66,17 @@
     "michelinUrl": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
     "hours": "Wednesday–Saturday 5:30–8:00 pm; Sunday–Tuesday closed",
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
-    "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos"
+    "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "SingleThread",
     "city": "Healdsburg",
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "131 North St., Healdsburg, CA 95448",
     "phone": "+1 707-723-4646",
     "restaurantUrl": "https://www.singlethreadfarms.com/",
@@ -75,6 +87,8 @@
     "city": "Yountville",
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "6640 Washington St., Yountville, CA 94599",
     "phone": "+1 707-944-2380",
     "restaurantUrl": "https://www.thomaskeller.com/tfl",
@@ -91,13 +105,17 @@
     "hours": "Tuesday–Saturday 5:30–9:45 pm; Sunday–Monday closed",
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Birdsong",
     "city": "San Francisco",
     "stars": 2,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "1085 Mission St., San Francisco, CA 94103",
     "phone": "+1 415-369-9161",
     "restaurantUrl": "https://www.birdsongsf.com/",
@@ -113,13 +131,17 @@
     "hours": "Tuesday–Saturday, 5:00–9:30 pm; Sunday–Monday closed",
     "hoursNote": "MICHELIN profile hours; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Kiln",
     "city": "San Francisco",
     "stars": 2,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "149 Fell St., San Francisco, CA 94102",
     "phone": "+1 415-982-9722",
     "restaurantUrl": "https://www.kilnsf.com/",
@@ -130,6 +152,8 @@
     "city": "San Francisco",
     "stars": 2,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
     "address": "3416 19th St., San Francisco, CA 94110",
     "phone": "+1 415-874-9921",
     "restaurantUrl": "https://www.lazybearsf.com/",
@@ -142,97 +166,129 @@
     "name": "Saison",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Sons & Daughters",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "7 Adams",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/7-adams"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/7-adams",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Angler SF",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/angler-sf"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/angler-sf",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Hilda and Jesse",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/hilda-and-jesse"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/hilda-and-jesse",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Kin Khao",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kin-khao"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kin-khao",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Mister Jiu’s",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Naides",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/naides"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/naides",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Nari",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nari"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nari",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Niku Steakhouse",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/niku-steakhouse"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/niku-steakhouse",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Nisei",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nisei"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nisei",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "San Ho Won",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/san-ho-won"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/san-ho-won",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Sorrel",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sorrel"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sorrel",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Ssal",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/ssal"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/ssal",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "State Bird Provisions",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/state-bird-provisions"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/state-bird-provisions",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "The Progress",
     "city": "San Francisco",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/the-progress"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/the-progress",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Wolfsbane",
@@ -241,78 +297,104 @@
     "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane",
     "hours": "Tuesday–Saturday 5:30–10:00 pm; Sunday–Monday closed",
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
-    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane"
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Sun Moon Studio",
     "city": "Oakland",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/sun-moon-studio"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/sun-moon-studio",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Selby’s",
     "city": "Atherton",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/atherton/restaurant/selby-s"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/atherton/restaurant/selby-s",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Protégé",
     "city": "Palo Alto",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/palo-alto/restaurant/protege"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/palo-alto/restaurant/protege",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Wakuriya",
     "city": "San Mateo",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-mateo/restaurant/wakuriya"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-mateo/restaurant/wakuriya",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Madcap",
     "city": "San Anselmo",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-anselmo/restaurant/madcap"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-anselmo/restaurant/madcap",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Plumed Horse",
     "city": "Saratoga",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/saratoga/restaurant/plumed-horse"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/saratoga/restaurant/plumed-horse",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "The Village Pub",
     "city": "Woodside",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/woodside/restaurant/the-village-pub"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/woodside/restaurant/the-village-pub",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Troubadour",
     "city": "Healdsburg",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/troubadour"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/troubadour",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Cyrus",
     "city": "Geyserville",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/geyserville/restaurant/cyrus"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/geyserville/restaurant/cyrus",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Auro",
     "city": "Calistoga",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/calistoga/restaurant/auro"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/calistoga/restaurant/auro",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Auberge du Soleil",
     "city": "Rutherford",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/rutherford/restaurant/auberge-du-soleil"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/rutherford/restaurant/auberge-du-soleil",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Press",
     "city": "St. Helena",
     "stars": 1,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   }
 ]
