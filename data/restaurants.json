@@ -3,25 +3,73 @@
     "name": "Atelier Crenn",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn",
+    "address": "3127 Fillmore St., San Francisco, CA 94123",
+    "price": "$$$$",
+    "site": "https://www.ateliercrenn.com/",
+    "hours": "Tuesday–Saturday 4:45–8:45 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn",
+      "https://www.ateliercrenn.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Benu",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+    "address": "22 Hawthorne St., San Francisco, CA 94105",
+    "price": "$$$$",
+    "site": "https://www.benusf.com/",
+    "hours": "Wednesday–Saturday 5–8 pm (Fri–Sat to 8:30 pm); Sunday–Tuesday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+      "https://www.benusf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Californios",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+    "address": "355 11th St., San Francisco, CA 94103",
+    "price": "$$$$",
+    "site": "https://www.californiossf.com/",
+    "hours": "Tuesday–Saturday 5–10 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+      "https://www.californiossf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Quince",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+    "address": "470 Pacific Ave., San Francisco, CA 94133",
+    "price": "$$$$",
+    "site": "https://www.quincerestaurant.com/",
+    "hours": "Tuesday–Thursday 5–9 pm; Friday–Saturday 11:30 am–1 pm and 5–9 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+      "https://www.quincerestaurant.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Enclos",
@@ -29,20 +77,49 @@
     "stars": 3,
     "michelinUrl": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
     "hours": "Wednesday–Saturday 5:30–8:00 pm; Sunday–Tuesday closed",
-    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
-    "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos"
+    "hoursNote": "Hours from prior session; not re-confirmed on MICHELIN profile in the 2026-11-24 pass (chunk truncated). Treat as unverified until re-checked.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
+    "address": "139 E. Napa St., Sonoma, CA 95476",
+    "price": "$$$$",
+    "site": "https://enclos-sonoma.com/",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
+      "https://enclos-sonoma.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "SingleThread",
     "city": "Healdsburg",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread",
+    "address": "131 North St., Healdsburg, CA 95448",
+    "price": "$$$$",
+    "site": "https://www.singlethreadfarms.com/",
+    "hoursNote": "Hours not captured on 2026-11-24; treat as unverified.",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread",
+      "https://www.singlethreadfarms.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "The French Laundry",
     "city": "Yountville",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry",
+    "address": "6640 Washington St., Yountville, CA 94599",
+    "price": "$$$$",
+    "site": "https://www.thomaskeller.com/tfl",
+    "hoursNote": "Hours not captured on 2026-11-24; treat as unverified.",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry",
+      "https://www.thomaskeller.com/tfl"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Acquerello",
@@ -53,15 +130,36 @@
     "menuUrl": "https://www.acquerellosf.com/seasonal-tasting-menu",
     "restaurantUrl": "https://www.acquerellosf.com/",
     "hours": "Tuesday–Saturday 5:30–9:45 pm; Sunday–Monday closed",
-    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
+    "address": "1722 Sacramento St., San Francisco, CA 94109",
+    "price": "$$$$",
+    "site": "https://www.acquerellosf.com/",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
+      "https://www.acquerellosf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Birdsong",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+    "address": "1085 Mission St., San Francisco, CA 94103",
+    "price": "$$$$",
+    "site": "https://www.birdsongsf.com/",
+    "hours": "Tuesday–Thursday 5:30–8 pm; Friday–Saturday 5–8:30 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+      "https://www.birdsongsf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Commis",
@@ -76,25 +174,69 @@
     "name": "Kiln",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355",
+    "address": "149 Fell St., San Francisco, CA 94102",
+    "price": "$$$$",
+    "site": "https://www.kilnsf.com/",
+    "hoursNote": "Hours not captured on 2026-11-24 (MICHELIN location widget obscured); treat as unverified.",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355",
+      "https://www.kilnsf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Lazy Bear",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+    "address": "3416 19th St., San Francisco, CA 94110",
+    "price": "$$$$",
+    "site": "https://www.lazybearsf.com/",
+    "hours": "Tuesday–Saturday 5–11 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+      "https://www.lazybearsf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Saison",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison",
+    "address": "178 Townsend St., San Francisco, CA 94107",
+    "price": "$$$$",
+    "site": "https://www.saisonsf.com/",
+    "hours": "Tuesday–Saturday 5–9:30 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours, captured 2026-11-24. Holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison",
+      "https://www.saisonsf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "Sons & Daughters",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters",
+    "address": "2875 18th St., San Francisco, CA 94110",
+    "price": "$$$$",
+    "site": "https://www.sonsanddaughterssf.com/",
+    "hoursNote": "Hours not captured on 2026-11-24; treat as unverified.",
+    "verifiedOn": "2026-11-24",
+    "verifiedSources": [
+      "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters",
+      "https://www.sonsanddaughterssf.com/"
+    ],
+    "verificationNote": "Stars, address, price level and website confirmed on the official MICHELIN profile page (star icons counted) on 2026-11-24."
   },
   {
     "name": "7 Adams",
