@@ -6,6 +6,13 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
+| Repo review: line-by-line verification of existing data and irregularity flags | in progress | `arena/0d407371-baymich2` | `data/restaurants.json` (existing rows, verification fields only), `data/flags.json` |
+| Expanded Bay Area Michelin dataset: starred, Bib Gourmand, Selected; 2-adult total pricing; hours; social links | in progress | `arena/0d407371-baymich2` | `data/restaurants.json`, `data/sources.json` |
+| Hotel selection and restaurant-density ranking (radius and method stated) | in progress | `arena/0d407371-baymich2` | `data/hotels.json` |
+| Activities with official links, hours and social links | in progress | `arena/0d407371-baymich2` | `data/activities.json` |
+| Multi-page site: landing page, category subpages, map/clusters, summary, questions, suggestions, flagged review | in progress | `arena/0d407371-baymich2` | `index.html`, `*.html` subpages, `styles.css`, `app.js`, `README.md` |
+
+Scope note (2026-11-24, session `arena/0d407371-baymich2`): this session is the only active session with open claims. Arena requires all work on branch `arena/0d407371-baymich2`; the `session-<id>/<task>` branch naming in the protocol is therefore not used. This session also performs the integration step for its own outputs, and records that in the log.
 
 ## Log
 
@@ -14,6 +21,8 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
 - 2026-11-24 — Validation passed: JSON parsed; 41 unique restaurant records and 4 hotel records; 7/7/27 star counts; every restaurant has an official MICHELIN profile URL; every hotel has an official MICHELIN profile URL; `node --check app.js` passed; local HTTP smoke test returned 200 for the index, CSS, JS, and both JSON files.
 - 2026-11-24 — PR #3 merged to `main` (merge commit `65175a55f10ab8fde38242c9f0e96da07425c892`). GitHub Pages build/deploy run `45360018248` succeeded; public page verified with the live 41-row restaurant index at https://kanlerxz87-cyber.github.io/Baymich2/.
+
+- 2026-11-24 — Session `arena/0d407371-baymich2` claimed the five tasks above (repo review, expanded restaurant dataset, hotel ranking, activities, multi-page site). Files in scope are listed in the table. No conflicting claims were present on `origin/main` at claim time (HEAD `c7849d2`).
 
 ## Source record, verification and irregularities
 
