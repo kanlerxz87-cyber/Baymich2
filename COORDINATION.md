@@ -6,6 +6,7 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
+| Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | in progress | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
 
 ## Log
 
@@ -14,6 +15,17 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
 - 2026-11-24 — Validation passed: JSON parsed; 41 unique restaurant records and 4 hotel records; 7/7/27 star counts; every restaurant has an official MICHELIN profile URL; every hotel has an official MICHELIN profile URL; `node --check app.js` passed; local HTTP smoke test returned 200 for the index, CSS, JS, and both JSON files.
 - 2026-11-24 — PR #3 merged to `main` (merge commit `65175a55f10ab8fde38242c9f0e96da07425c892`). GitHub Pages build/deploy run `45360018248` succeeded; public page verified with the live 41-row restaurant index at https://kanlerxz87-cyber.github.io/Baymich2/.
+
+- 2026-11-24 — Session e3632548 (branch `arena/e3632548-baymich2`) claimed restaurant profile verification pass 1. Repo review: branch matched `main` at c7849d2 (PR #4) and the working tree was clean. Protocol note: this board prescribes `session-<id>/<task>` branches, but Arena assigns one branch per session, so this session works on its assigned branch only and touches only the files in its claimed scope.
+- 2026-11-24 — Read 9 official MICHELIN profile pages in full (Atelier Crenn, Benu, Californios, Quince, SingleThread, The French Laundry, Birdsong, Kiln, Lazy Bear). Added address, phone, official venue website and hours for the 6 whose hours were visible in the profile. Hours were not in the captured part of the profile for SingleThread, The French Laundry and Kiln, so they remain blank.
+
+## Irregularities flagged for review (session e3632548)
+
+- Repo log says PR #3 merged at 65175a5 and the Pages build ran at 45360018248. These hashes are not in the current branch history, which shows only the PR #4 merge (c7849d2); confirm on GitHub before relying on either.
+- The Michelin article states 83 starred restaurants statewide for 2026. The dataset holds 41 Bay Area and adjacent entries, a boundary set by the previous session rather than by Michelin.
+- Michelin's profile URLs are in `/ca/en/` and `/us/en/` forms. Both load the same profile; the us/en URL is used for Atelier Crenn, which redirected.
+- Acquerello's $731.60 figure reconciles to 2 × $295 × 1.24 (20% service plus 4% surcharge on the menu base). Tax and beverages excluded.
+- Many hours, prices, social links and all activities remain unverified (see the Flagged for Review page).
 
 ## Source record, verification and irregularities
 

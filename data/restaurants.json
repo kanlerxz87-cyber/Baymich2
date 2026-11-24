@@ -3,25 +3,53 @@
     "name": "Atelier Crenn",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn"
+    "michelinUrl": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/atelier-crenn",
+    "address": "3127 Fillmore St., San Francisco, CA 94123",
+    "phone": "+1 415-440-0462",
+    "restaurantUrl": "https://www.ateliercrenn.com/",
+    "hours": "Tuesday–Saturday 4:45–8:45 pm; Monday & Sunday closed",
+    "hoursSource": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/atelier-crenn",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)",
+    "hoursNote": "Hours from official MICHELIN profile; holiday/exception schedules not confirmed."
   },
   {
     "name": "Benu",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+    "address": "22 Hawthorne St., San Francisco, CA 94105",
+    "phone": "+1 415-685-4860",
+    "restaurantUrl": "https://www.benusf.com/",
+    "hours": "Wednesday–Thursday 5–8 pm; Friday–Saturday 5–8:30 pm; Sunday–Tuesday closed",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)",
+    "hoursNote": "Hours from official MICHELIN profile; holiday/exception schedules not confirmed."
   },
   {
     "name": "Californios",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+    "address": "355 11th St., San Francisco, CA 94103",
+    "phone": "+1 415-757-0994",
+    "restaurantUrl": "https://www.californiossf.com/",
+    "hours": "Tuesday–Saturday 5–10 pm; Sunday–Monday closed",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)",
+    "hoursNote": "Hours from official MICHELIN profile; holiday/exception schedules not confirmed."
   },
   {
     "name": "Quince",
     "city": "San Francisco",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+    "address": "470 Pacific Ave., San Francisco, CA 94133",
+    "phone": "+1 415-775-8500",
+    "restaurantUrl": "https://www.quincerestaurant.com/",
+    "hours": "Tuesday–Thursday 5–9 pm; Friday–Saturday 11:30 am–1 pm and 5–9 pm; Sunday–Monday closed",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)",
+    "hoursNote": "Hours from official MICHELIN profile; holiday/exception schedules not confirmed."
   },
   {
     "name": "Enclos",
@@ -36,13 +64,21 @@
     "name": "SingleThread",
     "city": "Healdsburg",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread",
+    "address": "131 North St., Healdsburg, CA 95448",
+    "phone": "+1 707-723-4646",
+    "restaurantUrl": "https://www.singlethreadfarms.com/",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "The French Laundry",
     "city": "Yountville",
     "stars": 3,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry",
+    "address": "6640 Washington St., Yountville, CA 94599",
+    "phone": "+1 707-944-2380",
+    "restaurantUrl": "https://www.thomaskeller.com/tfl",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Acquerello",
@@ -61,7 +97,14 @@
     "name": "Birdsong",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+    "address": "1085 Mission St., San Francisco, CA 94103",
+    "phone": "+1 415-369-9161",
+    "restaurantUrl": "https://www.birdsongsf.com/",
+    "hours": "Tuesday–Thursday 5:30–8 pm; Friday–Saturday 5–8:30 pm; Sunday–Monday closed",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)",
+    "hoursNote": "Hours from official MICHELIN profile; holiday/exception schedules not confirmed."
   },
   {
     "name": "Commis",
@@ -76,13 +119,24 @@
     "name": "Kiln",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355",
+    "address": "149 Fell St., San Francisco, CA 94102",
+    "phone": "+1 415-982-9722",
+    "restaurantUrl": "https://www.kilnsf.com/",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Lazy Bear",
     "city": "San Francisco",
     "stars": 2,
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+    "address": "3416 19th St., San Francisco, CA 94110",
+    "phone": "+1 415-874-9921",
+    "restaurantUrl": "https://www.lazybearsf.com/",
+    "hours": "Tuesday–Saturday 5–11 pm; Sunday–Monday closed",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)",
+    "hoursNote": "Hours from official MICHELIN profile; holiday/exception schedules not confirmed."
   },
   {
     "name": "Saison",
