@@ -1,12 +1,13 @@
 # Shared task board
 
-Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the branch assigned by Arena).
+Session ID: `arena/e5e158a9-baymich2` (current Arena branch; work remains on the branch assigned by Arena).
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
 | Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | in progress | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
+| Official 2026 Bib Gourmand roster and standalone category page prototypes | in progress | `arena/e5e158a9-baymich2` | `COORDINATION.md`, `data/bib-gourmand.json`, `restaurants.html`, `restaurants-page.js`, `category-pages.css`, `hotels.html`, `activities.html`, `planning.html` |
 
 ## Log
 
@@ -15,6 +16,8 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
 - 2026-11-24 — Validation passed: JSON parsed; 41 unique restaurant records and 4 hotel records; 7/7/27 star counts; every restaurant has an official MICHELIN profile URL; every hotel has an official MICHELIN profile URL; `node --check app.js` passed; local HTTP smoke test returned 200 for the index, CSS, JS, and both JSON files.
 - 2026-11-24 — PR #3 merged to `main` (merge commit `65175a55f10ab8fde38242c9f0e96da07425c892`). GitHub Pages build/deploy run `45360018248` succeeded; public page verified with the live 41-row restaurant index at https://kanlerxz87-cyber.github.io/Baymich2/.
+- 2026-11-24 — Claimed the official 2026 Bib Gourmand roster and standalone category page prototypes on active Arena branch `arena/e5e158a9-baymich2`. Scope is limited to `data/bib-gourmand.json`, `restaurants.html`, `restaurants-page.js`, `category-pages.css`, `hotels.html`, `activities.html`, `planning.html`, and this board. The 2026 star and Bib Gourmand source articles were checked directly at MICHELIN Guide; expansion and regression checks are in progress.
+- 2026-11-24 — `git pull --rebase origin main` exposed new work from session `e3632548` on `data/restaurants.json` and `app.js`. Resolved the task-board conflict by preserving that claim and narrowing this session's scope; no edits will be made to those owned files. Integration of the new data/pages into `index.html` and shared navigation is logged as dependent on the other profile-verification task finishing.
 
 - 2026-11-24 — Session e3632548 (branch `arena/e3632548-baymich2`) claimed restaurant profile verification pass 1. Repo review: branch matched `main` at c7849d2 (PR #4) and the working tree was clean. Protocol note: this board prescribes `session-<id>/<task>` branches, but Arena assigns one branch per session, so this session works on its assigned branch only and touches only the files in its claimed scope.
 - 2026-11-24 — Read 9 official MICHELIN profile pages in full (Atelier Crenn, Benu, Californios, Quince, SingleThread, The French Laundry, Birdsong, Kiln, Lazy Bear). Added address, phone, official venue website and hours for the 6 whose hours were visible in the profile. Hours were not in the captured part of the profile for SingleThread, The French Laundry and Kiln, so they remain blank.
