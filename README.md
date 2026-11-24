@@ -20,7 +20,7 @@ The site is static and dependency-free. From the repository root, run:
 python3 -m http.server 8000 --bind 0.0.0.0
 ```
 
-Then open `http://localhost:8000`. GitHub Pages deployment is configured in `.github/workflows/pages.yml`.
+Then open `http://localhost:8000`. The repository's live Pages site is configured to publish `main` from the repository root at <https://kanlerxz87-cyber.github.io/Baymich2/>. This feature branch's expanded pages are not the live root until integrated into `main`. The feature branch cannot change Pages settings from this session; see [COORDINATION.md](COORDINATION.md).
 
 ## Data policy
 
