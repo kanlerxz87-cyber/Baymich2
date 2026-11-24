@@ -19,6 +19,8 @@ assert len(stars) == 41 and len(bibs) == 8
 assert Counter(r['stars'] for r in stars) == {1: 27, 2: 7, 3: 7}
 assert len({r['name'] for r in restaurants}) == len(restaurants), 'Duplicate restaurant names'
 for r in restaurants:
+    assert 'county' not in r, f'Unverified county attribution must not be displayed: {r["name"]}'
+    assert r['cuisine'] == '', f'Cuisine must stay blank until official row-level check: {r["name"]}'
     assert r['profile'].startswith('https://guide.michelin.com/'), r['name']
     assert r['annualSelectionSource'].startswith('https://guide.michelin.com/'), r['name']
     assert r['awardYear'] == 2026

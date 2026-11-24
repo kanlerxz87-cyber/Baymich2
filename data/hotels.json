@@ -1,7 +1,7 @@
 [
   {
     "name": "SingleThread Inn",
-    "location": "Healdsburg · Sonoma County",
+    "location": "Healdsburg",
     "guideNearbyStarred": [
       "SingleThread (3)",
       "Troubadour (1)",
@@ -15,7 +15,7 @@
   },
   {
     "name": "Hotel Healdsburg",
-    "location": "Healdsburg · Sonoma County",
+    "location": "Healdsburg",
     "guideNearbyStarred": [
       "Troubadour (1)",
       "SingleThread (3)",
@@ -29,7 +29,7 @@
   },
   {
     "name": "Auberge du Soleil, Auberge Collection",
-    "location": "Rutherford · Napa County",
+    "location": "Rutherford",
     "guideNearbyStarred": [
       "Auberge du Soleil (1)",
       "Press (1)",
@@ -43,7 +43,7 @@
   },
   {
     "name": "The Battery",
-    "location": "San Francisco · San Francisco County",
+    "location": "San Francisco",
     "guideNearbyStarred": [
       "Quince (3)"
     ],
@@ -55,7 +55,7 @@
   },
   {
     "name": "San Francisco Proper Hotel",
-    "location": "Mid-Market · San Francisco County",
+    "location": "Mid-Market, San Francisco",
     "guideNearbyStarred": [
       "Birdsong (2)"
     ],
