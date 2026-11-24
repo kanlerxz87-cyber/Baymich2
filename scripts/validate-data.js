@@ -27,8 +27,10 @@ for (const restaurant of restaurants) {
   requireValue(restaurant.statusYear === 2026, `${label}: expected 2026 status year`);
   requireValue(officialMichelin(restaurant.statusSource), `${label}: missing official MICHELIN status source`);
   requireValue(officialMichelin(restaurant.michelinUrl), `${label}: missing official MICHELIN profile`);
-  if (restaurant.hours) requireValue(officialMichelin(restaurant.hoursSource), `${label}: hours lack official MICHELIN source`);
-  if (restaurant.pairPrice) requireValue(Boolean(restaurant.menuUrl && restaurant.pairPriceNote), `${label}: price lacks menu source or calculation note`);
+  if (restaurant.hours) requireValue(officialMichelin(restaurant.hoursSource) || restaurant.hoursSource === restaurant.restaurantUrl,
+    `${label}: hours lack an official MICHELIN profile or verified official venue source`);
+  if (restaurant.pairPrice) requireValue(Boolean(/^https:\/\//.test(restaurant.menuUrl || '') && restaurant.pairPriceNote),
+    `${label}: price lacks a source URL or calculation note`);
 }
 
 requireValue(stars[3] === 7 && stars[2] === 7 && stars[1] === 27,

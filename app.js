@@ -33,7 +33,8 @@ function priceMarkup(restaurant) {
 
 function hoursMarkup(restaurant) {
   if (!restaurant.hours) return '<span class="missing">Unverified</span>';
-  return `<span>${escapeHtml(restaurant.hours)}<small class="hours-note"> · exceptions unverified</small></span>`;
+  const note = restaurant.hoursNote || 'Exceptions unverified.';
+  return `<span>${escapeHtml(restaurant.hours)}<small class="hours-note"> · ${escapeHtml(note)}</small></span>`;
 }
 
 function socialMarkup() {
