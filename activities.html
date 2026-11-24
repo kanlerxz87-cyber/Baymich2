@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Activities · SF Bay Area MICHELIN Guide</title>
+<meta name="description" content="Verified MICHELIN restaurants, hotels and activities for the San Francisco Bay Area, with official source links and flagged gaps.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="activities">
+<header class="site">
+  <a class="brand" href="index.html">SF Bay Area · MICHELIN Guide dashboard</a>
+  <nav class="menu"><a href="index.html">Overview</a><a href="restaurants.html">Restaurants</a><a href="hotels.html">Hotels</a><a href="activities.html" aria-current="page">Activities</a><a href="review.html">Review &amp; questions</a></nav>
+</header>
+<main>
+<p id="error" class="card" hidden></p>
+<h1>Activities</h1>
+<p class="lede" id="status"></p>
+<div class="table-wrap"><table class="responsive">
+  <thead><tr><th>Activity</th><th>Open days</th><th>Hours</th><th>Exceptions</th><th>Cost for two adults</th><th>Phone</th><th>Social</th><th>Official links</th><th>Verification</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table></div>
+<p class="note">Only NPS pages and official sources were used. Ticket and entry prices were not captured, so they are blank.</p>
+
+</main>
+<footer>Data checked against official MICHELIN, NPS and venue pages on 24 Nov 2026. Blank or “Unverified” means no official value was found. Not affiliated with MICHELIN or NPS.</footer>
+<script src="app.js"></script>
+</body>
+</html>

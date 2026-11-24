@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Restaurants · SF Bay Area MICHELIN Guide</title>
+<meta name="description" content="Verified MICHELIN restaurants, hotels and activities for the San Francisco Bay Area, with official source links and flagged gaps.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="restaurants">
+<header class="site">
+  <a class="brand" href="index.html">SF Bay Area · MICHELIN Guide dashboard</a>
+  <nav class="menu"><a href="index.html">Overview</a><a href="restaurants.html" aria-current="page">Restaurants</a><a href="hotels.html">Hotels</a><a href="activities.html">Activities</a><a href="review.html">Review &amp; questions</a></nav>
+</header>
+<main>
+<p id="error" class="card" hidden></p>
+<h1>Restaurants</h1>
+<p class="lede">Each row links to its MICHELIN listing. “Currently starred” means a star count shown on the profile or in the 2026 article. Bib Gourmand is a value distinction, not a star.</p>
+<div class="toolbar">
+  <button class="chip" data-cat="all" aria-pressed="true">All</button>
+  <button class="chip" data-cat="starred" aria-pressed="false">Starred</button>
+  <button class="chip" data-cat="bib" aria-pressed="false">Bib Gourmand</button>
+  <select id="region" aria-label="Region"></select>
+  <input id="q" type="search" placeholder="Search name, city or cuisine">
+</div>
+<p class="count" id="count"></p>
+<div class="table-wrap"><table class="responsive">
+  <thead><tr><th>Restaurant</th><th>Status</th><th>Price tier</th><th>Cost for two</th><th>Open days / hours</th><th>Address</th><th>Official links</th><th>Social</th><th>Verification</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table></div>
+<div class="card">
+<h2>Column notes</h2>
+<ul class="clean">
+  <li><strong>Price tier</strong> is MICHELIN’s $ scale, not a total bill.</li>
+  <li><strong>Cost for two</strong> is filled only when an official page lists a price. Acquerello’s total is an estimate.</li>
+  <li><strong>Social</strong> is blank everywhere: no official YouTube, TikTok or Instagram link was verified (F11).</li>
+  <li>Flags refer to the table on the Review page.</li>
+</ul>
+</div>
+
+</main>
+<footer>Data checked against official MICHELIN, NPS and venue pages on 24 Nov 2026. Blank or “Unverified” means no official value was found. Not affiliated with MICHELIN or NPS.</footer>
+<script src="app.js"></script>
+</body>
+</html>

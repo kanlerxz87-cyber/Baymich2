@@ -1,0 +1,68 @@
+[
+  {
+    "id": "S1",
+    "title": "MICHELIN Guide California 2026 (ceremony article, 24 Jun 2026)",
+    "url": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "used": "Current-star list (83 starred statewide)."
+  },
+  {
+    "id": "S2",
+    "title": "MICHELIN Bib Gourmand, San Francisco and surroundings (30 entries, page 1 of 1)",
+    "url": "https://guide.michelin.com/en/us/california/san-francisco/restaurants/bib-gourmand",
+    "used": "Bib entries, tiers, cuisines, links."
+  },
+  {
+    "id": "S3",
+    "title": "MICHELIN Bib Gourmand affordable article (28 May 2026)",
+    "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/california-s-most-affordable-restaurants-in-2026",
+    "used": "Statewide Bib total 117."
+  },
+  {
+    "id": "S4",
+    "title": "MICHELIN hotels: California, three-Key filter",
+    "url": "https://guide.michelin.com/en/hotels-stays/california?distinction=3-keys-michelin",
+    "used": "Keys for Auberge du Soleil, SingleThread Inn, Meadowood."
+  },
+  {
+    "id": "S5",
+    "title": "MICHELIN hotels: San Francisco Bay Area, two-Key filter",
+    "url": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=2-keys-michelin",
+    "used": "Two-Key Bay Area hotels."
+  },
+  {
+    "id": "S6",
+    "title": "MICHELIN hotels: San Francisco Bay Area, one-Key filter",
+    "url": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=1-key-michelin",
+    "used": "One-Key Bay Area hotels."
+  },
+  {
+    "id": "S7",
+    "title": "MICHELIN hotels: Silicon Valley, one-Key filter",
+    "url": "https://guide.michelin.com/en/hotels-stays/silicon-valley?distinction=1-key-michelin",
+    "used": "Rosewood Sand Hill (1 Key)."
+  },
+  {
+    "id": "S8",
+    "title": "Acquerello seasonal tasting menu (venue)",
+    "url": "https://www.acquerellosf.com/seasonal-tasting-menu",
+    "used": "$295 pp; $195 wine; 20% service charge and 4% employee-benefits surcharge 'added to all sales'."
+  },
+  {
+    "id": "S9",
+    "title": "NPS Alcatraz — plan your visit",
+    "url": "https://www.nps.gov/alca/planyourvisit/index.htm",
+    "used": "Ferry-only access, phone, ticket timing."
+  },
+  {
+    "id": "S10",
+    "title": "NPS Alcatraz — hours",
+    "url": "https://www.nps.gov/alca/planyourvisit/hours.htm",
+    "used": "Hours and holiday closures."
+  },
+  {
+    "id": "S11",
+    "title": "NPS Muir Woods — hours",
+    "url": "https://www.nps.gov/muwo/planyourvisit/hours.htm",
+    "used": "Hours, seasonal table, parking reservation, phone."
+  }
+]

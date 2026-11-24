@@ -1,0 +1,193 @@
+[
+  {
+    "id": "F1",
+    "severity": "high",
+    "item": "Quince, SingleThread, The French Laundry",
+    "type": "Irregular hours on official profile",
+    "detail": "MICHELIN profiles list the same window for all seven days (Quince 16:00–20:45; SingleThread and The French Laundry 16:00–20:00). This looks like a default value, not real opening days. Open days left UNVERIFIED.",
+    "action": "Check the restaurant's own site or booking page before relying on hours.",
+    "links": [
+      "https://guide.michelin.com/en/california/san-francisco/restaurant/quince",
+      "https://guide.michelin.com/en/california/healdsburg/restaurant/singlethread",
+      "https://guide.michelin.com/en/california/yountville/restaurant/the-french-laundry"
+    ]
+  },
+  {
+    "id": "F2",
+    "severity": "high",
+    "item": "Golden Gate Bridge",
+    "type": "Official source unreachable",
+    "detail": "goldengatebridge.org and /visitors/ could not be fetched in this session. No hours, fees or links are recorded for this activity.",
+    "action": "Manual check of the official Golden Gate Bridge Highway & Transportation District visitor pages.",
+    "links": [
+      "https://www.goldengatebridge.org/"
+    ]
+  },
+  {
+    "id": "F3",
+    "severity": "medium",
+    "item": "Alcatraz (NPS hours page)",
+    "type": "Stale page date",
+    "detail": "The NPS hours page reads 'Last updated April 27, 2021' while the plan page is current. Hours could be out of date.",
+    "action": "Confirm hours on the NPS page or with Alcatraz City Cruises at booking.",
+    "links": [
+      "https://www.nps.gov/alca/planyourvisit/hours.htm"
+    ]
+  },
+  {
+    "id": "F4",
+    "severity": "low",
+    "item": "Alcatraz phone number",
+    "type": "Two different numbers",
+    "detail": "The Alcatraz page lists (415) 981-7625; the NPS general line is 415-561-4900. Both are shown with their source.",
+    "action": "Confirm which number to publish.",
+    "links": [
+      "https://www.nps.gov/alca/planyourvisit/index.htm"
+    ]
+  },
+  {
+    "id": "F5",
+    "severity": "medium",
+    "item": "Muir Woods hours",
+    "type": "Internal conflict on NPS page",
+    "detail": "The page says 'Every Day 8:00–5:00 PM' in one place and gives a seasonal table (Oct 4–31 8:00 AM–6:00 PM; sunset closing otherwise). The seasonal table is used here.",
+    "action": "Confirm the current-season hours with NPS before publishing.",
+    "links": [
+      "https://www.nps.gov/muwo/planyourvisit/hours.htm"
+    ]
+  },
+  {
+    "id": "F6",
+    "severity": "low",
+    "item": "Muir Woods holiday table",
+    "type": "Title does not match contents",
+    "detail": "The holiday table is titled 2026–2027 but lists only 2027 dates.",
+    "action": "Confirm 2026 holiday closures with NPS.",
+    "links": [
+      "https://www.nps.gov/muwo/planyourvisit/hours.htm"
+    ]
+  },
+  {
+    "id": "F7",
+    "severity": "medium",
+    "item": "Repo URLs (all 41 starred rows)",
+    "type": "Non-standard URL prefix (corrected)",
+    "detail": "The committed dataset used /ca/en/ URLs. The verified official links use /en/california/. URLs were normalized to the verified form in this session.",
+    "action": "None needed unless the /ca/en/ form was intended.",
+    "links": [
+      "https://guide.michelin.com/en/california/san-francisco/restaurant/atelier-crenn"
+    ]
+  },
+  {
+    "id": "F8",
+    "severity": "medium",
+    "item": "Star count check: San Francisco area",
+    "type": "Count mismatch, not resolved",
+    "detail": "MICHELIN's Bib page facet for San Francisco and surroundings shows 4 three-star, 7 two-star, 18 one-star. Our rows in SF, Oakland, Peninsula and Marin give 4, 7, 22 (SF 15, Oakland 1, Peninsula/Marin 6). The gap of 4 one-star rows may come from area boundaries; not resolved.",
+    "action": "Check each 1★ row (Oakland and Peninsula/Marin first) against the MICHELIN area filter.",
+    "links": [
+      "https://guide.michelin.com/en/us/california/san-francisco/restaurants/bib-gourmand"
+    ]
+  },
+  {
+    "id": "F9",
+    "severity": "high",
+    "item": "Acquerello total price",
+    "type": "Estimate, not a listed total",
+    "detail": "Base is $590 (2 × $295). The venue says a 20% service charge and a 4% employee-benefits surcharge are 'added to all sales', but does not state the base, so the total is an estimate. Our figure $731.60 applies both to $590; applying 4% after the 20% gives $736.32. Tax, wine ($195 pp) and tip are excluded.",
+    "action": "Ask the restaurant for an exact two-guest total or confirm the surcharge base.",
+    "links": [
+      "https://www.acquerellosf.com/seasonal-tasting-menu"
+    ]
+  },
+  {
+    "id": "F10",
+    "severity": "medium",
+    "item": "29 starred rows from prior dataset",
+    "type": "Not re-verified this session",
+    "detail": "Birdsong, Lazy Bear, Saison, Sons & Daughters, and 25 one-star rows came from the repo and were not re-fetched this session. Their MICHELIN URLs and star status are unconfirmed; they are marked as such in the table.",
+    "action": "Open each MICHELIN profile and confirm the URL and star count.",
+    "links": [
+      "https://guide.michelin.com/en/california/san-francisco/restaurant/birdsong"
+    ]
+  },
+  {
+    "id": "F11",
+    "severity": "high",
+    "item": "Social links (YouTube / TikTok / Instagram)",
+    "type": "None verified",
+    "detail": "No official YouTube, TikTok or Instagram link was found on the MICHELIN profiles or venue sites checked. All social fields are blank.",
+    "action": "Confirm official handles from each venue's own site, or accept that some will remain blank.",
+    "links": [
+      "https://www.ateliercrenn.com/",
+      "https://www.benusf.com/",
+      "https://www.californiossf.com/"
+    ]
+  },
+  {
+    "id": "F12",
+    "severity": "medium",
+    "item": "Hotels in Napa / Sonoma",
+    "type": "Scope question",
+    "detail": "Auberge du Soleil, SingleThread Inn and Meadowood are in Napa/Sonoma, outside the San Francisco Bay Area. They remain in the dataset pending the user's decision.",
+    "action": "Decide whether Wine Country hotels stay in scope.",
+    "links": [
+      "https://guide.michelin.com/en/hotels-stays/california?distinction=3-keys-michelin"
+    ]
+  },
+  {
+    "id": "F13",
+    "severity": "medium",
+    "item": "Hotels: nearby restaurant counts",
+    "type": "Not computed",
+    "detail": "Counts need hotel coordinates, restaurant coordinates, a radius and a travel mode. These are not captured or agreed, so the ranking is withheld.",
+    "action": "Decide radius and mode (see Questions).",
+    "links": [
+      "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area"
+    ]
+  },
+  {
+    "id": "F14",
+    "severity": "low",
+    "item": "Hotel page URLs",
+    "type": "Partial",
+    "detail": "Cavallo Point, Four Seasons SF, Hotel Drisco and 1 Hotel SF were confirmed on MICHELIN Key listings, but their hotel-page URLs were not captured. The listing link is used for them.",
+    "action": "Capture hotel-page URLs in a later pass.",
+    "links": [
+      "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=2-keys-michelin"
+    ]
+  },
+  {
+    "id": "F15",
+    "severity": "low",
+    "item": "Sun Moon Studio phone",
+    "type": "Not on profile",
+    "detail": "The MICHELIN profile shows a website but no phone number.",
+    "action": "None; left blank.",
+    "links": [
+      "https://guide.michelin.com/en/california/oakland/restaurant/sun-moon-studio"
+    ]
+  },
+  {
+    "id": "F16",
+    "severity": "medium",
+    "item": "Cost for two adults",
+    "type": "Not captured for most rows",
+    "detail": "Only Acquerello has a listed per-person price. Other rows show only MICHELIN's $ tiers, not totals, so cost for two is left blank.",
+    "action": "Decide whether to collect menu prices from each venue's own site.",
+    "links": [
+      "https://guide.michelin.com/en/us/california/san-francisco/restaurants/bib-gourmand"
+    ]
+  },
+  {
+    "id": "F17",
+    "severity": "low",
+    "item": "Map",
+    "type": "Not built",
+    "detail": "A map needs verified coordinates for each row. They were not captured, so the site shows city and region clusters as a table instead of a map.",
+    "action": "Decide whether to capture coordinates from MICHELIN profiles (manual or scripted).",
+    "links": [
+      "https://guide.michelin.com/en/us/california/san-francisco/restaurants/bib-gourmand?showMap=true"
+    ]
+  }
+]

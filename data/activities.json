@@ -1,0 +1,70 @@
+{
+  "status": "Two entries verified from NPS pages; one entry unverified.",
+  "activities": [
+    {
+      "name": "Alcatraz Island (NPS)",
+      "area": "San Francisco Bay",
+      "url": "https://www.nps.gov/alca/planyourvisit/index.htm",
+      "sourceLinks": [
+        "https://www.nps.gov/alca/planyourvisit/index.htm",
+        "https://www.nps.gov/alca/planyourvisit/hours.htm"
+      ],
+      "openDays": "Every day (see hours)",
+      "hours": "Sun & Mon 8:30 AM–6:30 PM; Tue–Sat 8:30 AM–9:30 PM",
+      "exceptions": "Closed Thanksgiving (Nov 26, 2026), Christmas (Dec 25, 2026), New Year's Day (Jan 1, 2027). Access only by NPS-contracted ferry. No food on island. Tickets released 90 days ahead.",
+      "phone": "(415) 981-7625 (from the Alcatraz page; differs from NPS general line 415-561-4900)",
+      "costForTwo": "",
+      "costStatus": "unverified",
+      "costNote": "Ticket prices not captured from an official page; left blank.",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "socialStatus": "Unverified: not checked",
+      "verification": "Hours verified on NPS pages (page 'Last updated April 27, 2021' — flagged)"
+    },
+    {
+      "name": "Muir Woods National Monument (NPS)",
+      "area": "Marin County",
+      "url": "https://www.nps.gov/muwo/planyourvisit/hours.htm",
+      "sourceLinks": [
+        "https://www.nps.gov/muwo/planyourvisit/hours.htm"
+      ],
+      "openDays": "Every day",
+      "hours": "8:00 AM until approximately sunset (seasonal table: Oct 4–31 8:00 AM–6:00 PM)",
+      "exceptions": "Visitor Center Oct 1–Nov 5: 8:00 AM–5:30 PM. Parking reservation required (gomuirwoods.com, as listed on NPS page). Page also lists 'Every Day 8:00–5:00 PM' — conflicts with seasonal table (flagged).",
+      "phone": "415-561-2850",
+      "costForTwo": "",
+      "costStatus": "unverified",
+      "costNote": "Entrance/parking fee not captured from an official page; left blank.",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "socialStatus": "Unverified: not checked",
+      "verification": "Hours verified on NPS page (last updated 25 May 2026); conflicts flagged"
+    },
+    {
+      "name": "Golden Gate Bridge",
+      "area": "San Francisco / Marin",
+      "url": "",
+      "sourceLinks": [],
+      "openDays": "UNVERIFIED",
+      "hours": "UNVERIFIED",
+      "exceptions": "Official site goldengatebridge.org could not be fetched in this session; all visitor values left blank.",
+      "phone": "",
+      "costForTwo": "",
+      "costStatus": "unverified",
+      "costNote": "",
+      "social": {
+        "youtube": "",
+        "tiktok": "",
+        "instagram": ""
+      },
+      "socialStatus": "Unverified: not checked",
+      "verification": "NOT VERIFIED — needs official source"
+    }
+  ]
+}

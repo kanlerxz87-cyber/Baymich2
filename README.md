@@ -1,33 +1,33 @@
-# Bay Michelin
+# SF Bay Area MICHELIN Guide dashboard
 
-A mobile-friendly, source-led planning dashboard for current MICHELIN-starred restaurants in the San Francisco Bay Area and adjacent North Bay wine country.
+A mobile-friendly, source-led dashboard for MICHELIN-starred and Bib Gourmand restaurants, MICHELIN Key hotels, and activities in the San Francisco Bay Area (with Napa/Sonoma rows kept separate; see Review).
+
+Pages:
+
+- `index.html` — overview, executive summary, region counts
+- `restaurants.html` — starred and Bib Gourmand table with filters
+- `hotels.html` — MICHELIN Key hotels; nearby-restaurant ranking withheld
+- `activities.html` — NPS and other official activity pages
+- `review.html` — flags, decisions needed, suggestions, sources, method
+
+Data lives in `data/` as JSON (`restaurants.json`, `hotels.json`, `activities.json`, `flags.json`, `sources.json`). Every value has a source link; blanks mean no official value was found.
 
 ## Run locally
 
-Because the dashboard loads JSON with `fetch`, serve this directory over HTTP (opening `index.html` directly as a `file://` URL will not work):
+The pages load JSON with `fetch`, so serve the folder over HTTP (opening `index.html` as a `file://` URL will not work):
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then open `http://localhost:8000`.
-
-## Current scope and verification
-
-- Restaurant stars reflect the MICHELIN Guide’s **2026 California** selection, announced June 24, 2026. The source is linked in every restaurant row and in the Method & Sources section.
-- The 41-entry roster covers current starred restaurants in San Francisco, Oakland, the Peninsula, Marin and North Bay / wine country. This is not a complete list of all MICHELIN Selected or Bib Gourmand establishments.
-- Venue pricing, opening hours and social links are blank/marked unverified unless an official source was checked. Hotel rates require stay dates and are not asserted here.
-- Hotel cards are a shortlist of MICHELIN Guide hotels with Keys, not a dining-density ranking. The site explicitly withholds a rank until geographic boundary, travel radius, travel mode and complete restaurant dataset are set.
-- See the dedicated Open Questions, Suggestions and Flagged for Review sections before relying on the information for trip booking.
-
-## Files
-
-- `index.html` — single-page dashboard and category sections
-- `styles.css` — responsive layout
-- `app.js` — data filtering, cluster counts and rendering
-- `data/restaurants.json`, `data/hotels.json` — structured records
-- `COORDINATION.md` — shared work and verification log
+Then open http://localhost:8000/.
 
 ## Deployment
 
-GitHub Pages is enabled from the `main` branch root. The site is published at [`https://kanlerxz87-cyber.github.io/Baymich2/`](https://kanlerxz87-cyber.github.io/Baymich2/). The existing Pages deployment is branch-based; no additional deployment workflow is required.
+GitHub Pages serves the repository root from `main`: https://kanlerxz87-cyber.github.io/Baymich2/
+
+## Notes
+
+- Data was checked against official MICHELIN, NPS and venue pages on 24 Nov 2026. See `review.html` for the full list.
+- Flags (F1–F17) and open questions are on `review.html`.
+- Not affiliated with MICHELIN or the National Park Service.

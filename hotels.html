@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hotels · SF Bay Area MICHELIN Guide</title>
+<meta name="description" content="Verified MICHELIN restaurants, hotels and activities for the San Francisco Bay Area, with official source links and flagged gaps.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="hotels">
+<header class="site">
+  <a class="brand" href="index.html">SF Bay Area · MICHELIN Guide dashboard</a>
+  <nav class="menu"><a href="index.html">Overview</a><a href="restaurants.html">Restaurants</a><a href="hotels.html" aria-current="page">Hotels</a><a href="activities.html">Activities</a><a href="review.html">Review &amp; questions</a></nav>
+</header>
+<main>
+<p id="error" class="card" hidden></p>
+<h1>Hotels</h1>
+<p class="lede" id="status"></p>
+<div class="grid" id="hstats"></div>
+<div class="card"><strong>Ranking status:</strong> withheld. The method needs decisions first: the search radius, the travel mode, and verified coordinates for each hotel and restaurant (see Review &amp; questions).</div>
+<div class="table-wrap"><table class="responsive">
+  <thead><tr><th>Hotel</th><th>Area</th><th>MICHELIN Keys</th><th>Nearby MICHELIN restaurants</th><th>Rank</th><th>Official links</th></tr></thead>
+  <tbody id="rows"></tbody>
+</table></div>
+<p class="note">Keys come from MICHELIN’s Key listings. “Selected” hotels are not included. Auberge du Soleil, SingleThread Inn and Meadowood are in Napa/Sonoma, outside the Bay Area (F12).</p>
+
+</main>
+<footer>Data checked against official MICHELIN, NPS and venue pages on 24 Nov 2026. Blank or “Unverified” means no official value was found. Not affiliated with MICHELIN or NPS.</footer>
+<script src="app.js"></script>
+</body>
+</html>

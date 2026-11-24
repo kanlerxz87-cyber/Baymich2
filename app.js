@@ -1,126 +1,138 @@
-const STAR_SOURCE = 'https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california';
-const GUIDE_YEAR = 2026;
+// Shared renderer for all pages. Reads JSON from ./data/ (relative paths work on GitHub Pages subpaths).
+const D = 'data/';
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const unv = (t='Unverified') => `<span class="unv">${esc(t)}</span>`;
+const val = (v, t) => (v && String(v).trim()) ? esc(v) : unv(t);
+const lnk = (url, text) => url ? `<a href="${esc(url)}" rel="noopener">${esc(text || 'Source')}</a>` : unv('No source');
+const sev = s => `<span class="badge ${esc(s)}">${esc(s)}</span>`;
+async function getJSON(f){ const r = await fetch(D + f, {cache:'no-store'}); if(!r.ok) throw new Error(f + ' ' + r.status); return r.json(); }
 
-async function loadData() {
-  const [restaurants, hotels] = await Promise.all([
-    fetch('data/restaurants.json').then((response) => {
-      if (!response.ok) throw new Error('Could not load restaurant data');
-      return response.json();
-    }),
-    fetch('data/hotels.json').then((response) => {
-      if (!response.ok) throw new Error('Could not load hotel data');
-      return response.json();
-    })
-  ]);
-  return { restaurants, hotels };
+function socialCell(r){
+  const s = r.social || {}; const parts = [];
+  if (s.youtube) parts.push(lnk(s.youtube,'YouTube')); if (s.tiktok) parts.push(lnk(s.tiktok,'TikTok')); if (s.instagram) parts.push(lnk(s.instagram,'Instagram'));
+  return parts.length ? parts.join(' · ') : unv('Unverified');
+}
+function hoursCell(r){
+  const d = r.openDays && r.openDays !== 'UNVERIFIED' ? r.openDays : null;
+  const h = r.hours && !r.hours.startsWith('Profile lists') ? r.hours : null;
+  let out = '';
+  if (d) out += `<div>${esc(d)}</div>`;
+  if (h) out += `<div>${esc(h)}</div>`;
+  if (r.hoursStatus === 'flagged') out += `<div class="flagtxt">⚠ ${esc(r.hours)} — unverified (F1)</div>`;
+  if (!out) out = unv();
+  return out;
+}
+function costCell(r){
+  if (r.costForTwo) return `<div>${esc(r.costForTwo)}</div>` + (r.costStatus==='estimate' ? `<div class="note">Estimate (F9)</div>` : '');
+  return unv();
+}
+function flagsFor(r){
+  const f = [];
+  if (r.hoursStatus === 'flagged') f.push('F1');
+  if (r.verification && r.verification.startsWith('Not re-verified')) f.push('F10');
+  if (r.name.startsWith('Acquerello')) f.push('F9');
+  if (r.category==='Bib Gourmand') f.push('');
+  return f.filter(Boolean).join(', ') || '—';
+}
+function restaurantRow(r){
+  const star = r.category==='Starred' ? `<span class="badge star">${r.stars}★ currently</span>` : `<span class="badge bib">Bib Gourmand</span>`;
+  return `<tr>
+    <td data-label="Restaurant"><strong>${esc(r.name)}</strong><div class="note">${esc(r.city)} · ${esc(r.region)}</div></td>
+    <td data-label="Status">${star}<div class="note">${esc(r.guideStatus)}</div></td>
+    <td data-label="Price tier">${val(r.priceTier)}</td>
+    <td data-label="Cost for two">${costCell(r)}</td>
+    <td data-label="Open days / hours">${hoursCell(r)}</td>
+    <td data-label="Address">${val(r.address)}</td>
+    <td data-label="Official links"><div>${lnk(r.michelinUrl,'MICHELIN profile/listing')}</div>${r.website?`<div>${lnk(r.website,'Website')}</div>`:''}</td>
+    <td data-label="Social">${socialCell(r)}</td>
+    <td data-label="Verification"><div class="note">${esc(r.verification)}</div><div class="note">Flags: ${esc(flagsFor(r))}</div></td>
+  </tr>`;
 }
 
-function escapeHtml(value = '') {
-  return String(value).replace(/[&<>"']/g, (character) => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
-  })[character]);
+async function pageRestaurants(){
+  const rows = await getJSON('restaurants.json');
+  const state = {cat:'all', region:'all', q:''};
+  const regions = [...new Set(rows.map(r=>r.region))].sort();
+  document.getElementById('region').innerHTML = `<option value="all">All regions</option>` + regions.map(x=>`<option>${esc(x)}</option>`).join('');
+  const draw = () => {
+    const q = state.q.toLowerCase();
+    const list = rows.filter(r => (state.cat==='all' || (state.cat==='starred'? r.category==='Starred' : r.category==='Bib Gourmand'))
+      && (state.region==='all' || r.region===state.region)
+      && (!q || (r.name+' '+r.city+' '+(r.cuisine||'')).toLowerCase().includes(q)));
+    document.getElementById('rows').innerHTML = list.map(restaurantRow).join('');
+    document.getElementById('count').textContent = `${list.length} of ${rows.length} rows shown · starred ${rows.filter(r=>r.category==='Starred').length} · Bib Gourmand ${rows.filter(r=>r.category==='Bib Gourmand').length}`;
+  };
+  document.querySelectorAll('[data-cat]').forEach(b => b.addEventListener('click', () => {
+    state.cat = b.dataset.cat; document.querySelectorAll('[data-cat]').forEach(x=>x.setAttribute('aria-pressed', x===b)); draw(); }));
+  document.getElementById('region').addEventListener('change', e => { state.region = e.target.value; draw(); });
+  document.getElementById('q').addEventListener('input', e => { state.q = e.target.value; draw(); });
+  draw();
 }
 
-function sourceLink(url = STAR_SOURCE, label = 'MICHELIN ↗') {
-  return `<a class="source-link" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${label}</a>`;
+async function pageHome(){
+  const rows = await getJSON('restaurants.json');
+  const flags = await getJSON('flags.json');
+  const c = (f) => rows.filter(f).length;
+  document.getElementById('kpis').innerHTML = [
+    ['Starred rows (dataset)', c(r=>r.category==='Starred')],
+    ['3★ / 2★ / 1★', `${c(r=>r.stars===3)} / ${c(r=>r.stars===2)} / ${c(r=>r.stars===1)}`],
+    ['Bib Gourmand (SF & surroundings)', c(r=>r.category==='Bib Gourmand')],
+    ['Open flags', flags.length],
+  ].map(([k,v])=>`<div class="kpi"><b>${esc(v)}</b><span>${esc(k)}</span></div>`).join('');
+  const regs = [...new Set(rows.map(r=>r.region))].sort();
+  document.getElementById('clusters').innerHTML = regs.map(g => {
+    const s = rows.filter(r=>r.region===g && r.category==='Starred').length;
+    const b = rows.filter(r=>r.region===g && r.category==='Bib Gourmand').length;
+    return `<tr><td data-label="Region">${esc(g)}</td><td data-label="Starred">${s}</td><td data-label="Bib Gourmand">${b}</td></tr>`;
+  }).join('');
 }
 
-function priceMarkup(restaurant) {
-  if (!restaurant.pairPrice) return '<span class="missing">Unverified</span>';
-  const priceSource = restaurant.menuUrl ? `<br><a class="source-link" href="${escapeHtml(restaurant.menuUrl)}" target="_blank" rel="noreferrer">Official menu source ↗</a>` : '';
-  return `<details class="price-detail"><summary>${escapeHtml(restaurant.pairPrice)}</summary><p>${escapeHtml(restaurant.pairPriceNote)}${priceSource}</p></details>`;
+async function pageHotels(){
+  const h = await getJSON('hotels.json');
+  document.getElementById('status').textContent = h.status;
+  document.getElementById('hstats').innerHTML = Object.entries(h.stats).map(([k,v])=>`<div class="kpi"><b>${esc(v)}</b><span>${esc(k)}</span></div>`).join('');
+  document.getElementById('rows').innerHTML = h.hotels.map(x => `<tr>
+    <td data-label="Hotel"><strong>${esc(x.name)}</strong>${x.note?`<div class="note">${esc(x.note)}</div>`:''}</td>
+    <td data-label="Area">${esc(x.area)}</td>
+    <td data-label="MICHELIN Keys">${x.keys}</td>
+    <td data-label="Nearby MICHELIN restaurants">${unv('Not computed')}</td>
+    <td data-label="Rank">${unv('Withheld')}</td>
+    <td data-label="Official links">${lnk(x.url||x.listing, x.url?'Hotel page':'Key listing')}${x.url?` · ${lnk(x.listing,'Key listing')}`:''}</td>
+  </tr>`).join('');
 }
 
-function hoursMarkup(restaurant) {
-  if (!restaurant.hours) return '<span class="missing">Unverified</span>';
-  return `<span>${escapeHtml(restaurant.hours)}<small class="hours-note"> · exceptions unverified</small></span>`;
+async function pageActivities(){
+  const a = await getJSON('activities.json');
+  document.getElementById('status').textContent = a.status;
+  document.getElementById('rows').innerHTML = a.activities.map(x => `<tr>
+    <td data-label="Activity"><strong>${esc(x.name)}</strong><div class="note">${esc(x.area||'')}</div></td>
+    <td data-label="Open days">${val(x.openDays)}</td>
+    <td data-label="Hours">${val(x.hours)}</td>
+    <td data-label="Exceptions">${val(x.exceptions,'Unverified')}</td>
+    <td data-label="Cost for two adults">${unv(x.costNote || 'Unverified')}</td>
+    <td data-label="Phone">${val(x.phone)}</td>
+    <td data-label="Social">${socialCell(x)}</td>
+    <td data-label="Official links">${(x.sourceLinks||[]).length ? x.sourceLinks.map((u,i)=>lnk(u,'Source '+(i+1))).join(' · ') : unv('No source')}</td>
+    <td data-label="Verification"><div class="note">${esc(x.verification)}</div></td>
+  </tr>`).join('');
 }
 
-function socialMarkup() {
-  return '<span class="missing" title="No official social profile confirmed from an official venue source">Unverified</span>';
+async function pageReview(){
+  const flags = await getJSON('flags.json');
+  const src = await getJSON('sources.json');
+  document.getElementById('flags').innerHTML = flags.map(f => `<tr>
+    <td data-label="ID">${esc(f.id)}</td><td data-label="Severity">${sev(f.severity)}</td>
+    <td data-label="Item"><strong>${esc(f.item)}</strong><div class="note">${esc(f.type)}</div></td>
+    <td data-label="Detail">${esc(f.detail)}</td>
+    <td data-label="Action">${esc(f.action)}</td>
+    <td data-label="Links">${f.links.map((u,i)=>lnk(u,'Link '+(i+1))).join(' · ')}</td></tr>`).join('');
+  document.getElementById('sources').innerHTML = src.map(s => `<tr>
+    <td data-label="ID">${esc(s.id)}</td><td data-label="Source">${esc(s.title)}</td><td data-label="Used for">${esc(s.used)}</td>
+    <td data-label="Link">${lnk(s.url,'Open')}</td></tr>`).join('');
 }
 
-function venueMarkup(restaurant) {
-  const url = restaurant.restaurantUrl || restaurant.michelinUrl;
-  if (!url) return '<span class="missing">Unverified</span>';
-  const label = restaurant.restaurantUrl ? 'Official venue ↗' : 'MICHELIN profile ↗';
-  return `<a class="venue-link" href="${escapeHtml(url)}" target="_blank" rel="noreferrer">${label}</a>`;
-}
-
-function renderRestaurants(restaurants) {
-  const search = document.querySelector('#restaurant-search').value.trim().toLowerCase();
-  const star = document.querySelector('#star-filter').value;
-  const city = document.querySelector('#city-filter').value;
-  const shown = restaurants.filter((restaurant) => {
-    const matchesSearch = `${restaurant.name} ${restaurant.city}`.toLowerCase().includes(search);
-    return matchesSearch && (star === 'all' || restaurant.stars === Number(star)) && (city === 'all' || restaurant.city === city);
-  });
-  document.querySelector('#result-count').textContent = `Showing ${shown.length} of ${restaurants.length}`;
-  document.querySelector('#restaurant-rows').innerHTML = shown.map((restaurant) => `
-    <tr>
-      <td class="name-cell"><a class="venue-link" href="${escapeHtml(restaurant.michelinUrl)}" target="_blank" rel="noreferrer">${escapeHtml(restaurant.name)} ↗</a></td>
-      <td>${escapeHtml(restaurant.city)}</td>
-      <td><span class="star-badge">${'✳'.repeat(restaurant.stars)} <span>${restaurant.stars} ${restaurant.stars === 1 ? 'star' : 'stars'}</span></span></td>
-      <td>${priceMarkup(restaurant)}</td>
-      <td>${hoursMarkup(restaurant)}</td>
-      <td>${socialMarkup()}</td>
-      <td>${sourceLink(restaurant.michelinUrl || STAR_SOURCE, 'Official profile ↗')}</td>
-    </tr>`).join('');
-  document.querySelector('#restaurant-cards').innerHTML = shown.map((restaurant) => `
-    <article class="restaurant-card">
-      <div class="restaurant-card-top"><div><h3>${escapeHtml(restaurant.name)}</h3><div class="place">${escapeHtml(restaurant.city)}</div></div><span class="star-badge">${'✳'.repeat(restaurant.stars)} ${restaurant.stars}</span></div>
-      <div class="restaurant-card-info">
-        <div><label>DINNER FOR TWO</label>${priceMarkup(restaurant)}</div>
-        <div><label>OPEN DAYS / HOURS</label>${hoursMarkup(restaurant)}</div>
-        <div><label>OFFICIAL SOCIAL</label>${socialMarkup()}</div>
-        <div><label>VENUE LINK</label>${venueMarkup(restaurant)}</div>
-      </div>
-      <div class="restaurant-card-bottom">${sourceLink(restaurant.michelinUrl || STAR_SOURCE, 'Official MICHELIN profile ↗')}${restaurant.menuUrl ? `<a class="source-link" href="${escapeHtml(restaurant.menuUrl)}" target="_blank" rel="noreferrer">Price source ↗</a>` : ''}</div>
-    </article>`).join('');
-}
-
-function renderHotels(hotels) {
-  document.querySelector('#hotel-grid').innerHTML = hotels.map((hotel) => `
-    <article class="hotel-card">
-      <div class="hotel-top"><span class="key-stars">${'✦'.repeat(hotel.keys)}<span class="sr-only"> ${hotel.keys} MICHELIN Keys</span></span><span class="hotel-area">${escapeHtml(hotel.area)}</span></div>
-      <h3>${escapeHtml(hotel.name)}</h3><div class="hotel-address">${escapeHtml(hotel.address)}</div>
-      <div class="hotel-metric"><span>Nearby starred restaurants</span><strong>Not yet counted</strong></div>
-      <div class="hotel-metric"><span>Stay price</span><strong>Not date-verified</strong></div>
-      ${sourceLink(hotel.source, 'MICHELIN hotel profile ↗')}
-    </article>`).join('');
-}
-
-function renderClusters(restaurants) {
-  const counts = restaurants.reduce((result, restaurant) => {
-    result[restaurant.city] = (result[restaurant.city] || 0) + 1;
-    return result;
-  }, {});
-  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
-  document.querySelector('#cluster-list').innerHTML = sorted.map(([city, count]) => `
-    <div class="cluster-row"><i class="cluster-dot"></i><span class="cluster-city">${escapeHtml(city)}</span><span class="cluster-count">${count} ${count === 1 ? 'entry' : 'entries'}</span></div>`).join('');
-}
-
-function initialize(data) {
-  const { restaurants, hotels } = data;
-  document.querySelector('#three-count').textContent = restaurants.filter((restaurant) => restaurant.stars === 3).length;
-  document.querySelector('#two-count').textContent = restaurants.filter((restaurant) => restaurant.stars === 2).length;
-  document.querySelector('#one-count').textContent = restaurants.filter((restaurant) => restaurant.stars === 1).length;
-  const citySelect = document.querySelector('#city-filter');
-  [...new Set(restaurants.map((restaurant) => restaurant.city))].sort().forEach((city) => {
-    const option = document.createElement('option');
-    option.value = city;
-    option.textContent = city;
-    citySelect.append(option);
-  });
-  ['#restaurant-search', '#star-filter', '#city-filter'].forEach((selector) => {
-    document.querySelector(selector).addEventListener('input', () => renderRestaurants(restaurants));
-    document.querySelector(selector).addEventListener('change', () => renderRestaurants(restaurants));
-  });
-  renderRestaurants(restaurants);
-  renderHotels(hotels);
-  renderClusters(restaurants);
-}
-
-loadData().then(initialize).catch((error) => {
-  document.querySelector('#restaurant-rows').innerHTML = `<tr><td colspan="7">${escapeHtml(error.message)}. Run the site through a local HTTP server (not file://).</td></tr>`;
+const PAGES = {restaurants: pageRestaurants, home: pageHome, hotels: pageHotels, activities: pageActivities, review: pageReview};
+const page = document.body.dataset.page;
+if (PAGES[page]) PAGES[page]().catch(err => {
+  const m = document.getElementById('error'); if (m) { m.hidden = false; m.textContent = 'Could not load data: ' + err.message; }
 });

@@ -1,6 +1,99 @@
-[
-  {"name":"SingleThread Inn","area":"Healdsburg","keys":3,"address":"131 North Street, Healdsburg, CA 95448","rooms":"5 rooms","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698","note":"Three MICHELIN Keys; MICHELIN Guide lists the affiliated SingleThread restaurant as a three-star venue. Room rate and nearby-restaurant count are not entered: date/radius data not yet verified."},
-  {"name":"Auberge du Soleil, Auberge Collection","area":"Rutherford","keys":3,"address":"180 Rutherford Hill Road, Rutherford, CA","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246","note":"Three MICHELIN Keys; date-specific rates and a standardized count of nearby Guide restaurants are not verified."},
-  {"name":"Meadowood Napa Valley","area":"St. Helena","keys":3,"address":"900 Meadowood Lane, St. Helena, CA 94574","source":"https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/meadowood-napa-valley-8121","note":"Three MICHELIN Keys according to the official MICHELIN 2026 hotel selection; date-specific rates and nearby restaurant counts are not verified."},
-  {"name":"Rosewood Sand Hill","area":"Menlo Park","keys":1,"address":"2825 Sand Hill Road, Menlo Park, CA","source":"https://guide.michelin.com/en/hotels-stays/silicon-valley/rosewood-sand-hill-11406","note":"One MICHELIN Key; date-specific rates and standardized nearby-restaurant counts are not verified."}
-]
+{
+  "status": "Ranking withheld. No nearby-restaurant counts computed: radius, travel mode, and restaurant coordinates are not yet decided/verified.",
+  "stats": {
+    "bayAreaHotelsListed": 31,
+    "bayAreaTwoKey": 3,
+    "bayAreaOneKey": 2,
+    "statewideThreeKey": 6,
+    "statewideTwoKey": 19,
+    "statewideOneKey": 43,
+    "statewideSelected": 216
+  },
+  "hotels": [
+    {
+      "name": "Auberge du Soleil, Auberge Collection",
+      "area": "Napa / Sonoma Valleys (outside Bay Area)",
+      "keys": 3,
+      "url": "https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246",
+      "listing": "https://guide.michelin.com/en/hotels-stays/california?distinction=3-keys-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD"
+    },
+    {
+      "name": "SingleThread Inn",
+      "area": "Napa / Sonoma Valleys (outside Bay Area)",
+      "keys": 3,
+      "url": "https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698",
+      "listing": "https://guide.michelin.com/en/hotels-stays/california?distinction=3-keys-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD"
+    },
+    {
+      "name": "Meadowood Napa Valley",
+      "area": "Napa / Sonoma Valleys (outside Bay Area)",
+      "keys": 3,
+      "url": "https://guide.michelin.com/en/hotels-stays/napa-sonoma-valleys/meadowood-napa-valley-8121",
+      "listing": "https://guide.michelin.com/en/hotels-stays/california?distinction=3-keys-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD"
+    },
+    {
+      "name": "The Battery San Francisco",
+      "area": "San Francisco",
+      "keys": 2,
+      "url": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area/the-battery-san-francisco-8661",
+      "listing": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=2-keys-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD"
+    },
+    {
+      "name": "Cavallo Point Lodge",
+      "area": "Bay Area (listed on 2-Key filter)",
+      "keys": 2,
+      "url": "",
+      "listing": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=2-keys-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD",
+      "note": "Hotel page URL not captured; listing link used"
+    },
+    {
+      "name": "Four Seasons Hotel San Francisco at Embarcadero",
+      "area": "San Francisco",
+      "keys": 2,
+      "url": "",
+      "listing": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=2-keys-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD",
+      "note": "Hotel page URL not captured; listing link used"
+    },
+    {
+      "name": "Hotel Drisco",
+      "area": "San Francisco",
+      "keys": 1,
+      "url": "",
+      "listing": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=1-key-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD",
+      "note": "Hotel page URL not captured; listing link used"
+    },
+    {
+      "name": "1 Hotel San Francisco",
+      "area": "San Francisco",
+      "keys": 1,
+      "url": "",
+      "listing": "https://guide.michelin.com/en/hotels-stays/san-francisco-bay-area?distinction=1-key-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD",
+      "note": "Hotel page URL not captured; listing link used"
+    },
+    {
+      "name": "Rosewood Sand Hill",
+      "area": "Silicon Valley (listing)",
+      "keys": 1,
+      "url": "https://guide.michelin.com/en/hotels-stays/silicon-valley/rosewood-sand-hill-11406",
+      "listing": "https://guide.michelin.com/en/hotels-stays/silicon-valley?distinction=1-key-michelin",
+      "nearbyMichelinRestaurants": "NOT COMPUTED",
+      "rank": "WITHHELD"
+    }
+  ]
+}
