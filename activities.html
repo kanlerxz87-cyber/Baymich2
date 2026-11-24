@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official-source activities, hours, adult ticket prices, exceptions and social links near San Francisco Bay Area MICHELIN dining clusters.">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Activities | Bay Michelin</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="activities.css">
+  <script src="activities.js" defer></script>
+</head>
+<body class="activities-page">
+  <a class="skip-link" href="#activities-main">Skip to activities</a>
+  <div class="activities-shell">
+    <header class="activities-header">
+      <a class="activities-brand" href="index.html#overview" aria-label="Bay Michelin dashboard">
+        <span class="brand-mark">B.</span>
+        <span><strong>Bay Michelin</strong><small>FIELD GUIDE · 2026</small></span>
+      </a>
+      <nav class="activities-nav" aria-label="Guide categories">
+        <a href="index.html#overview">Overview</a>
+        <a href="index.html#restaurants">Restaurants</a>
+        <a href="index.html#hotels">Hotels</a>
+        <a href="index.html#activities" aria-current="page">Activities</a>
+      </nav>
+    </header>
+
+    <main id="activities-main" class="activities-main">
+      <section class="activities-hero" aria-labelledby="activities-title">
+        <div>
+          <p class="eyebrow">A DAY AROUND THE TABLE</p>
+          <h1 id="activities-title">Local activities,<br><em>officially sourced.</em></h1>
+          <p class="activities-lede">A small, date-checked directory of museums, science experiences and gardens that pair with Bay Area dining clusters. Each listing links to its official venue page, current hours and ticket information where published.</p>
+          <a class="activities-backlink" href="index.html#activities">← Back to the main guide</a>
+        </div>
+        <aside class="activities-snapshot" aria-label="Activity research snapshot">
+          <span class="snapshot-label">RESEARCH SNAPSHOT</span>
+          <strong>5 activities</strong>
+          <span>Official venue pages reviewed 24 Nov 2026</span>
+          <p>Hours and admission are time-sensitive. Check the venue's live calendar before booking or travelling.</p>
+        </aside>
+      </section>
+
+      <section class="activities-summary" aria-label="Executive summary">
+        <div class="summary-copy">
+          <p class="eyebrow">EXECUTIVE SUMMARY</p>
+          <h2>Useful planning facts, with uncertainty visible.</h2>
+          <p>Four venues publish standard adult admission prices; Filoli publishes seasonal starting prices. Two-adult subtotals below are simple multiplication of the official adult price, not a booked quote. The Filoli holiday pages disagree on daytime closing and last-entry times, so that conflict is flagged rather than resolved by guesswork.</p>
+        </div>
+        <div class="summary-stat"><strong>5</strong><span>official venue listings</span></div>
+        <div class="summary-stat"><strong>4</strong><span>posted adult price schedules</span></div>
+        <div class="summary-stat summary-stat-alert"><strong>1</strong><span>hours conflict flagged</span></div>
+      </section>
+
+      <section class="activities-directory" aria-labelledby="directory-title">
+        <div class="directory-heading">
+          <div>
+            <p class="eyebrow">BROWSE BY CITY OR TYPE</p>
+            <h2 id="directory-title">Activities directory</h2>
+            <p>Admission figures are per official venue pages. The two-adult figure is a ticket subtotal based only on posted adult rates; optional purchases and other fees are not assumed.</p>
+          </div>
+        </div>
+        <div class="activities-filters" role="search" aria-label="Filter activities">
+          <label class="activities-search"><span aria-hidden="true">⌕</span><input id="activity-search" type="search" placeholder="Search activity or location…" aria-label="Search activities"></label>
+          <label class="activities-select"><span class="sr-only">Filter by city</span><select id="activity-city-filter"><option value="all">All areas</option></select></label>
+          <label class="activities-select"><span class="sr-only">Filter by activity type</span><select id="activity-category-filter"><option value="all">All types</option></select></label>
+          <span id="activity-result-count" class="activity-result-count" aria-live="polite"></span>
+        </div>
+        <div class="activities-table-wrap">
+          <table class="activities-table">
+            <thead>
+              <tr>
+                <th scope="col">ACTIVITY</th>
+                <th scope="col">AREA / TYPE</th>
+                <th scope="col">OPEN DAYS, HOURS & EXCEPTIONS</th>
+                <th scope="col">ADMISSION / TWO ADULTS</th>
+                <th scope="col">OFFICIAL SOCIAL / VIDEO</th>
+                <th scope="col">OFFICIAL SOURCES</th>
+              </tr>
+            </thead>
+            <tbody id="activity-rows"><tr><td colspan="6">Loading the verified activity directory…</td></tr></tbody>
+          </table>
+        </div>
+        <div id="activity-cards" class="activity-cards" aria-live="polite"></div>
+        <p class="activities-footnote"><span aria-hidden="true">ⓘ</span> Data checked 24 Nov 2026. A source link is provided for every row. If current availability, exact prices or same-day operating notices are important, verify them directly with the venue.</p>
+      </section>
+
+      <section class="activity-review" aria-labelledby="review-title">
+        <div>
+          <p class="eyebrow">FLAGGED FOR REVIEW</p>
+          <h2 id="review-title">One unresolved source conflict</h2>
+          <p>Filoli's official Holiday Daytime event page states 10:00 a.m.–3:30 p.m. with last entry at 1:30 p.m.; the general Visit page states 10:00 a.m.–3:00 p.m. with last entry at 1:00 p.m. Both are linked in the Filoli row. Use its date-specific ticket calendar or contact the venue before relying on either time.</p>
+        </div>
+        <a href="https://filoli.org/holidays/" target="_blank" rel="noopener noreferrer">Review Filoli's official holiday information ↗</a>
+      </section>
+    </main>
+
+    <footer class="activities-footer">
+      <a class="activities-footer-brand" href="index.html#overview">Bay Michelin</a>
+      <span>Independent planning project · Not affiliated with MICHELIN Guide</span>
+      <a href="#activities-main">Back to top ↑</a>
+    </footer>
+  </div>
+  <noscript><p class="no-script-note">JavaScript is required to load the activity table. Open this site over HTTP and enable JavaScript.</p></noscript>
+</body>
+</html>

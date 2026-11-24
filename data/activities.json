@@ -1,0 +1,123 @@
+[
+  {
+    "name": "Exploratorium",
+    "city": "San Francisco",
+    "category": "Interactive science museum",
+    "address": "Pier 15, San Francisco, CA 94111",
+    "officialUrl": "https://www.exploratorium.edu/visit",
+    "hours": "Sunday 12:00 p.m.–5:00 p.m. (members and donors only 10:00 a.m.–noon); Monday closed; Tuesday–Saturday 10:00 a.m.–5:00 p.m.; Thursday After Dark 6:00 p.m.–10:00 p.m. (ages 18+).",
+    "exceptions": "Regular hours are subject to change. The official schedule lists Nov 26, 2026 closed; Dec 5, 12 and 16 closing at 4:00 p.m.; Dec 24 closing at 3:00 p.m. with no After Dark; Dec 25 closed; Dec 31 no After Dark; and Dec 21 and 28 open Mondays for winter break. Check the official schedule for later changes.",
+    "adultAdmission": "Daytime adult (18–64): $39.95; After Dark general admission (18+): $22.95.",
+    "twoAdultSubtotal": "$79.90 daytime; $45.90 After Dark (two times the posted adult rate).",
+    "priceNote": "Arithmetic subtotal from the official adult ticket prices; optional purchases are not included. No other fees are asserted.",
+    "socials": [
+      { "platform": "Instagram", "label": "Instagram", "url": "https://www.instagram.com/exploratorium/" },
+      { "platform": "TikTok", "label": "TikTok", "url": "https://www.tiktok.com/@exploratorium" },
+      { "platform": "YouTube", "label": "YouTube", "url": "https://www.youtube.com/user/Exploratorium" }
+    ],
+    "sources": [
+      { "label": "Official visit details, hours and ticket prices", "url": "https://www.exploratorium.edu/visit" },
+      { "label": "Official special hours and closures", "url": "https://www.exploratorium.edu/hours" },
+      { "label": "Official social profiles", "url": "https://www.exploratorium.edu/about/contact-us" }
+    ],
+    "verifiedOn": "2026-11-24",
+    "flags": []
+  },
+  {
+    "name": "San Francisco Museum of Modern Art (SFMOMA)",
+    "city": "San Francisco",
+    "category": "Modern and contemporary art museum",
+    "address": "151 Third Street, San Francisco, CA 94103",
+    "officialUrl": "https://www.sfmoma.org/visit/",
+    "hours": "Monday–Tuesday 10:00 a.m.–5:00 p.m.; Wednesday closed; Thursday noon–8:00 p.m.; Friday–Sunday 10:00 a.m.–5:00 p.m.",
+    "exceptions": "Closed Thanksgiving Day (Nov 26, 2026) and Christmas Day (Dec 25). Open Wednesday Dec 23, 2026, 10:00 a.m.–5:00 p.m.; early closing Dec 24, 10:00 a.m.–3:00 p.m., and Dec 31, noon–5:00 p.m. Recheck the museum's current holiday schedule before visiting.",
+    "adultAdmission": "General admission adult: $30.",
+    "twoAdultSubtotal": "$60 (two times the posted adult general-admission price).",
+    "priceNote": "Arithmetic subtotal from the official adult general-admission price; separately ticketed programs or add-ons are not included.",
+    "socials": [
+      { "platform": "Instagram", "label": "Instagram", "url": "https://www.instagram.com/sfmoma/" },
+      { "platform": "YouTube", "label": "YouTube video: Artist Cribs — David Huffman's Oakland Studio", "url": "https://www.youtube.com/watch?v=GFkSKHT_CJI" }
+    ],
+    "sources": [
+      { "label": "Official visit details, admission and holiday hours", "url": "https://www.sfmoma.org/visit/" },
+      { "label": "Official SFMOMA Watch page linking the YouTube feature", "url": "https://www.sfmoma.org/watch/" },
+      { "label": "Official SFMOMA page identifying @sfmoma on Instagram", "url": "https://www.sfmoma.org/read/how-to-create-your-own-social-justice-poster/" }
+    ],
+    "verifiedOn": "2026-11-24",
+    "flags": []
+  },
+  {
+    "name": "California Academy of Sciences",
+    "city": "San Francisco",
+    "category": "Natural history museum, aquarium and planetarium",
+    "address": "55 Music Concourse Drive, Golden Gate Park, San Francisco, CA 94118",
+    "officialUrl": "https://www.calacademy.org/plan-your-visit",
+    "hours": "Monday–Saturday 9:30 a.m.–5:00 p.m. (last entry 4:00 p.m.); Sunday 11:00 a.m.–5:00 p.m. (last entry 4:00 p.m.); NightLife most Thursdays 6:00 p.m.–10:00 p.m. for ages 21+ (last entry 9:00 p.m.).",
+    "exceptions": "The official holiday schedule lists Thanksgiving Day (Nov 26, 2026) 10:00 a.m.–3:00 p.m.; Nov 27–28 extended to 6:00 p.m.; Christmas Day (Dec 25) 11:00 a.m.–5:00 p.m.; Dec 26–30 extended to 6:00 p.m.; and a public closure for a private event on Dec 2. The venue says schedules can change for holidays, events and exhibit maintenance.",
+    "adultAdmission": "Adult (19+): $49; $55 peak. The official pricing page says peak pricing applies during spring break, summer, holiday weekends, and November and December holiday periods.",
+    "twoAdultSubtotal": "$98 at the posted standard rate; $110 at the posted peak rate (two times the adult rate).",
+    "priceNote": "Arithmetic subtotal from official adult rates; peak pricing is date-dependent. Optional add-ons are not included and no other fees are asserted.",
+    "socials": [
+      { "platform": "Instagram", "label": "Instagram", "url": "https://www.instagram.com/calacademy" },
+      { "platform": "TikTok", "label": "TikTok", "url": "https://www.tiktok.com/@heycalacademy" },
+      { "platform": "YouTube", "label": "YouTube", "url": "https://www.youtube.com/user/calacademy" },
+      { "platform": "Instagram", "label": "NightLife Instagram", "url": "https://www.instagram.com/casnightlife" }
+    ],
+    "sources": [
+      { "label": "Official plan-your-visit page and location", "url": "https://www.calacademy.org/plan-your-visit" },
+      { "label": "Official hours, holiday schedule and admission prices", "url": "https://www.calacademy.org/hours-admission" },
+      { "label": "Official social profiles", "url": "https://www.calacademy.org/find-us-on-social-media" }
+    ],
+    "verifiedOn": "2026-11-24",
+    "flags": []
+  },
+  {
+    "name": "Oakland Museum of California (OMCA)",
+    "city": "Oakland",
+    "category": "Art, history and natural sciences museum with garden",
+    "address": "1000 Oak Street, Oakland, CA 94607",
+    "officialUrl": "https://museumca.org/visit/",
+    "hours": "Wednesday–Sunday 11:00 a.m.–5:00 p.m.; Monday–Tuesday closed.",
+    "exceptions": "Thanksgiving Day (Nov 26, 2026), Christmas Day (Dec 25) and New Year's Day (Jan 1, 2027) are listed as closed. Thursday After Hours is on seasonal break and scheduled to resume in January 2027. The museum also lists free admission on the first Sunday of each month; verify current event details before planning.",
+    "adultAdmission": "All-inclusive adult ticket (ages 18–64): $25.",
+    "twoAdultSubtotal": "$50 (two times the posted adult ticket price).",
+    "priceNote": "Arithmetic subtotal from the official adult all-inclusive ticket price; the museum lists first-Sunday admission as free. No other fees are asserted.",
+    "socials": [
+      { "platform": "Instagram", "label": "Instagram", "url": "https://www.instagram.com/oaklandmuseumca/" },
+      { "platform": "YouTube", "label": "YouTube", "url": "https://www.youtube.com/user/oaklandmuseumca" }
+    ],
+    "sources": [
+      { "label": "Official visit details, hours, holiday schedule and admission", "url": "https://museumca.org/visit/" },
+      { "label": "Official ticket information", "url": "https://museumca.org/tickets/" },
+      { "label": "Official OMCA website and social profiles", "url": "https://museumca.org/" }
+    ],
+    "verifiedOn": "2026-11-24",
+    "flags": []
+  },
+  {
+    "name": "Filoli Historic House & Garden",
+    "city": "Woodside",
+    "category": "Historic estate, house, gardens and trails",
+    "address": "86 Cañada Road, Woodside, CA 94062",
+    "officialUrl": "https://filoli.org/visit/",
+    "hours": "Holidays at Filoli (Nov 14, 2026–Jan 10, 2027): the event page lists Holiday Daytime daily 10:00 a.m.–3:30 p.m. (last entry 1:30 p.m.) and Holiday Lights 4:00 p.m.–10:00 p.m. (last entry 8:00 p.m.).",
+    "exceptions": "The official Holiday Daytime page says Thistlewyck Village runs through Jan 3, 2027. The official Visit page lists closures on Nov 26, Dec 24 and Dec 25, 2026, and the Holiday Lights page lists Dec 12 as closed. Important source conflict: the Holiday Daytime event page says 10:00 a.m.–3:30 p.m. with last entry 1:30 p.m., while the general Visit page lists 10:00 a.m.–3:00 p.m. with last entry 1:00 p.m. Confirm the selected date and latest hours directly with Filoli before travel.",
+    "adultAdmission": "Holiday Daytime from $40 per person; Holiday Lights from $45 per person.",
+    "twoAdultSubtotal": "From $80 for two daytime tickets; from $90 for two Holiday Lights tickets (two times each published starting price).",
+    "priceNote": "The official event page lists starting prices, not a guaranteed date-specific checkout total. Two-person figures are arithmetic subtotals from those starting prices; the actual price may be higher. No other fees are asserted.",
+    "socials": [
+      { "platform": "Instagram", "label": "Instagram", "url": "https://www.instagram.com/filoliestate/" },
+      { "platform": "TikTok", "label": "TikTok", "url": "https://www.tiktok.com/@filoliestate" },
+      { "platform": "YouTube", "label": "YouTube", "url": "https://www.youtube.com/@FiloliEstate" }
+    ],
+    "sources": [
+      { "label": "Official visitor information and address", "url": "https://filoli.org/visit/" },
+      { "label": "Official 2026–27 holiday schedule and starting prices", "url": "https://filoli.org/holidays/" },
+      { "label": "Official date-specific opening-times calendar", "url": "https://filoli.org/visit/opening-times/" }
+    ],
+    "verifiedOn": "2026-11-24",
+    "flags": [
+      "Official Filoli pages disagree on Holiday Daytime closing and last-entry times; date-specific check required."
+    ]
+  }
+]
