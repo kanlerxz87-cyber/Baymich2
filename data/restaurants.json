@@ -1,0 +1,264 @@
+[
+  {
+    "name": "Atelier Crenn",
+    "city": "San Francisco",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn"
+  },
+  {
+    "name": "Benu",
+    "city": "San Francisco",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu"
+  },
+  {
+    "name": "Californios",
+    "city": "San Francisco",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios"
+  },
+  {
+    "name": "Quince",
+    "city": "San Francisco",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince"
+  },
+  {
+    "name": "Enclos",
+    "city": "Sonoma",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
+    "hours": "Wednesday–Saturday 5:30–8:00 pm; Sunday–Tuesday closed",
+    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos"
+  },
+  {
+    "name": "SingleThread",
+    "city": "Healdsburg",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread"
+  },
+  {
+    "name": "The French Laundry",
+    "city": "Yountville",
+    "stars": 3,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry"
+  },
+  {
+    "name": "Acquerello",
+    "city": "San Francisco",
+    "stars": 2,
+    "pairPrice": "$731.60 + tax",
+    "pairPriceNote": "Two seasonal tasting menus at $295 each, plus the restaurant’s stated 20% service charge and 4% employee-benefits surcharge; excludes tax and beverages. Recheck menu before booking.",
+    "menuUrl": "https://www.acquerellosf.com/seasonal-tasting-menu",
+    "restaurantUrl": "https://www.acquerellosf.com/",
+    "hours": "Tuesday–Saturday 5:30–9:45 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello"
+  },
+  {
+    "name": "Birdsong",
+    "city": "San Francisco",
+    "stars": 2,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong"
+  },
+  {
+    "name": "Commis",
+    "city": "Oakland",
+    "stars": 2,
+    "hours": "Tuesday–Saturday, 5:00–9:30 pm; Sunday–Monday closed",
+    "hoursNote": "MICHELIN profile hours; holiday/exception schedules not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis",
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis"
+  },
+  {
+    "name": "Kiln",
+    "city": "San Francisco",
+    "stars": 2,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355"
+  },
+  {
+    "name": "Lazy Bear",
+    "city": "San Francisco",
+    "stars": 2,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear"
+  },
+  {
+    "name": "Saison",
+    "city": "San Francisco",
+    "stars": 2,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison"
+  },
+  {
+    "name": "Sons & Daughters",
+    "city": "San Francisco",
+    "stars": 2,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters"
+  },
+  {
+    "name": "7 Adams",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/7-adams"
+  },
+  {
+    "name": "Angler SF",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/angler-sf"
+  },
+  {
+    "name": "Hilda and Jesse",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/hilda-and-jesse"
+  },
+  {
+    "name": "Kin Khao",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kin-khao"
+  },
+  {
+    "name": "Mister Jiu’s",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s"
+  },
+  {
+    "name": "Naides",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/naides"
+  },
+  {
+    "name": "Nari",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nari"
+  },
+  {
+    "name": "Niku Steakhouse",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/niku-steakhouse"
+  },
+  {
+    "name": "Nisei",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nisei"
+  },
+  {
+    "name": "San Ho Won",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/san-ho-won"
+  },
+  {
+    "name": "Sorrel",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sorrel"
+  },
+  {
+    "name": "Ssal",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/ssal"
+  },
+  {
+    "name": "State Bird Provisions",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/state-bird-provisions"
+  },
+  {
+    "name": "The Progress",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/the-progress"
+  },
+  {
+    "name": "Wolfsbane",
+    "city": "San Francisco",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane",
+    "hours": "Tuesday–Saturday 5:30–10:00 pm; Sunday–Monday closed",
+    "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
+    "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane"
+  },
+  {
+    "name": "Sun Moon Studio",
+    "city": "Oakland",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/sun-moon-studio"
+  },
+  {
+    "name": "Selby’s",
+    "city": "Atherton",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/atherton/restaurant/selby-s"
+  },
+  {
+    "name": "Protégé",
+    "city": "Palo Alto",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/palo-alto/restaurant/protege"
+  },
+  {
+    "name": "Wakuriya",
+    "city": "San Mateo",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-mateo/restaurant/wakuriya"
+  },
+  {
+    "name": "Madcap",
+    "city": "San Anselmo",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-anselmo/restaurant/madcap"
+  },
+  {
+    "name": "Plumed Horse",
+    "city": "Saratoga",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/saratoga/restaurant/plumed-horse"
+  },
+  {
+    "name": "The Village Pub",
+    "city": "Woodside",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/woodside/restaurant/the-village-pub"
+  },
+  {
+    "name": "Troubadour",
+    "city": "Healdsburg",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/troubadour"
+  },
+  {
+    "name": "Cyrus",
+    "city": "Geyserville",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/geyserville/restaurant/cyrus"
+  },
+  {
+    "name": "Auro",
+    "city": "Calistoga",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/calistoga/restaurant/auro"
+  },
+  {
+    "name": "Auberge du Soleil",
+    "city": "Rutherford",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/rutherford/restaurant/auberge-du-soleil"
+  },
+  {
+    "name": "Press",
+    "city": "St. Helena",
+    "stars": 1,
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press"
+  }
+]
