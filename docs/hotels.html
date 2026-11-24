@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotels · SF Bay Area Michelin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">SF Bay Area Michelin Dashboard</div>
+  <nav><a class="" href="index.html">Dashboard</a><a class="" href="michelin.html">Michelin Stars</a><a class="on" href="hotels.html">Hotels</a><a class="" href="flagged.html">Flagged for Review</a><a class="" href="questions.html">Questions & Suggestions</a><a class="" href="sources.html">Sources</a></nav>
+</header>
+<main>
+
+<section>
+  <h1>Hotels · ranked by nearby Michelin restaurants</h1>
+  <p class="flag-banner"><b>Not built yet.</b> A verified ranking needs three decisions first: the radius and weights (Q5), the hotel scope (Q6), and an approved coordinate source. No hotel is ranked and no hotel row is filled in until those are verified.</p>
+  <h2>Proposed method (for approval only)</h2>
+  <ol>
+    <li>Use the verified starred restaurant addresses from the Michelin page (see <a href="michelin.html">Michelin Stars</a>).</li>
+    <li>For each hotel, count starred restaurants within an approved straight-line radius.</li>
+    <li>Score: 3-star = 3, 2-star = 2, 1-star = 1 (weights to be approved).</li>
+    <li>Rank by score, then by count. Show the verified source for each hotel.</li>
+  </ol>
+  <p>Decisions: <a href="questions.html">Questions Q5 and Q6</a>.</p>
+</section>
+
+</main>
+<footer>
+  Every value links to an official source. Blank or “Not verified” means it could not be confirmed from an official source.
+  Data as of 2026-11-24. Built from <code>data/</code> by <code>scripts/build_site.py</code>.
+</footer>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard · SF Bay Area Michelin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">SF Bay Area Michelin Dashboard</div>
+  <nav><a class="on" href="index.html">Dashboard</a><a class="" href="michelin.html">Michelin Stars</a><a class="" href="hotels.html">Hotels</a><a class="" href="flagged.html">Flagged for Review</a><a class="" href="questions.html">Questions & Suggestions</a><a class="" href="sources.html">Sources</a></nav>
+</header>
+<main>
+
+<section class="hero">
+  <h1>SF Bay Area Michelin Dashboard</h1>
+  <p class="lede">A verified, organized view of the Michelin-starred restaurants in the Bay Area, with the questions that still need answers before any decisions are made.</p>
+</section>
+
+<section>
+  <h2>Executive summary</h2>
+  <ul class="summary">
+    <li><b>41 starred restaurants</b> in the Bay Area under the nine-county scope (assumption, see <a href="questions.html">Questions</a>). That is 41 of the 83 starred restaurants statewide in the official 2026 California selection.</li>
+    <li><b>7 three-star</b>, <b>7 two-star</b>, <b>27 one-star</b>. Source: <a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/guide-michelin-california" target="_blank" rel="noopener">official Michelin 2026 California article</a>.</li>
+    <li><b>New 2026 stars in the Bay Area:</b> Californios and Enclos (3 stars), Naides, Troubadour, Wolfsbane (1 star each). Source: the same official article.</li>
+    <li><b>Verification status:</b> star status is verified for all 41 rows. Official restaurant pages have been read for 21 of 41. Full listed hours are verified for 13, partial for 2, and pending for 26.</li>
+    <li><b>Prices:</b> Michelin lists a price tier only. No couple-price dollar amount has been verified yet, so that column is blank for every row.</li>
+    <li><b>Social links (YouTube, TikTok, Instagram):</b> none verified yet, so they are blank.</li>
+    <li><b>Hotels and activities:</b> not built yet. They depend on decisions listed on the <a href="questions.html">Questions</a> page.</li>
+    <li><b>Open items:</b> 7 medium/high flags on the <a href="flagged.html">Flagged for Review</a> page and 10 open questions.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Pages</h2>
+  <div class="cards">
+    <a class="card" href="michelin.html"><b>Michelin Stars</b><span>41 starred Bay Area restaurants, by star level, with official links.</span></a>
+    <a class="card" href="hotels.html"><b>Hotels</b><span>Ranking by nearby starred restaurants. Blocked until method and hotel data are approved.</span></a>
+    <a class="card" href="flagged.html"><b>Flagged for Review</b><span>12 irregularities and unverified items.</span></a>
+    <a class="card" href="questions.html"><b>Questions & Suggestions</b><span>10 open questions and 8 suggestions. Nothing is implemented until you choose.</span></a>
+    <a class="card" href="sources.html"><b>Sources & Method</b><span>Every official source used, and how each value was checked.</span></a>
+  </div>
+</section>
+
+</main>
+<footer>
+  Every value links to an official source. Blank or “Not verified” means it could not be confirmed from an official source.
+  Data as of 2026-11-24. Built from <code>data/</code> by <code>scripts/build_site.py</code>.
+</footer>
+</body>
+</html>

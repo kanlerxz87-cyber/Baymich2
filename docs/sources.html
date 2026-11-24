@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sources · SF Bay Area Michelin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">SF Bay Area Michelin Dashboard</div>
+  <nav><a class="" href="index.html">Dashboard</a><a class="" href="michelin.html">Michelin Stars</a><a class="" href="hotels.html">Hotels</a><a class="" href="flagged.html">Flagged for Review</a><a class="" href="questions.html">Questions & Suggestions</a><a class="on" href="sources.html">Sources</a></nav>
+</header>
+<main>
+
+<section>
+  <h1>Sources &amp; Method</h1>
+  <h2>Primary sources (official)</h2>
+  <ul>
+    <li><a href="https://guide.michelin.com/us/en/article/michelin-guide-ceremony/guide-michelin-california" target="_blank" rel="noopener">MICHELIN Guide — Every MICHELIN-Starred Restaurant in California for 2026</a> (published 24 June 2026). Used for star status and the 83-restaurant count.</li>
+    <li>Official Michelin restaurant pages (guide.michelin.com/us/en/…). One link per row in the <a href="michelin.html">Michelin table</a>. Used for address, phone, restaurant website, price tier, and listed hours.</li>
+  </ul>
+  <h2>Secondary sources (cross-check only, not used as values)</h2>
+  <ul>
+    <li><a href="https://sf.eater.com/restaurant-news/212958/2026-michelin-star-winners-california-guide-san-francisco-bay-area" target="_blank" rel="noopener">Eater SF — 2026 Michelin Star Winners of the Bay Area</a>. Used to find conflicts (see <a href="flagged.html">Flagged</a>).</li>
+  </ul>
+  <h2>Method</h2>
+  <ol>
+    <li>Read the official article and copy star lists exactly.</li>
+    <li>Open each official restaurant page and copy address, phone, website, price tier, and listed hours.</li>
+    <li>If a value is missing from the official page, leave it blank and flag it. Nothing is inferred.</li>
+    <li>Compare against secondary sources and flag any conflict.</li>
+  </ol>
+  <h2>Data files</h2>
+  <ul>
+    <li><code>data/michelin_starred_bay_area.json</code> — table data.</li>
+    <li><code>data/review.json</code> — flags, questions, suggestions.</li>
+    <li><code>COORDINATION.md</code> — shared task board and session log.</li>
+  </ul>
+</section>
+
+</main>
+<footer>
+  Every value links to an official source. Blank or “Not verified” means it could not be confirmed from an official source.
+  Data as of 2026-11-24. Built from <code>data/</code> by <code>scripts/build_site.py</code>.
+</footer>
+</body>
+</html>
