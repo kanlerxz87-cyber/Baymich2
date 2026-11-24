@@ -6,6 +6,7 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
+| Michelin SF listing cross-check (star-tier counts vs. official SF-area listing) and repo irregularity review | in progress | `arena/e5e6b91f-baymich2` | `COORDINATION.md` only (read-only check of `data/restaurants.json`) |
 
 ## Log
 
@@ -14,6 +15,10 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
 - 2026-11-24 — Validation passed: JSON parsed; 41 unique restaurant records and 4 hotel records; 7/7/27 star counts; every restaurant has an official MICHELIN profile URL; every hotel has an official MICHELIN profile URL; `node --check app.js` passed; local HTTP smoke test returned 200 for the index, CSS, JS, and both JSON files.
 - 2026-11-24 — PR #3 merged to `main` (merge commit `65175a55f10ab8fde38242c9f0e96da07425c892`). GitHub Pages build/deploy run `45360018248` succeeded; public page verified with the live 41-row restaurant index at https://kanlerxz87-cyber.github.io/Baymich2/.
+
+- 2026-11-24 — Session `arena/e5e6b91f-baymich2` claimed the cross-check task. Scope note: this session works only on branch `arena/e5e6b91f-baymich2`, as assigned by Arena, so the `session-<id>/<task>` branch naming in this board was not used. No other session's files were edited.
+- 2026-11-24 — Cross-check against the official MICHELIN listing for San Francisco and surroundings (https://guide.michelin.com/us/en/california/san-francisco/restaurants, shows "145 restaurants" with tier counts 3 Stars = 4, 2 Stars = 7, 1 Star = 18, Bib Gourmand = 30, Selected = 86). Result: 3-star count (4 SF) and 2-star count (7 SF + Oakland) match `data/restaurants.json`. The 1-star count is NOT reconciled: the listing's 18 covers a wider area than the dataset's 15 San Francisco + 1 Oakland + Peninsula/Marin entries, and the individual 1-star cards were not read line by line. Status: open.
+- 2026-11-24 — Arithmetic check of the Acquerello two-person figure: 2 x $295 = $590; +20% service = $708; +4% of $590 = $23.60; total $731.60 before tax and beverages. Matches the stored value, but whether the 4% applies to food only is taken from the restaurant's stated terms and has not been independently re-read on the day of this check.
 
 ## Source record, verification and irregularities
 
