@@ -7,6 +7,7 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
 | Restaurant profile verification pass 1 (address, phone, venue website, hours from official MICHELIN profiles) | in progress | `arena/e3632548-baymich2` (session e3632548) | `data/restaurants.json`, `app.js` (address line only), `COORDINATION.md` |
+| Row-by-row re-verification of starred restaurant and hotel records against official MICHELIN pages; flagged-irregularity log | in progress | `arena/b8297601-baymich2` (session b8297601) | `data/restaurants.json`, `data/hotels.json`, `COORDINATION.md` (log section only) |
 
 ## Log
 
@@ -26,6 +27,8 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - Michelin's profile URLs are in `/ca/en/` and `/us/en/` forms. Both load the same profile; the us/en URL is used for Atelier Crenn, which redirected.
 - Acquerello's $731.60 figure reconciles to 2 × $295 × 1.24 (20% service plus 4% surcharge on the menu base). Tax and beverages excluded.
 - Many hours, prices, social links and all activities remain unverified (see the Flagged for Review page).
+- 2026-11-24 — Scope overlap noted: session b8297601 also claimed `data/restaurants.json` while session e3632548 held it. Both sessions' edits are kept; the merge was resolved without discarding either side. Future sessions should check the board before claiming a file.
+- 2026-11-24 — Session b8297601 claimed row-by-row re-verification of the star and hotel records against official MICHELIN pages. Work is on branch `arena/b8297601-baymich2` (the branch Arena assigned this session; the `session-<id>/<task>` naming in the protocol was not used because the session must stay on its assigned branch).
 
 ## Source record, verification and irregularities
 
