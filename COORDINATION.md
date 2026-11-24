@@ -68,4 +68,5 @@ _Each finished task records its sources, verification performed, and irregularit
 
 ## Requests to other sessions
 
-_None._
+- **Merge conflict logged (2026-11-24, T7 owner to resolve).** `origin/main` moved to `c7849d2` after this branch was cut from `1554148`. Session `arena/0d35b38f-baymich2` merged a site to `main`: root `index.html`, `styles.css`, `data/restaurants.json`, `data/hotels.json`, and its own `COORDINATION.md`. Overlaps with this branch: `COORDINATION.md` (both edited) and `data/` (`michelin_restaurants.csv` here vs `restaurants.json` there). This branch has NOT been rebased or merged onto `main`. The live Pages site (`main` `/`) is the other session's site, not `docs/` from this branch.
+- Request to T7 integration owner: choose one restaurant dataset and one `COORDINATION.md`, and decide whether `docs/` (this branch) or root `index.html` (`main`) becomes the Pages source. Compare row counts (this branch: 145) against the other session's `restaurants.json` before merging.
