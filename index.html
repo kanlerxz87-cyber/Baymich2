@@ -47,6 +47,7 @@
     <h2 class="section-title"><span class="kicker">Dashboard</span> At a glance</h2>
     <div class="dashboard" id="dashboardStats">
       <div class="stat-card"><span class="value" id="statTotal">—</span><span class="label">Michelin-starred restaurants</span></div>
+      <div class="stat-card"><span class="value" id="statBib">—</span><span class="label">Bib Gourmand (rated)</span></div>
       <div class="stat-card"><span class="value" id="stat3">—</span><span class="label">Three-star</span></div>
       <div class="stat-card"><span class="value" id="stat2">—</span><span class="label">Two-star</span></div>
       <div class="stat-card"><span class="value" id="stat1">—</span><span class="label">One-star</span></div>
@@ -95,12 +96,15 @@
 <script>
 (function(){
   const r = window.RESTAURANTS || [];
-  const total = r.length;
+  const starred = r.filter(x=>x.stars);
+  const total = starred.length;
+  const nBib = r.filter(x=>x.status==="Bib Gourmand").length;
   const n3 = r.filter(x=>x.stars===3).length;
   const n2 = r.filter(x=>x.stars===2).length;
   const n1 = r.filter(x=>x.stars===1).length;
   const regions = new Set(r.map(x=>x.region)).size;
   document.getElementById('statTotal').textContent = total;
+  document.getElementById('statBib').textContent = nBib;
   document.getElementById('stat3').textContent = n3;
   document.getElementById('stat2').textContent = n2;
   document.getElementById('stat1').textContent = n1;
