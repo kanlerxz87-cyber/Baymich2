@@ -38,3 +38,8 @@ Statuses: `unclaimed` · `in progress` · `done` · `needs review` (published on
 - Pull and rebase before every push: `git pull --rebase origin arena/6a60274e-baymich2`.
 - If a conflict happens, stop and log it here. Do not discard the other session's changes.
 - A claim older than 60 minutes with no commits can be taken over (note the handoff here).
+
+### 2026-11-24 · arena-6a60274e · publish
+- GitHub Pages already exists for this repo, serving `main` at `/` (https://kanlerxz87-cyber.github.io/Baymich2/). The session token cannot change Pages settings (HTTP 403), so the dashboard is not live yet.
+- Opened PR #1 (`arena/6a60274e-baymich2` → `main`): https://github.com/kanlerxz87-cyber/Baymich2/pull/1
+- To publish: merge PR #1, then set Pages source to `main` / `/docs`. This is the T10 integration step.
