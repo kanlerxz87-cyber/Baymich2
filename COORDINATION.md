@@ -6,6 +6,7 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
+| Officially sourced local activities directory and standalone category page | in progress | `arena/e60a579b-baymich2` | `activities.html`, `activities.js`, `activities.css`, `data/activities.json` |
 
 ## Log
 
@@ -24,3 +25,4 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 - Deliberate blanks/flags: all but one restaurant's total for two; most restaurant hours and exception schedules; verified social/video profiles; full MICHELIN Selected and Bib Gourmand roster; activity listings; verified coordinates; hotel rates; and hotel dining-density ranking. These fields remain explicitly unverified or unranked. No hotel rank is presented because travel radius/mode and comprehensive geocoded restaurant data are missing.
 - Publication: GitHub Pages is live from the repository's `main` branch at `/` (public URL: https://kanlerxz87-cyber.github.io/Baymich2/). The existing branch-based Pages configuration was retained. An optional attempt to switch the repo to Actions-based deployment was rejected by GitHub permissions (HTTP 403); it was unnecessary because the existing Pages build succeeded.
 - Review status remains open for the explicitly flagged research gaps above (full Selected/Bib roster, social links, prices/hours, activities, map coordinates, hotel rates and density-ranking inputs).
+- 2026-11-24 — Claimed the non-overlapping activity-directory task on `arena/e60a579b-baymich2`. Scope: `activities.html`, `activities.js`, `activities.css`, `data/activities.json`. Work will be independently sourced, clearly flag unavailable facts, and avoid changing shared restaurant/hotel datasets or the main index/navigation; integration link is a later shared-output decision.
