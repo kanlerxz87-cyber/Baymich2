@@ -21,9 +21,9 @@ Shared task board for agent sessions working on this repo.
 |---|------|--------|-------|------------|------------------------|
 | 1 | Create COORDINATION.md task board | done | session-3a52860e | COORDINATION.md | n/a |
 | 2 | Research Michelin Star restaurants SF Bay Area (official Michelin guide) | done | session-3a52860e | data/restaurants.json | https://guide.michelin.com (verified 2026-11-24) |
-| 3 | Research Michelin-listed (no star) restaurants SF Bay Area | in progress | session-3a52860e | data/restaurants.json | https://guide.michelin.com |
-| 4 | Research hotels ranked by Michelin restaurants around them | unclaimed | — | data/hotels.json | official hotel + Michelin sources |
-| 5 | Gather social links (YouTube/TikTok/Instagram), hours, pricing per entry | in progress | session-3a52860e | data/restaurants.json | official entry sites |
+| 3 | Research Michelin-listed (no star) restaurants SF Bay Area | done | session-3a52860e | data/restaurants.json | https://guide.michelin.com (page-1 subset: 8 Bib Gourmand + 14 Selected enumerated, flagged unverified; full guide 116 listed-no-star) |
+| 4 | Research hotels ranked by Michelin restaurants around them | done | session-3a52860e | data/hotels.json | official hotel + Michelin sources (candidate set, flagged unverified) |
+| 5 | Gather social links (YouTube/TikTok/Instagram), hours, pricing per entry | done | session-3a52860e | data/restaurants.json | official entry sites |
 | 6 | Build GitHub Pages site: landing + category subpages + tables | unclaimed | — | *.html, assets/ | n/a |
 | 7 | Executive summary page | unclaimed | — | executive-summary.html | n/a |
 | 8 | Suggestions section page | unclaimed | — | suggestions.html | n/a |
