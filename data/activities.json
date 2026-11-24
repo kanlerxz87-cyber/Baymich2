@@ -1,0 +1,42 @@
+[
+  {
+    "name": "SFMOMA",
+    "type": "Modern & contemporary art museum",
+    "location": "151 Third Street, San Francisco",
+    "daysHours": "Mon–Tue 10am–5pm; Wed closed; Thu noon–8pm; Fri–Sun 10am–5pm",
+    "exceptions": "Closed Thanksgiving Day and Christmas Day. Published special 2026 holiday hours include Dec 23 open 10am–5pm, Christmas Eve 10am–3pm, New Year’s Eve noon–5pm. Recheck official visit page before travel.",
+    "coupleCost": "$60 standard adult admission for two (2 × $30); ticket/offer eligibility may change.",
+    "official": "https://www.sfmoma.org/visit/",
+    "social": ""
+  },
+  {
+    "name": "Alcatraz Island",
+    "type": "National park and historic site",
+    "location": "San Francisco Bay; ferry access at Piers 31–33",
+    "daysHours": "Daily: Sun–Mon 8:30am–6:30pm; Tue–Sat 8:30am–9:30pm (seasonal ferry schedule)",
+    "exceptions": "Closed Thanksgiving, Christmas, and New Year’s Day; seasonal departures; reservations recommended and sellouts possible. Ticket/ferry schedule is controlled by Alcatraz City Cruises; confirm before booking.",
+    "coupleCost": "",
+    "official": "https://www.nps.gov/alca/planyourvisit/hours.htm",
+    "social": ""
+  },
+  {
+    "name": "Conservatory of Flowers",
+    "type": "Botanical conservatory",
+    "location": "100 John F. Kennedy Drive, Golden Gate Park, San Francisco",
+    "daysHours": "Open six days a week, 10am–4:30pm; last entry 4pm",
+    "exceptions": "Closed Wednesdays for weekly maintenance. Official site lists annual 2026 maintenance closure Jan 21–Feb 4; recheck current notices.",
+    "coupleCost": "",
+    "official": "https://gggp.org/visit/admissions-hours/",
+    "social": "https://www.instagram.com/conservatoryofflowers/"
+  },
+  {
+    "name": "Japanese Tea Garden",
+    "type": "Public garden",
+    "location": "75 Hagiwara Tea Garden Drive, Golden Gate Park, San Francisco",
+    "daysHours": "Daily from 9am; last entry varies by season (Mar–Oct 5:30pm; Nov–Feb 4:30pm)",
+    "exceptions": "Last entry is 30 minutes before closing. Free hour Monday, Wednesday, Friday 9–10am. Verify seasonal updates before visiting.",
+    "coupleCost": "",
+    "official": "https://gggp.org/visit/admissions-hours/",
+    "social": "https://www.instagram.com/japaneseteagardensf/"
+  }
+]

@@ -1,0 +1,68 @@
+[
+  {
+    "name": "SingleThread Inn",
+    "location": "Healdsburg · Sonoma County",
+    "guideNearbyStarred": [
+      "SingleThread (3)",
+      "Troubadour (1)",
+      "Cyrus (1)"
+    ],
+    "nearbyStarCount": 3,
+    "rankBasis": "Count of 2026-starred restaurants named in MICHELIN hotel profile’s “Restaurants near the hotel” section; not a distance-radius total.",
+    "nightlyRate": "",
+    "social": "",
+    "profile": "https://guide.michelin.com/us/en/hotels-stays/napa-sonoma-valleys/singlethread-inn-13698"
+  },
+  {
+    "name": "Hotel Healdsburg",
+    "location": "Healdsburg · Sonoma County",
+    "guideNearbyStarred": [
+      "Troubadour (1)",
+      "SingleThread (3)",
+      "Cyrus (1)"
+    ],
+    "nearbyStarCount": 3,
+    "rankBasis": "Count of 2026-starred restaurants named in MICHELIN hotel profile’s “Restaurants near the hotel” section; not a distance-radius total.",
+    "nightlyRate": "",
+    "social": "",
+    "profile": "https://guide.michelin.com/us/en/hotels-stays/napa-sonoma-valleys/hotel-healdsburg-45"
+  },
+  {
+    "name": "Auberge du Soleil, Auberge Collection",
+    "location": "Rutherford · Napa County",
+    "guideNearbyStarred": [
+      "Auberge du Soleil (1)",
+      "Press (1)",
+      "The French Laundry (3)"
+    ],
+    "nearbyStarCount": 3,
+    "rankBasis": "Count of 2026-starred restaurants named in MICHELIN hotel profile’s “Restaurants near the hotel” section; not a distance-radius total.",
+    "nightlyRate": "",
+    "social": "",
+    "profile": "https://guide.michelin.com/us/en/hotels-stays/napa-sonoma-valleys/auberge-du-soleil-auberge-collection-7246"
+  },
+  {
+    "name": "The Battery",
+    "location": "San Francisco · San Francisco County",
+    "guideNearbyStarred": [
+      "Quince (3)"
+    ],
+    "nearbyStarCount": 1,
+    "rankBasis": "Count of 2026-starred restaurants named in MICHELIN hotel profile’s “Restaurants near the hotel” section; not a distance-radius total.",
+    "nightlyRate": "",
+    "social": "",
+    "profile": "https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/the-battery-san-francisco-8661"
+  },
+  {
+    "name": "San Francisco Proper Hotel",
+    "location": "Mid-Market · San Francisco County",
+    "guideNearbyStarred": [
+      "Birdsong (2)"
+    ],
+    "nearbyStarCount": 1,
+    "rankBasis": "Count of 2026-starred restaurants named in MICHELIN hotel profile’s “Restaurants near the hotel” section; not a distance-radius total.",
+    "nightlyRate": "",
+    "social": "",
+    "profile": "https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area/san-francisco-proper-hotel-8978"
+  }
+]

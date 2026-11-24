@@ -1,0 +1,79 @@
+[
+  {
+    "name": "2026 MICHELIN Guide California Star Selection",
+    "url": "https://guide.michelin.com/us/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "kind": "Official annual award list",
+    "checked": "2026-11-24",
+    "use": "Authoritative star levels and official list of Starred restaurants for the 2026 California selection, revealed June 24, 2026."
+  },
+  {
+    "name": "MICHELIN Guide San Francisco & surroundings — all starred",
+    "url": "https://guide.michelin.com/us/en/california/san-francisco/restaurants/all-starred",
+    "kind": "Official restaurant directory",
+    "checked": "2026-11-24",
+    "use": "Current listing/filter and individual restaurant profile links; area filter includes nearby towns."
+  },
+  {
+    "name": "MICHELIN Guide San Francisco & surroundings — Bib Gourmand",
+    "url": "https://guide.michelin.com/us/en/california/san-francisco/restaurants/bib-gourmand",
+    "kind": "Official restaurant directory",
+    "checked": "2026-11-24",
+    "use": "Confirms Bib Gourmand is a distinct Guide distinction; displayed examples are not an exhaustive county-wide Bib list."
+  },
+  {
+    "name": "MICHELIN Guide Benu profile",
+    "url": "https://guide.michelin.com/us/en/california/san-francisco/restaurant/benu",
+    "kind": "Official restaurant listing",
+    "checked": "2026-11-24",
+    "use": "Star distinction and official profile."
+  },
+  {
+    "name": "Benu official information",
+    "url": "https://www.benusf.com/info",
+    "kind": "Restaurant official site",
+    "checked": "2026-11-24",
+    "use": "Official tasting menu price $425/person, 22% service charge, and dinner service days Wednesday–Saturday. The published price does not yield a complete tax/beverage-inclusive bill."
+  },
+  {
+    "name": "Quince official website",
+    "url": "https://www.quincerestaurant.com/",
+    "kind": "Restaurant official site",
+    "checked": "2026-11-24",
+    "use": "Official address context, days open and reservation information."
+  },
+  {
+    "name": "Saison official website",
+    "url": "https://saisonsf.com/",
+    "kind": "Restaurant official site",
+    "checked": "2026-11-24",
+    "use": "Official venue profile."
+  },
+  {
+    "name": "SFMOMA visit details",
+    "url": "https://www.sfmoma.org/visit/",
+    "kind": "Official venue site",
+    "checked": "2026-11-24",
+    "use": "Current ticket price, opening hours, holiday exceptions and address."
+  },
+  {
+    "name": "NPS Alcatraz operating hours",
+    "url": "https://www.nps.gov/alca/planyourvisit/hours.htm",
+    "kind": "U.S. National Park Service",
+    "checked": "2026-11-24",
+    "use": "Official island hours and holiday closures; ferry timetables are seasonal and operator controlled."
+  },
+  {
+    "name": "Gardens of Golden Gate Park hours/admissions",
+    "url": "https://gggp.org/visit/admissions-hours/",
+    "kind": "Official venue operator site",
+    "checked": "2026-11-24",
+    "use": "Hours, seasonal last entry, maintenance closures, and official social account links."
+  },
+  {
+    "name": "MICHELIN Guide Bay Area hotels",
+    "url": "https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area",
+    "kind": "Official hotel directory",
+    "checked": "2026-11-24",
+    "use": "Official hotel selection. No date-based quote was captured; nightly rates are intentionally blank."
+  }
+]
