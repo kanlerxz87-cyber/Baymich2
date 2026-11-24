@@ -4,7 +4,7 @@ Session ID: `ee58963c` (Arena branch `arena/ee58963c-baymich2`). At task start, 
 
 | Task | Status | Owner | File scope |
 |---|---|---|---|
-| Initial source-grounded site, research log, and project structure | needs review | ee58963c | `COORDINATION.md`, `README.md`, `index.html`, `restaurants.html`, `hotels.html`, `activities.html`, `decisions.html`, `review.html`, `sources.html`, `assets/**`, `data/**`, `docs/**`, `scripts/**`, `.github/workflows/**` |
+| Initial source-grounded site, research log, and project structure | needs review | ee58963c | `COORDINATION.md`, `README.md`, `index.html`, `restaurants.html`, `hotels.html`, `activities.html`, `decisions.html`, `review.html`, `sources.html`, `assets/**`, `data/**`, `scripts/**` |
 
 ## Claim log
 - 2026-11-24 — Claimed after checking the board (which did not exist) and confirming the repository contained only README. The claim commit was pushed to `arena/ee58963c-baymich2`. An initial pull attempt failed because that remote branch did not yet exist; rebasing on `origin/main` succeeded and the current branch was pushed. No other session claim was present.
