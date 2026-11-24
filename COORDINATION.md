@@ -5,10 +5,12 @@ Session ID: `arena/0d35b38f-baymich2` (current Arena branch; work remains on the
 | Task | Status | Owner | File scope |
 |---|---|---|---|
 | Site foundation, source-verification workflow, and initial research dataset | done | `arena/0d35b38f-baymich2` | `COORDINATION.md`, `README.md`, `index.html`, `styles.css`, `app.js`, `data/` |
+| Session `arena/39e54224-baymich2`: row-level verification pass (hours, prices, social links, star re-check) for the 41 starred entries and 4 hotels; repo review of irregularities | in progress | `arena/39e54224-baymich2` | `data/restaurants.json`, `data/hotels.json`, `COORDINATION.md` (log section only) |
 | Final integration, full row-by-row source verification, and GitHub Pages publication | needs review | `arena/0d35b38f-baymich2` | shared site/data outputs |
 
 ## Log
 
+- 2026-11-24 — Session `arena/39e54224-baymich2` claimed the row-level verification pass above. Scope limited to `data/restaurants.json`, `data/hotels.json` and the log. Site UI files (`index.html`, `styles.css`, `app.js`) are not claimed and are not edited in this session; any UI change is logged as a request for the integration session. Work stays on the Arena branch `arena/39e54224-baymich2` as assigned by Arena (the board's `session-<id>/<task>` naming is superseded for this session).
 - 2026-11-24 — Claimed site foundation and research scope. Repo initially contained only the initial README; no coordination board or other claims were present. Work stayed on the active Arena branch.
 - 2026-11-24 — Built mobile-responsive dashboard, search/filterable restaurant index, city-level cluster summary, hotel shortlist, decision questions, suggestions, and a flagged-review register. The dashboard's row-level restaurant links point to the official MICHELIN restaurant profile pages; each row's 2026 star distinction was cross-checked against MICHELIN's official 2026 California starred list.
 - 2026-11-24 — Checked the official MICHELIN Guide's 2026 selection article (published June 24, 2026) in full, including all star tiers and restaurant names/cities. It yielded 41 local/adjacent-region starred entries (7 three-star, 7 two-star, 27 one-star) for the stated working boundary. Checked representative individual profile pages for Acquerello, Commis, Enclos, Wolfsbane, hotel profiles for SingleThread Inn and Rosewood Sand Hill, and Acquerello's official menu/surcharge page. Source links are in the data and site.
