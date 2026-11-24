@@ -30,4 +30,4 @@ Then open `http://localhost:8000`.
 
 ## Deployment
 
-A GitHub Actions workflow publishes the static root to GitHub Pages on pushes to `main` and on manual dispatch. Repository Pages must be configured to use **GitHub Actions** as the build/deploy source. The workflow does not claim a site is live until a Pages deployment succeeds.
+GitHub Pages is already enabled for this repository from the `main` branch root. After these changes are integrated into `main`, GitHub Pages will publish the static site at `https://kanlerxz87-cyber.github.io/Baymich2/`. The existing Pages deployment is branch-based; no additional deployment workflow is required.
