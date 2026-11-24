@@ -1,0 +1,148 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Clusters · Bay Area Michelin Dashboard</title>
+<meta name="description" content="Bay Area Michelin restaurants, clusters, hotels, verification status and open questions. Every value links to its source or is flagged unverified.">
+<style>
+:root{--ink:#1d2330;--mut:#5b6474;--line:#e3e7ee;--bg:#f6f7f9;--card:#fff;--acc:#1f4fd1;--gold:#b7860b;--warn:#b45309;--ok:#15803d}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--acc);word-break:break-word}
+header.top{background:#111827;color:#fff;padding:14px 16px}
+header.top .t{font-weight:700;font-size:17px;margin:0}header.top .s{color:#cbd5e1;font-size:12px;margin:2px 0 8px}
+nav{display:flex;flex-wrap:wrap;gap:6px}nav a{color:#e5e7eb;text-decoration:none;background:#1f2937;padding:6px 10px;border-radius:999px;font-size:13px}
+nav a.on,nav a:hover{background:#2563eb;color:#fff}
+main{max-width:1200px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:6px 0 4px}h2{font-size:18px;margin:22px 0 8px}h3{font-size:15px;margin:14px 0 6px}
+.lead{color:var(--mut);margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .n{font-size:24px;font-weight:700}.kpi .l{color:var(--mut);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit;display:block}
+.card:hover{border-color:var(--acc)}.card b{display:block;font-size:16px;margin-bottom:4px}.card span{color:var(--mut);font-size:13px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:13px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.tools input{flex:1 1 220px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px}
+.tools button{border:1px solid var(--line);background:#fff;padding:7px 11px;border-radius:999px;font-size:13px;cursor:pointer}
+.tools button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f4f9;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:0}
+td .sub{color:var(--mut);font-size:12px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.b3{background:#fde68a;color:#78350f}.b2{background:#fcd9a8;color:#7c2d12}.b1{background:#e0e7ff;color:#312e81}.bib{background:#dcfce7;color:#14532d}.sel{background:#f1f5f9;color:#334155}.unv{background:#fff7ed;color:#9a3412;border:1px dashed #fdba74}
+.flag{display:inline-block;color:var(--warn);background:#fff7ed;border:1px dashed #fdba74;border-radius:6px;padding:0 6px;font-size:12px;white-space:nowrap}
+.ok{color:var(--ok);font-weight:600}.part{color:var(--warn);font-weight:600}
+.bar{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;min-width:80px}.bar i{display:block;height:100%;background:var(--acc)}
+.cnt{font-weight:700}
+ul.clean{padding-left:18px}ul.clean li{margin:4px 0}
+footer{color:var(--mut);font-size:12px;padding:20px 16px;text-align:center}
+/* mobile: each table row becomes a card */
+@media (max-width:760px){
+ .tw{overflow:visible;border:none;background:none}
+ table,thead,tbody,tr,td{display:block;width:100%}
+ thead{display:none}
+ tr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 10px;margin:0 0 10px}
+ td{border:none;padding:5px 0;display:flex;gap:8px;justify-content:space-between}
+ td::before{content:attr(data-label);color:var(--mut);font-size:11px;text-transform:uppercase;flex:0 0 38%;letter-spacing:.03em}
+ td.nolabel::before{content:none}
+ td.nolabel{display:block}
+ .sticky-mobile{display:none}
+}
+</style></head><body>
+<header class="top"><p class="t">Bay Area Michelin Dashboard</p><p class="s">Data as of 2026-11-24 · San Francisco &amp; surroundings (Michelin listing)</p><nav><a href="index.html" class="">Home</a><a href="restaurants.html" class="">Michelin restaurants</a><a href="clusters.html" class="on">Clusters</a><a href="hotels.html" class="">Hotels</a><a href="summary.html" class="">Summary & questions</a><a href="flagged.html" class="">Flagged for review</a><a href="repo-review.html" class="">Repo review & sources</a></nav></header>
+<main><h1>Clusters</h1>
+<p class="lead">Where the Michelin listings concentrate. Counts are computed from the verified listing rows (no estimates).</p>
+<h2>By city</h2>
+<div class="tw"><table><thead><tr><th>City</th><th>Restaurants</th><th>Share</th><th>3★</th><th>2★</th><th>1★</th><th>Bib</th><th>Selected</th></tr></thead>
+<tbody><tr data-award="x"><td data-label="City"><b>not captured</b></td>
+<td data-label="Restaurants"><span class="cnt">88</span></td>
+<td data-label="Share"><div class="bar"><i style="width:61%"></i></div><span class="sub">61%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">15</td>
+<td data-label="Bib">11</td><td data-label="Selected">62</td></tr><tr data-award="x"><td data-label="City"><b>Oakland</b></td>
+<td data-label="Restaurants"><span class="cnt">20</span></td>
+<td data-label="Share"><div class="bar"><i style="width:14%"></i></div><span class="sub">14%</span></td>
+<td data-label="3★">0</td><td data-label="2★">1</td><td data-label="1★">1</td>
+<td data-label="Bib">9</td><td data-label="Selected">9</td></tr><tr data-award="x"><td data-label="City"><b>San Francisco</b></td>
+<td data-label="Restaurants"><span class="cnt">10</span></td>
+<td data-label="Share"><div class="bar"><i style="width:7%"></i></div><span class="sub">7%</span></td>
+<td data-label="3★">4</td><td data-label="2★">6</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">0</td></tr><tr data-award="x"><td data-label="City"><b>Berkeley</b></td>
+<td data-label="Restaurants"><span class="cnt">8</span></td>
+<td data-label="Share"><div class="bar"><i style="width:6%"></i></div><span class="sub">6%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">3</td><td data-label="Selected">5</td></tr><tr data-award="x"><td data-label="City"><b>San Mateo</b></td>
+<td data-label="Restaurants"><span class="cnt">5</span></td>
+<td data-label="Share"><div class="bar"><i style="width:3%"></i></div><span class="sub">3%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">1</td>
+<td data-label="Bib">1</td><td data-label="Selected">2</td></tr><tr data-award="x"><td data-label="City"><b>San Anselmo</b></td>
+<td data-label="Restaurants"><span class="cnt">2</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">1</td>
+<td data-label="Bib">1</td><td data-label="Selected">0</td></tr><tr data-award="x"><td data-label="City"><b>Alameda</b></td>
+<td data-label="Restaurants"><span class="cnt">2</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">1</td><td data-label="Selected">1</td></tr><tr data-award="x"><td data-label="City"><b>El Cerrito</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">1</td><td data-label="Selected">0</td></tr><tr data-award="x"><td data-label="City"><b>Mill Valley</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">1</td><td data-label="Selected">0</td></tr><tr data-award="x"><td data-label="City"><b>San Leandro</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">1</td><td data-label="Selected">0</td></tr><tr data-award="x"><td data-label="City"><b>Fairfax</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">1</td><td data-label="Selected">0</td></tr><tr data-award="x"><td data-label="City"><b>Corte Madera</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">1</td></tr><tr data-award="x"><td data-label="City"><b>Kentfield</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">1</td></tr><tr data-award="x"><td data-label="City"><b>Daly City</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">1</td></tr><tr data-award="x"><td data-label="City"><b>Lafayette</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">1</td></tr><tr data-award="x"><td data-label="City"><b>Sausalito</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">1</td></tr><tr data-award="x"><td data-label="City"><b>Millbrae</b></td>
+<td data-label="Restaurants"><span class="cnt">1</span></td>
+<td data-label="Share"><div class="bar"><i style="width:1%"></i></div><span class="sub">1%</span></td>
+<td data-label="3★">0</td><td data-label="2★">0</td><td data-label="1★">0</td>
+<td data-label="Bib">0</td><td data-label="Selected">1</td></tr></tbody></table></div>
+<h2>Price tier (Michelin $ symbol) by award</h2>
+<p class="lead">Michelin's price symbol is a range, not a dollar amount. Dollar prices for 2 adults are not yet verified.</p>
+<div class="tw"><table><thead><tr><th>Award</th><th>$</th><th>$$</th><th>$$$</th><th>$$$$</th></tr></thead><tbody><tr><td data-label='Award'><span class="badge b3">★★★ 3 Stars</span></td><td data-label='$'>0</td><td data-label='$$'>0</td><td data-label='$$$'>0</td><td data-label='$$$$'>4</td></tr><tr><td data-label='Award'><span class="badge b2">★★ 2 Stars</span></td><td data-label='$'>0</td><td data-label='$$'>0</td><td data-label='$$$'>0</td><td data-label='$$$$'>7</td></tr><tr><td data-label='Award'><span class="badge b1">★ 1 Star</span></td><td data-label='$'>0</td><td data-label='$$'>0</td><td data-label='$$$'>6</td><td data-label='$$$$'>12</td></tr><tr><td data-label='Award'><span class="badge bib">Bib Gourmand</span></td><td data-label='$'>4</td><td data-label='$$'>25</td><td data-label='$$$'>1</td><td data-label='$$$$'>0</td></tr><tr><td data-label='Award'><span class="badge sel">Selected</span></td><td data-label='$'>6</td><td data-label='$$'>24</td><td data-label='$$$'>34</td><td data-label='$$$$'>21</td></tr></tbody></table></div>
+<h2>Most common cuisine labels (Michelin)</h2>
+<div class="panel"><ul class="clean"><li>Japanese — <b>19</b></li><li>Contemporary — <b>18</b></li><li>Californian — <b>17</b></li><li>Mexican — <b>12</b></li><li>Italian — <b>11</b></li><li>Chinese — <b>10</b></li><li>Thai — <b>6</b></li><li>American — <b>5</b></li><li>Korean — <b>5</b></li><li>French — <b>5</b></li></ul><p class="sub">Counts list a restaurant once per cuisine label it carries.</p></div>
+<div class="note"><b>Scope and gaps:</b> pages 1–2 of the listing were captured without a city on each card, so 88 of 145 rows show “not captured” rather than an assumed city. City counts are therefore partial. The table covers Michelin's “San Francisco and surroundings” list only; other Bay Area listings were not captured.</div></main>
+<footer>Built from <a href="https://github.com/kanlerxz87-cyber/Baymich2">the Baymich2 repo</a> · Michelin data: <a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants">guide.michelin.com</a> · Unverified fields are blank and flagged ⚑.</footer>
+<script>
+(function(){
+ var q=document.getElementById('q'); var btns=document.querySelectorAll('[data-f]'); var rs=document.querySelectorAll('tbody tr[data-award]');
+ var cur='all';
+ function apply(){var t=(q?q.value:'').toLowerCase();
+  rs.forEach(function(r){var okF=(cur==='all')||r.getAttribute('data-award')===cur;
+   var okQ=!t||r.textContent.toLowerCase().indexOf(t)>-1; r.style.display=(okF&&okQ)?'':'none';});
+  var c=document.getElementById('count'); if(c){c.textContent=document.querySelectorAll('tbody tr[data-award]:not([style*="none"])').length;}
+ }
+ btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur=b.getAttribute('data-f');apply();});});
+ if(q){q.addEventListener('input',apply);}
+ apply();
+})();
+</script></body></html>

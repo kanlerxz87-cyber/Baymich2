@@ -1,0 +1,103 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Summary &amp; questions · Bay Area Michelin Dashboard</title>
+<meta name="description" content="Bay Area Michelin restaurants, clusters, hotels, verification status and open questions. Every value links to its source or is flagged unverified.">
+<style>
+:root{--ink:#1d2330;--mut:#5b6474;--line:#e3e7ee;--bg:#f6f7f9;--card:#fff;--acc:#1f4fd1;--gold:#b7860b;--warn:#b45309;--ok:#15803d}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--acc);word-break:break-word}
+header.top{background:#111827;color:#fff;padding:14px 16px}
+header.top .t{font-weight:700;font-size:17px;margin:0}header.top .s{color:#cbd5e1;font-size:12px;margin:2px 0 8px}
+nav{display:flex;flex-wrap:wrap;gap:6px}nav a{color:#e5e7eb;text-decoration:none;background:#1f2937;padding:6px 10px;border-radius:999px;font-size:13px}
+nav a.on,nav a:hover{background:#2563eb;color:#fff}
+main{max-width:1200px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:6px 0 4px}h2{font-size:18px;margin:22px 0 8px}h3{font-size:15px;margin:14px 0 6px}
+.lead{color:var(--mut);margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .n{font-size:24px;font-weight:700}.kpi .l{color:var(--mut);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit;display:block}
+.card:hover{border-color:var(--acc)}.card b{display:block;font-size:16px;margin-bottom:4px}.card span{color:var(--mut);font-size:13px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:13px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.tools input{flex:1 1 220px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px}
+.tools button{border:1px solid var(--line);background:#fff;padding:7px 11px;border-radius:999px;font-size:13px;cursor:pointer}
+.tools button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f4f9;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:0}
+td .sub{color:var(--mut);font-size:12px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.b3{background:#fde68a;color:#78350f}.b2{background:#fcd9a8;color:#7c2d12}.b1{background:#e0e7ff;color:#312e81}.bib{background:#dcfce7;color:#14532d}.sel{background:#f1f5f9;color:#334155}.unv{background:#fff7ed;color:#9a3412;border:1px dashed #fdba74}
+.flag{display:inline-block;color:var(--warn);background:#fff7ed;border:1px dashed #fdba74;border-radius:6px;padding:0 6px;font-size:12px;white-space:nowrap}
+.ok{color:var(--ok);font-weight:600}.part{color:var(--warn);font-weight:600}
+.bar{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;min-width:80px}.bar i{display:block;height:100%;background:var(--acc)}
+.cnt{font-weight:700}
+ul.clean{padding-left:18px}ul.clean li{margin:4px 0}
+footer{color:var(--mut);font-size:12px;padding:20px 16px;text-align:center}
+/* mobile: each table row becomes a card */
+@media (max-width:760px){
+ .tw{overflow:visible;border:none;background:none}
+ table,thead,tbody,tr,td{display:block;width:100%}
+ thead{display:none}
+ tr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 10px;margin:0 0 10px}
+ td{border:none;padding:5px 0;display:flex;gap:8px;justify-content:space-between}
+ td::before{content:attr(data-label);color:var(--mut);font-size:11px;text-transform:uppercase;flex:0 0 38%;letter-spacing:.03em}
+ td.nolabel::before{content:none}
+ td.nolabel{display:block}
+ .sticky-mobile{display:none}
+}
+</style></head><body>
+<header class="top"><p class="t">Bay Area Michelin Dashboard</p><p class="s">Data as of 2026-11-24 · San Francisco &amp; surroundings (Michelin listing)</p><nav><a href="index.html" class="">Home</a><a href="restaurants.html" class="">Michelin restaurants</a><a href="clusters.html" class="">Clusters</a><a href="hotels.html" class="">Hotels</a><a href="summary.html" class="on">Summary & questions</a><a href="flagged.html" class="">Flagged for review</a><a href="repo-review.html" class="">Repo review & sources</a></nav></header>
+<main><h1>Executive summary</h1>
+<div class="panel"><ul class="clean">
+<li><b>145 restaurants</b> captured from Michelin's “San Francisco and surroundings” list (header: 145). Award counts: <b>4 three-star, 7 two-star, 18 one-star, 30 Bib Gourmand, 85 Selected, 1 tier unverified</b>. Michelin's sidebar shows Bib 30 and Selected 86; captured Selected is 85 plus one unverified tier.</li>
+<li><b>Two tiers need review:</b> Village Sake (Bib Gourmand, from the Bibendum icon on its Michelin page) and Kajiken (tier not shown in the captured text).</li>
+<li><b>Cluster:</b> city was captured for 57 of 145 rows. Among those, Oakland has 20, Berkeley 8 and San Mateo 5. San Francisco rows from listing pages 1–2 have no city in the captured text.</li>
+<li><b>Verified now:</b> the award for every row, from the listing cards (two tiers flagged above). For 12 detail pages (11 starred plus Village Sake), address, phone and website come from Michelin. Hours are complete for 7, partial for 2, and missing for 3.</li>
+<li><b>Not verified yet:</b> price for 2 adults (0 of 145), social links (0 of 145), hours for most rows, and the hotel ranking.</li>
+<li><b>Hotels:</b> Michelin lists 31 hotels for the Bay Area (3 Two-Key, 2 One-Key, 26 Selected). Only two hotel names have been read so far, and the ranking is not done.</li>
+</ul></div>
+<h2>Open questions</h2></ul></div>
+<h2>Open questions</h2>
+<div class="tw"><table><thead><tr><th>#</th><th>Question</th><th>Status</th><th>What is needed to answer it</th></tr></thead><tbody>
+<tr><td data-label="#">Q1</td><td data-label="Question">What does “around” mean for the hotel ranking: walking distance, a neighbourhood, or a radius?</td><td data-label="Status"><span class="part">Open</span></td><td data-label="Needed">Your choice. Options: 1 km, 2 km, same neighbourhood.</td></tr>
+<tr><td data-label="#">Q2</td><td data-label="Question">How many restaurants should the table hold: SF &amp; surroundings only, or the full Bay Area (San Jose, Napa, Sonoma, Santa Cruz etc.)?</td><td data-label="Status"><span class="part">Open</span></td><td data-label="Needed">Your scope decision. The other listings are linked from Michelin's page and were not captured.</td></tr>
+<tr><td data-label="#">Q3</td><td data-label="Question">What is the price for 2 adults at each restaurant?</td><td data-label="Status"><span class="part">Unanswered</span></td><td data-label="Needed">Each restaurant's official menu page (tasting menu, à la carte, drinks extra) — see S2.</td></tr>
+<tr><td data-label="#">Q4</td><td data-label="Question">Are current opening hours and days correct?</td><td data-label="Status"><span class="part">Partly answered</span></td><td data-label="Needed">Michelin hours for 7 complete and 2 partial rows; cross-check against each restaurant's website; check holiday closures.</td></tr>
+<tr><td data-label="#">Q5</td><td data-label="Question">Which social accounts (YouTube, TikTok, Instagram) belong to each restaurant?</td><td data-label="Status"><span class="part">Unanswered</span></td><td data-label="Needed">Social icons or links on each official site; confirm the account is the restaurant's own (S3).</td></tr>
+<tr><td data-label="#">Q6</td><td data-label="Question">Which hotel is closest to the most Michelin restaurants?</td><td data-label="Status"><span class="part">Unanswered</span></td><td data-label="Needed">Hotel addresses from the 31 Michelin hotel pages, plus a distance method (Q1). No geocoding source has been chosen yet (S4).</td></tr>
+<tr><td data-label="#">Q7</td><td data-label="Question">Does Michelin's total of 145 match the rows captured?</td><td data-label="Status"><span class="ok">Resolved on count</span></td><td data-label="Needed">Captured rows total 145. The two tiers in F1–F3 still need checking.</td></tr>
+<tr><td data-label="#">Q8</td><td data-label="Question">How often will the data be refreshed, and by whom?</td><td data-label="Status"><span class="part">Open</span></td><td data-label="Needed">Your decision on refresh cadence (for example monthly) and owner.</td></tr>
+</tbody></table></div>
+<h2>Suggestions — choose before anything is changed</h2>
+<p class="lead">Nothing below has been implemented. Reply with the IDs you want (for example “S1, S3, S4”), or with changes to any of them.</p>
+<div class="tw"><table><thead><tr><th>ID</th><th>Suggestion</th><th>Why</th><th>Effort / risk</th></tr></thead><tbody>
+<tr><td data-label="ID">S1</td><td data-label="Suggestion">Read the Michelin detail page for the 18 one-star, 30 Bib and 85 Selected rows (address, hours, website).</td><td data-label="Why">Fills the biggest gap in hours and addresses.</td><td data-label="Effort">About 133 page reads. Low risk.</td></tr>
+<tr><td data-label="ID">S2</td><td data-label="Suggestion">Add “price for 2 adults” from each restaurant's own menu page. Store the menu, currency, date and URL. Leave blank if no official number exists.</td><td data-label="Why">Your required column; Michelin gives only $ symbols.</td><td data-label="Effort">About 144 menu pages. Prices change; add a date stamp.</td></tr>
+<tr><td data-label="ID">S3</td><td data-label="Suggestion">Collect YouTube / TikTok / Instagram links only from each restaurant's official website footer or social links, and record the account name.</td><td data-label="Why">Avoids guessed or fan accounts.</td><td data-label="Effort">About 144 site checks. Some restaurants may have none.</td></tr>
+<tr><td data-label="ID">S4</td><td data-label="Suggestion">Ranking method for hotels: read all 31 hotel pages for addresses, then count Michelin restaurants within a radius you choose (Q1). Show the method and distance on each row.</td><td data-label="Why">Answers the hotel ranking request.</td><td data-label="Effort">31 hotel reads plus a distance step. Distance needs a geocoding source; none has been chosen yet.</td></tr>
+<tr><td data-label="ID">S5</td><td data-label="Suggestion">Add the South Bay and wider Bay Area Michelin listings (San Jose, Palo Alto, Napa/Sonoma, etc.) as separate tables.</td><td data-label="Why">Matches “Bay Area” in your brief.</td><td data-label="Effort">Several more listing reads. Larger table.</td></tr>
+<tr><td data-label="ID">S6</td><td data-label="Suggestion">Add a “last verified” date and source column to every row, and a simple link-checker before publishing.</td><td data-label="Why">Keeps the “no hallucination” rule auditable.</td><td data-label="Effort">Small. Low risk.</td></tr>
+<tr><td data-label="ID">S7</td><td data-label="Suggestion">Change GitHub Pages to publish from the <code>/docs</code> folder of <code>main</code> (currently <code>/</code>).</td><td data-label="Why">Keeps site files separate from data and tools.</td><td data-label="Effort">One setting change. Affects the live URL only if the setting changes.</td></tr>
+<tr><td data-label="ID">S8</td><td data-label="Suggestion">Keep the data in CSV and rebuild the site from it with <code>tools/build_site.py</code>, so each refresh is one command.</td><td data-label="Why">Repeatable, reviewable changes.</td><td data-label="Effort">Already in place.</td></tr>
+</tbody></table></div>
+<p class="sub">Decision log: record your choice (approve / defer / decline) for each ID in <code>COORDINATION.md</code>.</p></main>
+<footer>Built from <a href="https://github.com/kanlerxz87-cyber/Baymich2">the Baymich2 repo</a> · Michelin data: <a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants">guide.michelin.com</a> · Unverified fields are blank and flagged ⚑.</footer>
+<script>
+(function(){
+ var q=document.getElementById('q'); var btns=document.querySelectorAll('[data-f]'); var rs=document.querySelectorAll('tbody tr[data-award]');
+ var cur='all';
+ function apply(){var t=(q?q.value:'').toLowerCase();
+  rs.forEach(function(r){var okF=(cur==='all')||r.getAttribute('data-award')===cur;
+   var okQ=!t||r.textContent.toLowerCase().indexOf(t)>-1; r.style.display=(okF&&okQ)?'':'none';});
+  var c=document.getElementById('count'); if(c){c.textContent=document.querySelectorAll('tbody tr[data-award]:not([style*="none"])').length;}
+ }
+ btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur=b.getAttribute('data-f');apply();});});
+ if(q){q.addEventListener('input',apply);}
+ apply();
+})();
+</script></body></html>

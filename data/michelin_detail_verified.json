@@ -1,0 +1,103 @@
+{
+ "quince": {
+  "city": "San Francisco",
+  "address": "470 Pacific Ave., San Francisco, CA 94133",
+  "website": "https://www.quincerestaurant.com/",
+  "phone": "+1 415-775-8500",
+  "hours": "Mon: Closed · Tue–Thu: 5–9 PM · Fri–Sat: 11:30 AM–1 PM & 5–9 PM · Sun: Closed",
+  "hours_status": "complete"
+ },
+ "californios": {
+  "city": "San Francisco",
+  "address": "355 11th St., San Francisco, CA 94103",
+  "website": "https://www.californiossf.com/",
+  "phone": "+1 415-757-0994",
+  "hours": "Mon: Closed · Tue–Sat: 5–10 PM · Sun: Closed",
+  "hours_status": "complete"
+ },
+ "benu": {
+  "city": "San Francisco",
+  "address": "22 Hawthorne St., San Francisco, CA 94105",
+  "website": "https://www.benusf.com/",
+  "phone": "+1 415-685-4860",
+  "hours": "Mon–Tue: Closed · Wed–Thu: 5–8 PM · Fri–Sat: 5–8:30 PM · Sun: Closed",
+  "hours_status": "complete"
+ },
+ "atelier-crenn": {
+  "city": "San Francisco",
+  "address": "3127 Fillmore St., San Francisco, CA 94123",
+  "website": "https://www.ateliercrenn.com/",
+  "phone": "+1 415-440-0462",
+  "hours": "",
+  "hours_status": "not captured in fetch"
+ },
+ "acquerello": {
+  "city": "San Francisco",
+  "address": "1722 Sacramento St., San Francisco, CA 94109",
+  "website": "https://www.acquerellosf.com/",
+  "phone": "+1 415-567-5432",
+  "hours": "Mon: Closed · Tue–Sat: 5:30–9:45 PM · Sun: Closed",
+  "hours_status": "complete"
+ },
+ "kiln-1210355": {
+  "city": "San Francisco",
+  "address": "149 Fell St., San Francisco, CA 94102",
+  "website": "https://www.kilnsf.com/",
+  "phone": "+1 415-982-9722",
+  "hours": "Mon: Closed · Tue–Thu: 6–8 PM · Fri–Sat: 5–8:30 PM · Sun: Closed",
+  "hours_status": "complete"
+ },
+ "lazy-bear": {
+  "city": "San Francisco",
+  "address": "3416 19th St., San Francisco, CA 94110",
+  "website": "https://www.lazybearsf.com/",
+  "phone": "+1 415-874-9921",
+  "hours": "Mon: Closed · Tue–Sat: 5–11 PM · Sun: Closed",
+  "hours_status": "complete"
+ },
+ "sons-daughters": {
+  "city": "San Francisco",
+  "address": "2875 18th St., San Francisco, CA 94110",
+  "website": "https://www.sonsanddaughterssf.com/",
+  "phone": "+1 415-994-7933",
+  "hours": "",
+  "hours_status": "not captured in fetch"
+ },
+ "saison": {
+  "city": "San Francisco",
+  "address": "178 Townsend St., San Francisco, CA 94107",
+  "website": "https://www.saisonsf.com/",
+  "phone": "+1 415-828-7990",
+  "hours": "Mon: Closed · Tue–Thu: 5–9:30 PM · Fri–Sun: partially captured, verify",
+  "hours_status": "partial"
+ },
+ "birdsong": {
+  "city": "San Francisco",
+  "address": "1085 Mission St., San Francisco, CA 94103",
+  "website": "https://www.birdsongsf.com/",
+  "phone": "+1 415-369-9161",
+  "hours": "",
+  "hours_status": "not captured in fetch"
+ },
+ "commis": {
+  "city": "Oakland",
+  "address": "3859 Piedmont Ave., Oakland, CA 94611",
+  "website": "https://www.commisrestaurant.com/",
+  "phone": "+1 510-653-3902",
+  "hours": "Mon: Closed · Tue–Fri: 5–9:30 PM · Sat–Sun: partially captured, verify",
+  "hours_status": "partial"
+ },
+ "village-sake": {
+  "city": "Fairfax",
+  "address": "19 Bolinas Rd., Fairfax, CA 94930",
+  "website": "https://www.villagesake.com/",
+  "phone": "+1 415-521-5790",
+  "hours": "Mon–Tue: Closed · Wed–Thu: 5–8 PM · Fri–Sat: 5–8:30 PM · Sun: 5–8 PM",
+  "hours_status": "complete",
+  "booking": "Manages its own bookings; Michelin says to contact the restaurant directly. Michelin notes it doesn't take reservations.",
+  "award_override": [
+   "Bib Gourmand",
+   "needs review – Bibendum icon above the name on the Michelin detail page; count reconciles to sidebar 30"
+  ]
+ }
+}

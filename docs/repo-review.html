@@ -1,0 +1,89 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Repo review &amp; sources · Bay Area Michelin Dashboard</title>
+<meta name="description" content="Bay Area Michelin restaurants, clusters, hotels, verification status and open questions. Every value links to its source or is flagged unverified.">
+<style>
+:root{--ink:#1d2330;--mut:#5b6474;--line:#e3e7ee;--bg:#f6f7f9;--card:#fff;--acc:#1f4fd1;--gold:#b7860b;--warn:#b45309;--ok:#15803d}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--acc);word-break:break-word}
+header.top{background:#111827;color:#fff;padding:14px 16px}
+header.top .t{font-weight:700;font-size:17px;margin:0}header.top .s{color:#cbd5e1;font-size:12px;margin:2px 0 8px}
+nav{display:flex;flex-wrap:wrap;gap:6px}nav a{color:#e5e7eb;text-decoration:none;background:#1f2937;padding:6px 10px;border-radius:999px;font-size:13px}
+nav a.on,nav a:hover{background:#2563eb;color:#fff}
+main{max-width:1200px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:6px 0 4px}h2{font-size:18px;margin:22px 0 8px}h3{font-size:15px;margin:14px 0 6px}
+.lead{color:var(--mut);margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .n{font-size:24px;font-weight:700}.kpi .l{color:var(--mut);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit;display:block}
+.card:hover{border-color:var(--acc)}.card b{display:block;font-size:16px;margin-bottom:4px}.card span{color:var(--mut);font-size:13px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:13px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.tools input{flex:1 1 220px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px}
+.tools button{border:1px solid var(--line);background:#fff;padding:7px 11px;border-radius:999px;font-size:13px;cursor:pointer}
+.tools button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f4f9;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:0}
+td .sub{color:var(--mut);font-size:12px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.b3{background:#fde68a;color:#78350f}.b2{background:#fcd9a8;color:#7c2d12}.b1{background:#e0e7ff;color:#312e81}.bib{background:#dcfce7;color:#14532d}.sel{background:#f1f5f9;color:#334155}.unv{background:#fff7ed;color:#9a3412;border:1px dashed #fdba74}
+.flag{display:inline-block;color:var(--warn);background:#fff7ed;border:1px dashed #fdba74;border-radius:6px;padding:0 6px;font-size:12px;white-space:nowrap}
+.ok{color:var(--ok);font-weight:600}.part{color:var(--warn);font-weight:600}
+.bar{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;min-width:80px}.bar i{display:block;height:100%;background:var(--acc)}
+.cnt{font-weight:700}
+ul.clean{padding-left:18px}ul.clean li{margin:4px 0}
+footer{color:var(--mut);font-size:12px;padding:20px 16px;text-align:center}
+/* mobile: each table row becomes a card */
+@media (max-width:760px){
+ .tw{overflow:visible;border:none;background:none}
+ table,thead,tbody,tr,td{display:block;width:100%}
+ thead{display:none}
+ tr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 10px;margin:0 0 10px}
+ td{border:none;padding:5px 0;display:flex;gap:8px;justify-content:space-between}
+ td::before{content:attr(data-label);color:var(--mut);font-size:11px;text-transform:uppercase;flex:0 0 38%;letter-spacing:.03em}
+ td.nolabel::before{content:none}
+ td.nolabel{display:block}
+ .sticky-mobile{display:none}
+}
+</style></head><body>
+<header class="top"><p class="t">Bay Area Michelin Dashboard</p><p class="s">Data as of 2026-11-24 · San Francisco &amp; surroundings (Michelin listing)</p><nav><a href="index.html" class="">Home</a><a href="restaurants.html" class="">Michelin restaurants</a><a href="clusters.html" class="">Clusters</a><a href="hotels.html" class="">Hotels</a><a href="summary.html" class="">Summary & questions</a><a href="flagged.html" class="">Flagged for review</a><a href="repo-review.html" class="on">Repo review & sources</a></nav></header>
+<main><h1>Repo review &amp; sources</h1>
+<h2>What the repo contained</h2>
+<div class="panel"><ul class="clean">
+<li><b>One commit</b> (“Initial commit”) on <code>main</code>; working branch <code>arena/5d054995-baymich2</code>, based on <code>1554148</code>.</li>
+<li><b>Files:</b> <code>README.md</code> only, one line: “# Baymich2”. No code, data, LICENSE or docs before this work.</li>
+<li><b>Pages:</b> GitHub Pages was already enabled on <code>main</code> at <code>/</code> (status built). This build publishes from <code>/docs</code>; that setting change is suggestion S7.</li>
+<li><b>Coordination:</b> <code>COORDINATION.md</code> did not exist and was created as the task board.</li>
+<li><b>Irregularities:</b> see <a href="flagged.html">Flagged</a> (F1–F4, F10, F11, F12, F15).</li>
+</ul></div>
+<h2>Sources used (every link)</h2>
+<div class="tw"><table><thead><tr><th>Source</th><th>Link</th><th>Used for</th></tr></thead><tbody><tr><td data-label="Source"><b>Michelin listing: San Francisco &amp; surroundings (page 1)</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants" rel="noopener">https://guide.michelin.com/us/en/california/san-francisco/restaurants</a></td><td data-label="Used for">Rows from page 1 (no city captured)</td></tr><tr><td data-label="Source"><b>Michelin listing page 2</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2</a></td><td data-label="Used for">Rows from page 2 (no city captured)</td></tr><tr><td data-label="Source"><b>Michelin listing page 3</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/3" rel="noopener">https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/3</a></td><td data-label="Used for">Rows 97–144 incl. Oakland, Berkeley, Marin, Peninsula</td></tr><tr><td data-label="Source"><b>Michelin listing page 4</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/4" rel="noopener">https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/4</a></td><td data-label="Used for">Header “145-145 of 145”; Kajiken</td></tr><tr><td data-label="Source"><b>Michelin detail: Village Sake</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/fairfax/restaurant/village-sake" rel="noopener">https://guide.michelin.com/us/en/california/fairfax/restaurant/village-sake</a></td><td data-label="Used for">Address, website, phone, hours; Bibendum icon (Bib evidence)</td></tr><tr><td data-label="Source"><b>Michelin detail: Kajiken (not read)</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/san-mateo/restaurant/kajiken" rel="noopener">https://guide.michelin.com/us/en/california/san-mateo/restaurant/kajiken</a></td><td data-label="Used for">Listed only; detail page not read</td></tr><tr><td data-label="Source"><b>Michelin detail pages (11 starred)</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants" rel="noopener">https://guide.michelin.com/us/en/california/san-francisco/restaurants</a></td><td data-label="Used for">Address, phone, website, hours (links per row in the restaurants table)</td></tr><tr><td data-label="Source"><b>Michelin Hotels: San Francisco Bay Area</b></td><td data-label="Link"><a href="https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area" rel="noopener">https://guide.michelin.com/us/en/hotels-stays/san-francisco-bay-area</a></td><td data-label="Used for">Hotel count (31), distinctions, two hotel names</td></tr></tbody></table></div>
+<p class="sub">Restaurant websites are linked from each Michelin detail page and are listed per row on the restaurants page.</p>
+<h2>Verification performed</h2>
+<div class="panel"><ul class="clean">
+<li>Read Michelin listing pages 1–4. Header on page 4 reads “145-145 of 145”. Captured rows total 145.</li>
+<li>Award counts match the sidebar for 3★ (4), 2★ (7), 1★ (18) and Bib (30 with Village Sake). Selected is 85 plus Kajiken (tier unverified), against the sidebar's 86.</li>
+<li>Read 12 detail pages (11 starred plus Village Sake). Address, phone and website come from them. Hours are complete for 7, partial for 2 and missing for 3.</li>
+<li>Not verified: prices for two adults, social links, hotel addresses, and restaurant websites beyond the links Michelin shows.</li>
+</ul></div>
+</main>
+<footer>Built from <a href="https://github.com/kanlerxz87-cyber/Baymich2">the Baymich2 repo</a> · Michelin data: <a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants">guide.michelin.com</a> · Unverified fields are blank and flagged ⚑.</footer>
+<script>
+(function(){
+ var q=document.getElementById('q'); var btns=document.querySelectorAll('[data-f]'); var rs=document.querySelectorAll('tbody tr[data-award]');
+ var cur='all';
+ function apply(){var t=(q?q.value:'').toLowerCase();
+  rs.forEach(function(r){var okF=(cur==='all')||r.getAttribute('data-award')===cur;
+   var okQ=!t||r.textContent.toLowerCase().indexOf(t)>-1; r.style.display=(okF&&okQ)?'':'none';});
+  var c=document.getElementById('count'); if(c){c.textContent=document.querySelectorAll('tbody tr[data-award]:not([style*="none"])').length;}
+ }
+ btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur=b.getAttribute('data-f');apply();});});
+ if(q){q.addEventListener('input',apply);}
+ apply();
+})();
+</script></body></html>

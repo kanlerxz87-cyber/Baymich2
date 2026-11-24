@@ -1,0 +1,1679 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Michelin restaurants · Bay Area Michelin Dashboard</title>
+<meta name="description" content="Bay Area Michelin restaurants, clusters, hotels, verification status and open questions. Every value links to its source or is flagged unverified.">
+<style>
+:root{--ink:#1d2330;--mut:#5b6474;--line:#e3e7ee;--bg:#f6f7f9;--card:#fff;--acc:#1f4fd1;--gold:#b7860b;--warn:#b45309;--ok:#15803d}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--bg)}
+a{color:var(--acc);word-break:break-word}
+header.top{background:#111827;color:#fff;padding:14px 16px}
+header.top .t{font-weight:700;font-size:17px;margin:0}header.top .s{color:#cbd5e1;font-size:12px;margin:2px 0 8px}
+nav{display:flex;flex-wrap:wrap;gap:6px}nav a{color:#e5e7eb;text-decoration:none;background:#1f2937;padding:6px 10px;border-radius:999px;font-size:13px}
+nav a.on,nav a:hover{background:#2563eb;color:#fff}
+main{max-width:1200px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:6px 0 4px}h2{font-size:18px;margin:22px 0 8px}h3{font-size:15px;margin:14px 0 6px}
+.lead{color:var(--mut);margin:0 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin:10px 0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+.kpi .n{font-size:24px;font-weight:700}.kpi .l{color:var(--mut);font-size:12px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;text-decoration:none;color:inherit;display:block}
+.card:hover{border-color:var(--acc)}.card b{display:block;font-size:16px;margin-bottom:4px}.card span{color:var(--mut);font-size:13px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;margin:10px 0}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px;margin:10px 0;font-size:13px}
+.tools{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:10px 0}
+.tools input{flex:1 1 220px;padding:9px 12px;border:1px solid var(--line);border-radius:10px;font-size:14px}
+.tools button{border:1px solid var(--line);background:#fff;padding:7px 11px;border-radius:999px;font-size:13px;cursor:pointer}
+.tools button.on{background:var(--acc);color:#fff;border-color:var(--acc)}
+.tw{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:12px}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{background:#f1f4f9;font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:var(--mut);position:sticky;top:0}
+td .sub{color:var(--mut);font-size:12px}
+.badge{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.b3{background:#fde68a;color:#78350f}.b2{background:#fcd9a8;color:#7c2d12}.b1{background:#e0e7ff;color:#312e81}.bib{background:#dcfce7;color:#14532d}.sel{background:#f1f5f9;color:#334155}.unv{background:#fff7ed;color:#9a3412;border:1px dashed #fdba74}
+.flag{display:inline-block;color:var(--warn);background:#fff7ed;border:1px dashed #fdba74;border-radius:6px;padding:0 6px;font-size:12px;white-space:nowrap}
+.ok{color:var(--ok);font-weight:600}.part{color:var(--warn);font-weight:600}
+.bar{height:8px;background:#e5e7eb;border-radius:99px;overflow:hidden;min-width:80px}.bar i{display:block;height:100%;background:var(--acc)}
+.cnt{font-weight:700}
+ul.clean{padding-left:18px}ul.clean li{margin:4px 0}
+footer{color:var(--mut);font-size:12px;padding:20px 16px;text-align:center}
+/* mobile: each table row becomes a card */
+@media (max-width:760px){
+ .tw{overflow:visible;border:none;background:none}
+ table,thead,tbody,tr,td{display:block;width:100%}
+ thead{display:none}
+ tr{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:6px 10px;margin:0 0 10px}
+ td{border:none;padding:5px 0;display:flex;gap:8px;justify-content:space-between}
+ td::before{content:attr(data-label);color:var(--mut);font-size:11px;text-transform:uppercase;flex:0 0 38%;letter-spacing:.03em}
+ td.nolabel::before{content:none}
+ td.nolabel{display:block}
+ .sticky-mobile{display:none}
+}
+</style></head><body>
+<header class="top"><p class="t">Bay Area Michelin Dashboard</p><p class="s">Data as of 2026-11-24 · San Francisco &amp; surroundings (Michelin listing)</p><nav><a href="index.html" class="">Home</a><a href="restaurants.html" class="on">Michelin restaurants</a><a href="clusters.html" class="">Clusters</a><a href="hotels.html" class="">Hotels</a><a href="summary.html" class="">Summary & questions</a><a href="flagged.html" class="">Flagged for review</a><a href="repo-review.html" class="">Repo review & sources</a></nav></header>
+<main><h1>Michelin restaurants · SF &amp; surroundings</h1>
+<p class="lead">145 restaurants from Michelin's “San Francisco and surroundings” listing. Showing <span id="count">145</span>.</p>
+<div class="note"><b>Verification:</b> every row links to its Michelin listing. Address, phone, website and hours are only filled where the Michelin detail page was checked (12 of 145). Price for 2 adults and social links are not verified yet, so they are blank and flagged.</div>
+<div class="tools">
+ <input id="q" type="search" placeholder="Search name, cuisine, city…" aria-label="Search">
+ <button data-f="all" class="on">All (145)</button>
+ <button data-f="3 Stars">3★ (4)</button>
+ <button data-f="2 Stars">2★ (7)</button>
+ <button data-f="1 Star">1★ (18)</button>
+ <button data-f="Bib Gourmand">Bib (30)</button>
+ <button data-f="Selected">Selected (85)</button>
+</div>
+<div class="tw"><table><thead><tr><th>Restaurant</th><th>Michelin award</th><th>Price tier (Michelin)</th><th>Price for 2 adults</th><th>Cuisine</th><th>Address</th><th>Days &amp; hours (Michelin)</th><th>Restaurant website</th><th>Source</th><th>YouTube / TikTok / Instagram</th></tr></thead>
+<tbody><tr data-award="3 Stars">
+<td data-label="Restaurant"><b>Atelier Crenn</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b3">★★★ 3 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">3127 Fillmore St., San Francisco, CA 94123</td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><a href="https://www.ateliercrenn.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/atelier-crenn" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="3 Stars">
+<td data-label="Restaurant"><b>Benu</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b3">★★★ 3 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Asian</td>
+<td data-label="Address">22 Hawthorne St., San Francisco, CA 94105</td>
+<td data-label="Days & hours">Mon–Tue: Closed · Wed–Thu: 5–8 PM · Fri–Sat: 5–8:30 PM · Sun: Closed<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.benusf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/benu" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="3 Stars">
+<td data-label="Restaurant"><b>Californios</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b3">★★★ 3 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address">355 11th St., San Francisco, CA 94103</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Sat: 5–10 PM · Sun: Closed<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.californiossf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/californios" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="3 Stars">
+<td data-label="Restaurant"><b>Quince</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b3">★★★ 3 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">470 Pacific Ave., San Francisco, CA 94133</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Thu: 5–9 PM · Fri–Sat: 11:30 AM–1 PM &amp; 5–9 PM · Sun: Closed<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.quincerestaurant.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/quince" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Acquerello</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address">1722 Sacramento St., San Francisco, CA 94109</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Sat: 5:30–9:45 PM · Sun: Closed<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.acquerellosf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/acquerello" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Birdsong</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">1085 Mission St., San Francisco, CA 94103</td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><a href="https://www.birdsongsf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/birdsong" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Commis</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">3859 Piedmont Ave., Oakland, CA 94611</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Fri: 5–9:30 PM · Sat–Sun: partially captured, verify<div class="sub"><span class="part">partial</span> · verify</div></td>
+<td data-label="Website"><a href="https://www.commisrestaurant.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/commis" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Kiln</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">149 Fell St., San Francisco, CA 94102</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Thu: 6–8 PM · Fri–Sat: 5–8:30 PM · Sun: Closed<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.kilnsf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/kiln-1210355" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Lazy Bear</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">3416 19th St., San Francisco, CA 94110</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Sat: 5–11 PM · Sun: Closed<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.lazybearsf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/lazy-bear" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Saison</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address">178 Townsend St., San Francisco, CA 94107</td>
+<td data-label="Days & hours">Mon: Closed · Tue–Thu: 5–9:30 PM · Fri–Sun: partially captured, verify<div class="sub"><span class="part">partial</span> · verify</div></td>
+<td data-label="Website"><a href="https://www.saisonsf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/saison" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="2 Stars">
+<td data-label="Restaurant"><b>Sons &amp; Daughters</b><div class="sub">San Francisco</div></td>
+<td data-label="Michelin award"><span class="badge b2">★★ 2 Stars</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address">2875 18th St., San Francisco, CA 94110</td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><a href="https://www.sonsanddaughterssf.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurant/sons-daughters" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>7 Adams</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Angler SF</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Hilda and Jesse</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">American</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Kin Khao</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Thai</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Madcap</b><div class="sub">San Anselmo</div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-anselmo/restaurant/madcap" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Mister Jiu’s</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Nari</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Thai</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Niku Steakhouse</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Steakhouse</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Nisei</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Restaurant Naides</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Filipino</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>San Ho Won</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Korean</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Sorrel</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Ssal</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Korean</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>State Bird Provisions</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Sun Moon Studio</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/sun-moon-studio" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>The Progress</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Wakuriya</b><div class="sub">San Mateo</div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-mateo/restaurant/wakuriya" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="1 Star">
+<td data-label="Restaurant"><b>Wolfsbane</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge b1">★ 1 Star</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>A16</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Pizza</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Anchor Oyster Bar</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Seafood</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Bansang</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Korean</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Bombera</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/bombera" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Comal</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/comal" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Dumpling Home</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>FOB Kitchen</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Filipino</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/fob-kitchen" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Good Good Culture Club</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">South East Asian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Great China</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/great-china" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Insalata&#x27;s</b><div class="sub">San Anselmo</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mediterranean Cuisine</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-anselmo/restaurant/insalata-s" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Ippuku</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/ippuku" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Izakaya Rintaro</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Jo&#x27;s Modern Thai</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Thai</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/jo-s-modern-thai" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Joodooboo</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Korean</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/joodooboo" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Kitchen Istanbul</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Turkish</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>MAMA Oakland</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/mama-oakland" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>New Dumpling</b><div class="sub">El Cerrito</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/el-cerrito/restaurant/new-dumpling" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Okane</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Outerlands</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Pausa</b><div class="sub">San Mateo</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-mateo/restaurant/pausa" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Playa</b><div class="sub">Mill Valley</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/mill-valley/restaurant/playa" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Snail Bar</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/snail-bar" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Soba Ichi</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/soba-ichi" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Spinning Bones</b><div class="sub">Alameda</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/alameda/restaurant/spinning-bones" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Tacos Oscar</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/tacos-oscar" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Teni East Kitchen</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Burmese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/teni-east-kitchen" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Top Hatters Kitchen</b><div class="sub">San Leandro</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-leandro/restaurant/top-hatters-kitchen" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Trestle</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Village Sake</b><div class="sub">Fairfax</div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span><div class="sub">needs review – Bibendum icon above the name on the Michelin detail page; count reconciles to sidebar 30</div></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address">19 Bolinas Rd., Fairfax, CA 94930</td>
+<td data-label="Days & hours">Mon–Tue: Closed · Wed–Thu: 5–8 PM · Fri–Sat: 5–8:30 PM · Sun: 5–8 PM<div class="sub"><span class="ok">✓ captured</span> from Michelin detail page</div></td>
+<td data-label="Website"><a href="https://www.villagesake.com/" rel="noopener">Official site ↗</a></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/fairfax/restaurant/village-sake" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Bib Gourmand">
+<td data-label="Restaurant"><b>Z &amp; Y</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge bib">Bib Gourmand</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>3rd Cousin</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Abaca</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Filipino</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>All Spice</b><div class="sub">San Mateo</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">International</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-mateo/restaurant/all-spice" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Azalina’s</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Malaysian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Aziza</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Moroccan</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Barcote</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Ethiopian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/barcote" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Bardo</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">American</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/bardo-lounge" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Belotti Ristorante e Bottega</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/belotti-ristorante-e-bottega" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Bird &amp; Buffalo</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Thai</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/bird-buffalo" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Burdell</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">American</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/burdell" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Burmatown</b><div class="sub">Corte Madera</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Burmese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/corte-madera/restaurant/burmatown" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Che Fico</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Chez Panisse</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/chez-panisse" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Copra</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Indian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Cotogna</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Dalida</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mediterranean Cuisine</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Dingles Public House</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Gastropub</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Donaji</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>El Buen Comer</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Ernest</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Flour + Water</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Four Kings</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Frances</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Friends Only</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Sushi</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Gary Danko</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Guesthouse</b><div class="sub">Kentfield</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/kentfield/restaurant/guesthouse" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Hamano Sushi</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Harborview Restaurant &amp; Bar</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>HK Lounge Bistro</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Hog Island Oyster Co.</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Seafood</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Itria</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Iyasare</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/iyasare" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>ju-ni</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Kan Kiin</b><div class="sub">Daly City</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Thai</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/daly-city/restaurant/kan-kiin" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Ken</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Sushi</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Kokkari Estiatorio</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Greek</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>KUSAKABE</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>La Cigale</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">French</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/3" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>La Marcha</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Spanish</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/la-marcha" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>La Taqueria</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Liholiho Yacht Club</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Asian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Maria Isabel</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Mensho</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Merchant Roots</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Creative</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Mijote</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">French</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Miller &amp; Lux</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Steakhouse</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Minnie Bell&#x27;s Soul Movement</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Southern</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Movida</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Nightbird</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Nopalito</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Octavia</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Oma San Francisco Station</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Omakase</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Palette Tea House</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Parche</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Colombian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/parche" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Pearl 6101</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mediterranean Cuisine</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/3" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Pomet</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/pomet" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Popoca</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Latin American</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/popoca" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Prelude</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">American</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Prik Hom</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Thai</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Prospect</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Reve Bistro</b><div class="sub">Lafayette</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">French</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/lafayette/restaurant/reve-bistro" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Rich Table</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Rooh</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Indian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Routier</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">French</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Saru Sushi Bar</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Sato Omakase</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Sushi</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Shizen</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Vegan</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Sorella</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>SPQR</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Spruce</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Sungho</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Korean</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Sushi Ran</b><div class="sub">Sausalito</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/sausalito/restaurant/sushi-ran" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Sushi Yoshizumi</b><div class="sub">San Mateo</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-mateo/restaurant/sushi-yoshizumi" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Tacubaya</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Mexican</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/tacubaya" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>The Morris</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Contemporary</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Tiya</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Indian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Utzutzu</b><div class="sub">Alameda</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/alameda/restaurant/utzutzu" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Verjus</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">French</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Via Aurelia</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Italian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Vik&#x27;s Chaat</b><div class="sub">Berkeley</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Indian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/berkeley/restaurant/vik-s-chaat" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>wonderful</b><div class="sub">Millbrae</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Chinese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/millbrae/restaurant/wonderful" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Wood Tavern</b><div class="sub">Oakland</div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">American</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/oakland/restaurant/wood-tavern" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Yuji</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Japanese</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/1" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Selected">
+<td data-label="Restaurant"><b>Zuni Cafe</b><div class="sub"><span class="flag">⚑ city not captured</span></div></td>
+<td data-label="Michelin award"><span class="badge sel">Selected</span></td>
+<td data-label="Price tier">$$$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Californian</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants/page/2" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr><tr data-award="Unverified">
+<td data-label="Restaurant"><b>Kajiken</b><div class="sub">San Mateo</div></td>
+<td data-label="Michelin award"><span class="badge unv">Tier unverified</span><div class="sub">unverified – tier not shown in the captured listing text</div></td>
+<td data-label="Price tier">$</td>
+<td data-label="Price for 2"><span class="flag">⚑ unverified</span></td>
+<td data-label="Cuisine">Noodles</td>
+<td data-label="Address"><span class="flag">⚑ not captured</span></td>
+<td data-label="Days & hours"><span class="flag">⚑ hours not captured</span></td>
+<td data-label="Website"><span class="flag">⚑ not captured</span></td>
+<td data-label="Source"><a href="https://guide.michelin.com/us/en/california/san-mateo/restaurant/kajiken" rel="noopener">Michelin ↗</a></td>
+<td data-label="Social"><span class="flag">⚑ not searched</span></td>
+</tr></tbody></table></div>
+<p class="lead" style="margin-top:10px">Source for every row: Michelin Guide listing pages 1–4 of the SF &amp; surroundings list (read 2026-11-24). The Source link opens the restaurant's Michelin page where the city was captured, otherwise the listing page it was read from. Michelin's header says 145 restaurants and this table holds 145 rows. Two tiers are flagged for review (see <a href="flagged.html">Flagged</a>).</p></main>
+<footer>Built from <a href="https://github.com/kanlerxz87-cyber/Baymich2">the Baymich2 repo</a> · Michelin data: <a href="https://guide.michelin.com/us/en/california/san-francisco/restaurants">guide.michelin.com</a> · Unverified fields are blank and flagged ⚑.</footer>
+<script>
+(function(){
+ var q=document.getElementById('q'); var btns=document.querySelectorAll('[data-f]'); var rs=document.querySelectorAll('tbody tr[data-award]');
+ var cur='all';
+ function apply(){var t=(q?q.value:'').toLowerCase();
+  rs.forEach(function(r){var okF=(cur==='all')||r.getAttribute('data-award')===cur;
+   var okQ=!t||r.textContent.toLowerCase().indexOf(t)>-1; r.style.display=(okF&&okQ)?'':'none';});
+  var c=document.getElementById('count'); if(c){c.textContent=document.querySelectorAll('tbody tr[data-award]:not([style*="none"])').length;}
+ }
+ btns.forEach(function(b){b.addEventListener('click',function(){btns.forEach(function(x){x.classList.remove('on')});b.classList.add('on');cur=b.getAttribute('data-f');apply();});});
+ if(q){q.addEventListener('input',apply);}
+ apply();
+})();
+</script></body></html>
