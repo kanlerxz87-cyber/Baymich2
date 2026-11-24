@@ -30,4 +30,4 @@ Then open `http://localhost:8000`.
 
 ## Deployment
 
-GitHub Pages is already enabled for this repository from the `main` branch root. After these changes are integrated into `main`, GitHub Pages will publish the static site at `https://kanlerxz87-cyber.github.io/Baymich2/`. The existing Pages deployment is branch-based; no additional deployment workflow is required.
+GitHub Pages is enabled from the `main` branch root. The site is published at [`https://kanlerxz87-cyber.github.io/Baymich2/`](https://kanlerxz87-cyber.github.io/Baymich2/). The existing Pages deployment is branch-based; no additional deployment workflow is required.
