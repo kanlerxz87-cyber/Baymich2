@@ -8,7 +8,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn",
     "restaurantUrl": "https://www.ateliercrenn.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/atelier-crenn",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "3127 Fillmore St., San Francisco, CA 94123",
+    "phone": "+1 415-440-0462",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Benu",
@@ -19,7 +24,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
     "restaurantUrl": "https://www.benusf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/benu",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "22 Hawthorne St., San Francisco, CA 94105",
+    "phone": "+1 415-685-4860",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Californios",
@@ -30,7 +40,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
     "restaurantUrl": "https://californiossf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/californios",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "355 11th St., San Francisco, CA 94103",
+    "phone": "+1 415-757-0994",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Quince",
@@ -41,7 +56,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
     "restaurantUrl": "https://www.quincesf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/quince",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "470 Pacific Ave., San Francisco, CA 94133",
+    "phone": "+1 415-775-8500",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Enclos",
@@ -52,7 +72,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
     "restaurantUrl": "https://www.enclos-sonoma.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/sonoma/restaurant/enclos",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "SingleThread",
@@ -63,7 +85,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread",
     "restaurantUrl": "https://www.singlethreadfarms.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/singlethread",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "131 North St., Healdsburg, CA 95448",
+    "phone": "+1 707-723-4646",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "The French Laundry",
@@ -74,7 +101,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry",
     "restaurantUrl": "https://www.frenchlaundry.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/yountville/restaurant/the-french-laundry",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "6640 Washington St., Yountville, CA 94599",
+    "phone": "+1 707-944-2380",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Acquerello",
@@ -88,7 +120,9 @@
     "hours": "Tuesday–Saturday 5:30–9:45 pm; Sunday–Monday closed",
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/acquerello",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Birdsong",
@@ -99,7 +133,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
     "restaurantUrl": "https://www.birdsongsf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/birdsong",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "1085 Mission St., San Francisco, CA 94103",
+    "phone": "+1 415-369-9161",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Commis",
@@ -110,7 +149,9 @@
     "hoursNote": "MICHELIN profile hours; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis",
     "restaurantUrl": "https://www.commisrestaurant.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/commis",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Kiln",
@@ -121,7 +162,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355",
     "restaurantUrl": "https://www.kilnsf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kiln-1210355",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "149 Fell St., San Francisco, CA 94102",
+    "phone": "+1 415-982-9722",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Lazy Bear",
@@ -132,7 +178,12 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
     "restaurantUrl": "https://www.lazybearsf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/lazy-bear",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california",
+    "address": "3416 19th St., San Francisco, CA 94110",
+    "phone": "+1 415-874-9921",
+    "profileVerified": "2026-11-24 (official MICHELIN profile, read this session)"
   },
   {
     "name": "Saison",
@@ -143,7 +194,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison",
     "restaurantUrl": "https://www.saisonsf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/saison",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Sons & Daughters",
@@ -154,7 +207,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters",
     "restaurantUrl": "https://www.sonsanddaughterssf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sons-daughters",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "7 Adams",
@@ -165,7 +220,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/7-adams",
     "restaurantUrl": "https://www.7adams.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/7-adams"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/7-adams",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Angler SF",
@@ -176,7 +233,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/angler-sf",
     "restaurantUrl": "https://www.angler-sf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/angler-sf"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/angler-sf",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Hilda and Jesse",
@@ -187,7 +246,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/hilda-and-jesse",
     "restaurantUrl": "https://www.hildaandjesse.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/hilda-and-jesse"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/hilda-and-jesse",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Kin Khao",
@@ -198,7 +259,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kin-khao",
     "restaurantUrl": "https://www.kinkhao.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kin-khao"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/kin-khao",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Mister Jiu’s",
@@ -209,7 +272,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s",
     "restaurantUrl": "https://misterjius.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/mister-jiu%E2%80%99s",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Naides",
@@ -220,7 +285,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/naides",
     "restaurantUrl": "https://www.naidessf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/naides"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/naides",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Nari",
@@ -231,7 +298,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nari",
     "restaurantUrl": "https://www.narisf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nari"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nari",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Niku Steakhouse",
@@ -242,7 +311,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/niku-steakhouse",
     "restaurantUrl": "https://www.nikunyc.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/niku-steakhouse"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/niku-steakhouse",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Nisei",
@@ -253,7 +324,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nisei",
     "restaurantUrl": "https://www.restaurantnisei.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nisei"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/nisei",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "San Ho Won",
@@ -264,7 +337,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/san-ho-won",
     "restaurantUrl": "https://www.sanhowon.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/san-ho-won"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/san-ho-won",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Sorrel",
@@ -275,7 +350,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sorrel",
     "restaurantUrl": "https://www.sorrelrestaurant.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sorrel"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/sorrel",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Ssal",
@@ -286,7 +363,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/ssal",
     "restaurantUrl": "https://ssalsf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/ssal"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/ssal",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "State Bird Provisions",
@@ -297,7 +376,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/state-bird-provisions",
     "restaurantUrl": "https://www.statebirdsf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/state-bird-provisions"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/state-bird-provisions",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "The Progress",
@@ -308,7 +389,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/the-progress",
     "restaurantUrl": "https://theprogress-sf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/the-progress"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/the-progress",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Wolfsbane",
@@ -319,7 +402,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; exceptions not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane",
     "restaurantUrl": "https://wolfsbanesf.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-francisco/restaurant/wolfsbane",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Sun Moon Studio",
@@ -330,7 +415,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/oakland/restaurant/sun-moon-studio",
     "restaurantUrl": "https://www.sunmoonstudio.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/sun-moon-studio"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/oakland/restaurant/sun-moon-studio",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Selby’s",
@@ -341,7 +428,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/atherton/restaurant/selby-s",
     "restaurantUrl": "https://www.selbysrestaurant.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/atherton/restaurant/selby-s"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/atherton/restaurant/selby-s",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Protégé",
@@ -352,7 +441,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/palo-alto/restaurant/protege",
     "restaurantUrl": "https://www.protegepaloalto.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/palo-alto/restaurant/protege"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/palo-alto/restaurant/protege",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Wakuriya",
@@ -363,7 +454,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-mateo/restaurant/wakuriya",
     "restaurantUrl": "https://www.wakuriya.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-mateo/restaurant/wakuriya"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-mateo/restaurant/wakuriya",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Madcap",
@@ -374,7 +467,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/san-anselmo/restaurant/madcap",
     "restaurantUrl": "https://www.madcapmarin.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-anselmo/restaurant/madcap"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/san-anselmo/restaurant/madcap",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Plumed Horse",
@@ -385,7 +480,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/saratoga/restaurant/plumed-horse",
     "restaurantUrl": "https://plumedhorse.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/saratoga/restaurant/plumed-horse"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/saratoga/restaurant/plumed-horse",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "The Village Pub",
@@ -396,7 +493,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/woodside/restaurant/the-village-pub",
     "restaurantUrl": "https://www.thevillagepub.net/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/woodside/restaurant/the-village-pub"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/woodside/restaurant/the-village-pub",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Troubadour",
@@ -407,7 +506,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/troubadour",
     "restaurantUrl": "https://www.troubadourhbg.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/troubadour"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/healdsburg/restaurant/troubadour",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Cyrus",
@@ -418,7 +519,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/geyserville/restaurant/cyrus",
     "restaurantUrl": "https://www.cyrusrestaurant.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/geyserville/restaurant/cyrus"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/geyserville/restaurant/cyrus",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Auro",
@@ -429,7 +532,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/calistoga/restaurant/auro",
     "restaurantUrl": "https://www.auronapavalley.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/calistoga/restaurant/auro"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/calistoga/restaurant/auro",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Auberge du Soleil",
@@ -440,7 +545,9 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/rutherford/restaurant/auberge-du-soleil",
     "restaurantUrl": "https://auberge.com/auberge-du-soleil/dine/the-restaurant-at-auberge-du-soleil/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/rutherford/restaurant/auberge-du-soleil"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/rutherford/restaurant/auberge-du-soleil",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   },
   {
     "name": "Press",
@@ -451,6 +558,8 @@
     "hoursNote": "Official MICHELIN profile hours captured 24 Nov 2026; holiday/exception schedules not confirmed.",
     "hoursSource": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press",
     "restaurantUrl": "https://www.pressnapavalley.com/",
-    "michelinUrl": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press"
+    "michelinUrl": "https://guide.michelin.com/ca/en/california/saint-helena/restaurant/press",
+    "statusYear": 2026,
+    "statusSource": "https://guide.michelin.com/en/article/michelin-guide-ceremony/guide-michelin-california"
   }
 ]

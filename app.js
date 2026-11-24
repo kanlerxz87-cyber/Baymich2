@@ -33,7 +33,8 @@ function priceMarkup(restaurant) {
 
 function hoursMarkup(restaurant) {
   if (!restaurant.hours) return '<span class="missing">Unverified</span>';
-  return `<span>${escapeHtml(restaurant.hours)}<small class="hours-note"> · exceptions unverified</small></span>`;
+  const note = restaurant.hoursNote || 'Exceptions unverified.';
+  return `<span>${escapeHtml(restaurant.hours)}<small class="hours-note"> · ${escapeHtml(note)}</small></span>`;
 }
 
 function socialMarkup(restaurant = {}) {
@@ -65,18 +66,18 @@ function renderRestaurants(restaurants) {
   document.querySelector('#result-count').textContent = `Showing ${shown.length} of ${restaurants.length}`;
   document.querySelector('#restaurant-rows').innerHTML = shown.map((restaurant) => `
     <tr>
-      <td class="name-cell"><a class="venue-link" href="${escapeHtml(restaurant.michelinUrl)}" target="_blank" rel="noreferrer">${escapeHtml(restaurant.name)} ↗</a></td>
+      <td class="name-cell"><a class="venue-link" href="${escapeHtml(restaurant.michelinUrl)}" target="_blank" rel="noreferrer">${escapeHtml(restaurant.name)} ↗</a>${restaurant.address ? `<div class="place">${escapeHtml(restaurant.address)}</div>` : ''}</td>
       <td>${escapeHtml(restaurant.city)}</td>
-      <td><span class="star-badge\">${'✳'.repeat(restaurant.stars)} <span>${restaurant.stars} ${restaurant.stars === 1 ? 'star' : 'stars'}</span></span></td>
+      <td><span class="star-badge">${'✳'.repeat(restaurant.stars)} <span>${restaurant.statusYear || GUIDE_YEAR} · ${restaurant.stars} ${restaurant.stars === 1 ? 'star' : 'stars'}</span></span></td>
       <td>${restaurant.priceBand ? escapeHtml(restaurant.priceBand) : '<span class="missing">Unverified</span>'}</td>
       <td>${priceMarkup(restaurant)}</td>
       <td>${hoursMarkup(restaurant)}</td>
       <td>${socialMarkup(restaurant)}</td>
-      <td>${sourceLink(restaurant.michelinUrl || STAR_SOURCE, 'Official profile ↗')}</td>
+      <td>${sourceLink(restaurant.statusSource || STAR_SOURCE, `Official ${restaurant.statusYear || GUIDE_YEAR} star list ↗`)}</td>
     </tr>`).join('');
   document.querySelector('#restaurant-cards').innerHTML = shown.map((restaurant) => `
     <article class="restaurant-card">
-      <div class="restaurant-card-top"><div><h3>${escapeHtml(restaurant.name)}</h3><div class="place">${escapeHtml(restaurant.city)}</div></div><span class="star-badge">${'✳'.repeat(restaurant.stars)} ${restaurant.stars}</span></div>
+      <div class="restaurant-card-top"><div><h3>${escapeHtml(restaurant.name)}</h3><div class="place">${escapeHtml(restaurant.city)}</div></div><span class="star-badge">${'✳'.repeat(restaurant.stars)} ${restaurant.statusYear || GUIDE_YEAR} · ${restaurant.stars} ${restaurant.stars === 1 ? 'star' : 'stars'}</span></div>
       <div class="restaurant-card-info">
         <div><label>DINNER FOR TWO</label>${priceMarkup(restaurant)}</div>
         <div><label>OPEN DAYS / HOURS</label>${hoursMarkup(restaurant)}</div>
